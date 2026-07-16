@@ -1,0 +1,1001 @@
+Applicant_ID,Full_Name,Employer_Name,Age,Employment_Type,Monthly_Net_Income,Total_Existing_EMIs,CIBIL_Score,Requested_Loan_Amount,Requested_Tenure_Months,Average_Monthly_Bank_Balance,Number_of_Bounced_Transactions_Last_6M
+APP00001,Allison Hill,Jacobson-Baker,41,Salaried,85244.51,20363.79,713,1297180.27,48,87075.18,2
+APP00002,Noah Rhodes,"Stephens, Lopez and Mcclure",28,Salaried,77678.15,15531.45,687,2882070.7,36,120990.69,1
+APP00003,Angie Henderson,Lopez-Williams,46,Salaried,83934.28,14860.4,764,1210659.09,24,145391.13,1
+APP00004,Daniel Wagner,Marshall-Perez,47,Salaried,116759.19,44104.91,596,2428497.73,48,223157.75,3
+APP00005,Cristian Santos,Elliott-Hernandez,21,Salaried,57218.29,1698.85,666,2274517.88,24,94648.3,0
+APP00006,Connie Lawrence,"Contreras, Miller and Cooper",25,Salaried,69547.29,29180.54,450,1491845.37,24,120944.32,3
+APP00007,Abigail Shaffer,"Gutierrez, Avila and Perez",39,Salaried,80084.07,25491.96,668,3453651.48,84,115365.98,2
+APP00008,Gina Moore,Randall PLC,35,Salaried,63864.3,15739.21,664,4302148.45,36,120293.5,0
+APP00009,Gabrielle Davis,Sheppard-Mcdaniel,38,Salaried,54358.39,3072.76,765,1305930.57,60,115435.04,0
+APP00010,Ryan Munoz,Armstrong-Young,29,Salaried,166839.21,31318.72,604,3075045.32,120,343723.1,0
+APP00011,Monica Herrera,Miller-Orr,47,Salaried,61707.72,3189.29,703,3796048.48,24,153784.24,0
+APP00012,Jamie Arnold,"Johnson, Duncan and Black",46,Salaried,56044.27,11470.83,748,2220260.57,36,93162.27,0
+APP00013,Lisa Hensley,"Byrd, Oliver and Martinez",39,Self-Employed,86042.97,19439.38,624,5589064.23,36,75040.7,2
+APP00014,Michele Williams,Thompson-Joyce,49,Self-Employed,82004.56,14020.04,734,2490265.01,48,164920.65,1
+APP00015,Dylan Miller,Stokes and Sons,43,Salaried,38875.18,5586.68,665,1930227.2,120,24997.32,2
+APP00016,Brian Ramirez,Henderson Ltd,29,Salaried,102091.26,14830.63,681,6880829.53,84,99162.4,3
+APP00017,Holly Wood,Harris-Carson,42,Salaried,69323.38,6269.6,772,1546032.66,60,164173.76,0
+APP00018,Derek Zuniga,Flowers LLC,28,Salaried,36864.89,3268.31,794,2213504.72,24,55934.96,0
+APP00019,Lisa Jackson,Bartlett-Sloan,47,Salaried,129119.69,16929.38,706,6441910.87,60,210556.29,2
+APP00020,Carla Gray,Miller PLC,38,Salaried,91471.07,17157.98,658,5559319.45,36,246064.51,1
+APP00021,Margaret Hawkins DDS,Arnold-Gates,36,Salaried,38138.72,10605.32,681,848266.26,48,35723.38,0
+APP00022,Patty Perez,"Ellis, Marks and Buchanan",31,Self-Employed,199499.74,29787.37,736,7590005.18,36,101326.92,2
+APP00023,Ethan Adams,"Matthews, Harrington and Rodriguez",50,Salaried,101722.22,19778.62,630,2007003.11,24,71485.63,2
+APP00024,Tommy Walter,Hernandez PLC,36,Salaried,67066.57,24526.28,684,4668164.0,12,60900.57,0
+APP00025,Matthew Foster,"Chang, Ayers and Buckley",34,Self-Employed,181875.49,16937.26,683,2866631.21,24,401402.21,2
+APP00026,Judy Baker,"Chan, Floyd and Dillon",34,Self-Employed,66798.3,4152.67,734,1064030.39,12,157892.8,0
+APP00027,Justin Baker,Humphrey-Baker,43,Salaried,72231.39,10801.78,667,4759281.02,24,127895.03,0
+APP00028,Stephanie Ross,"Washington, Lynch and Johnson",42,Salaried,53733.4,5178.42,624,1614459.2,48,58182.45,0
+APP00029,Zachary Hicks,Powell-Montgomery,42,Salaried,93972.53,25230.92,726,4493879.53,84,146797.02,1
+APP00030,Anthony Rodriguez,"Steele, Williams and Preston",42,Salaried,89625.62,24380.3,752,2621417.71,24,41613.35,1
+APP00031,Rebecca Henderson,Vaughn-Williams,59,Self-Employed,69460.12,16758.96,606,3537291.73,84,134652.43,0
+APP00032,James Ferrell,Mccall-Prince,34,Salaried,46061.87,10943.56,721,1084672.4,24,82631.03,1
+APP00033,Tricia Valencia,Morgan LLC,33,Salaried,68807.73,17653.38,747,2720118.61,60,33258.97,2
+APP00034,Nathan Maldonado,Ramirez-Vasquez,30,Salaried,60494.74,3642.18,777,2662345.01,36,149179.45,0
+APP00035,Debra Davidson,"Cohen, Compton and Perez",44,Salaried,40595.77,7730.23,681,1299818.49,24,88468.21,1
+APP00036,Jeffrey Chavez,Mccann-Ramos,49,Self-Employed,24537.64,4635.95,635,665019.9,24,28231.4,2
+APP00037,Sherri Baker,Adams-Butler,37,Salaried,87949.57,12285.34,719,1795261.81,12,170848.93,1
+APP00038,Cassandra Gaines,"Davis, Alexander and Mcintyre",30,Salaried,19358.2,940.72,758,1052479.39,24,37846.17,0
+APP00039,Elizabeth Fowler,Figueroa-Malone,30,Self-Employed,65525.74,11911.11,713,1447919.82,36,51108.28,1
+APP00040,Brittany Farmer,Nicholson-Robertson,45,Self-Employed,48659.62,8470.44,653,1436801.04,36,43675.77,4
+APP00041,Paula Moreno,Jones Ltd,45,Salaried,134764.51,19845.12,633,4341374.68,48,275652.94,2
+APP00042,Fred Smith,"Powell, Deleon and Warren",43,Salaried,58583.4,5544.99,746,2300102.03,36,158161.36,1
+APP00043,Sherry Decker,"Johnson, Lee and Whitaker",31,Salaried,85103.06,9476.49,747,4608681.64,84,155964.87,1
+APP00044,Anthony Humphrey,Wright Group,40,Salaried,59114.76,5135.97,749,2227249.63,12,108543.39,0
+APP00045,Angelica Tucker,Hull Ltd,39,Salaried,73518.48,15854.5,694,4724710.27,24,138837.23,2
+APP00046,Philip Cannon,Hill Group,40,Salaried,98461.77,17913.98,823,5197515.07,48,143337.05,0
+APP00047,John Pierce,"Sanders, Leblanc and Maldonado",47,Self-Employed,49733.95,11776.21,632,3098882.59,24,27860.97,3
+APP00048,Shane Henderson,Watson PLC,40,Self-Employed,129071.97,4252.3,807,7096536.57,48,189309.17,1
+APP00049,Joshua Blair,Thompson-Harrell,45,Self-Employed,33917.1,11242.23,611,709474.69,12,77831.79,3
+APP00050,Eric Carney,"Arnold, Cooper and Monroe",39,Self-Employed,78042.61,26505.88,736,5515710.91,60,162775.41,2
+APP00051,Jessica Holmes,Curry-Barker,41,Self-Employed,123994.24,22608.29,797,7339860.58,60,317623.66,0
+APP00052,Danny Morgan,Johnson-Williams,44,Self-Employed,106745.05,16789.8,679,4949053.34,84,86752.6,2
+APP00053,Crystal Robinson,"Chan, Lewis and Walker",23,Self-Employed,196978.23,57395.93,746,4316552.68,60,296996.9,4
+APP00054,Mark Perez,Byrd LLC,35,Salaried,47200.56,4104.83,765,1055444.22,24,88572.56,0
+APP00055,Shannon Jones,"Ortiz, Smith and Deleon",33,Salaried,34891.05,10694.69,651,1704772.37,60,30276.8,0
+APP00056,Michael Lewis,"Smith, Buck and Holland",32,Salaried,40960.31,9890.09,646,1514377.42,36,36102.62,3
+APP00057,Timothy Duncan,"Owen, Walker and Franklin",35,Salaried,89581.85,21154.52,768,4707666.71,60,193962.77,1
+APP00058,Richard Aguirre,Marquez-Fletcher,53,Salaried,94618.43,14220.69,783,3249732.63,24,190735.22,0
+APP00059,Brent Jordan,Coleman-Bennett,29,Salaried,64500.78,17040.14,632,2758744.31,48,118565.4,1
+APP00060,John Daniel,Stevens-Robinson,48,Salaried,45625.02,1899.48,735,1062035.59,24,52156.99,0
+APP00061,Victoria Garcia,Byrd-Holloway,21,Salaried,77666.46,20161.2,678,1655232.87,36,119419.04,3
+APP00062,Gerald Hensley,Silva-Smith,35,Salaried,38353.14,1107.6,700,634310.53,36,21079.74,1
+APP00063,Connor West,"Levy, Franco and Hoffman",40,Self-Employed,144610.86,31935.19,813,8847055.19,120,106113.35,3
+APP00064,Donald Wright,"Lynch, Evans and Rodriguez",44,Self-Employed,497016.84,168205.46,683,22526381.4,120,741439.79,2
+APP00065,Jessica Callahan,Rogers LLC,45,Salaried,88210.05,7506.42,719,6071362.1,60,107613.27,1
+APP00066,Amber Kidd,"Nguyen, Hill and Douglas",46,Salaried,98315.88,30696.41,760,5600974.85,120,241782.28,1
+APP00067,Tracy House,"Evans, Hernandez and Cannon",35,Salaried,53312.28,10244.13,699,3098818.22,84,80897.47,0
+APP00068,Carol Tucker,Trujillo PLC,33,Self-Employed,16616.37,4037.7,744,706918.47,12,10348.33,2
+APP00069,James Brown,Guerrero-Becker,47,Self-Employed,45086.06,16058.08,552,2746969.23,48,20181.47,3
+APP00070,William Baker,"Johnson, Jimenez and Phillips",36,Salaried,41201.36,1702.61,717,2823273.76,24,93335.51,0
+APP00071,Jordan Henderson,Sullivan-Doyle,25,Self-Employed,19247.64,4095.74,781,1064479.74,12,15974.58,0
+APP00072,Whitney Peters,"Erickson, Armstrong and Lee",27,Salaried,130135.06,14364.67,828,2386070.16,24,119206.47,0
+APP00073,Brittney Phillips,"Reeves, Parks and Little",29,Salaried,69647.72,14414.6,643,3556295.71,60,97376.96,2
+APP00074,Lauren Daniels,Knox-Powers,43,Self-Employed,86745.91,2209.2,693,1667776.21,12,99356.89,0
+APP00075,Amy Silva,"Evans, Jackson and Sandoval",39,Salaried,60781.78,10342.61,729,1011004.29,12,113525.59,2
+APP00076,Sarah Moore,"White, Davis and Anderson",45,Salaried,69201.73,13996.29,667,3707415.3,12,106631.33,1
+APP00077,Angela Lopez,Hardy-Hansen,34,Salaried,101446.05,7314.77,708,6298493.98,60,76140.85,1
+APP00078,Megan Young,Arroyo LLC,40,Salaried,69654.0,13060.56,759,1499684.82,48,155401.28,1
+APP00079,Steve Sanchez,"Davis, Kelly and Garner",44,Self-Employed,97504.91,15282.0,664,1603850.18,120,140605.32,2
+APP00080,Lisa Barnes,Fisher-Eaton,35,Self-Employed,52743.49,12264.35,597,3438420.58,36,94485.13,0
+APP00081,Kelly Donovan,Green-Carter,43,Salaried,62711.4,17190.47,601,1249998.85,12,27591.44,2
+APP00082,Mike Allen,Ruiz Ltd,31,Salaried,33581.78,7590.1,702,473676.61,48,61539.4,1
+APP00083,Michael Evans,"Carpenter, Oliver and Kennedy",34,Self-Employed,14965.46,4624.05,562,827040.11,12,15274.27,2
+APP00084,Paul Jones,Mason Ltd,34,Salaried,58426.91,15841.9,676,3672886.74,120,87674.65,1
+APP00085,Zachary Ferrell,Moreno-Gutierrez,26,Self-Employed,55918.28,12808.29,632,2397127.25,48,61610.52,0
+APP00086,Daniel Baker,Taylor and Sons,43,Salaried,41007.44,7942.81,819,1820546.58,24,110761.89,0
+APP00087,Shirley Suarez,Ortiz-Hudson,33,Salaried,63900.93,12291.94,851,2058353.2,12,62208.2,0
+APP00088,Christopher Bass,Thomas-Huffman,38,Self-Employed,65156.06,7893.59,638,1714112.17,12,170293.3,2
+APP00089,Lisa Archer,Maxwell Group,43,Salaried,27724.28,854.63,761,1588987.22,24,76292.74,0
+APP00090,Aimee Montoya,Welch-Thompson,42,Salaried,47911.89,12736.21,638,3016392.11,36,64496.8,1
+APP00091,Matthew Mcmillan,"Brown, Hayes and Clark",45,Salaried,89845.06,22913.59,678,2809876.01,60,98769.83,1
+APP00092,Brian Rodriguez,Johnston and Sons,37,Salaried,81176.11,22167.9,757,2307767.9,48,101815.09,4
+APP00093,Denise Jacobs,Glover-Chan,34,Salaried,39107.95,145.74,721,1097662.39,24,116064.86,0
+APP00094,Christina Walters,Mendez Ltd,37,Salaried,73240.33,6086.2,720,1101221.42,12,143693.06,0
+APP00095,John Whitehead,Powell-Sanford,21,Self-Employed,102279.38,16803.58,624,2952243.24,36,174795.43,3
+APP00096,Anna Henderson,Smith-Ferguson,24,Self-Employed,90016.32,14139.75,750,1218735.88,12,48921.37,3
+APP00097,Aaron Wise,"Watson, Smith and Morris",25,Salaried,55853.01,14066.46,516,3312332.68,48,127888.67,0
+APP00098,Deborah Figueroa,"Lee, Rhodes and Sims",28,Salaried,49234.23,6787.57,703,1346832.47,36,32524.42,0
+APP00099,Jessica Smith,Perez LLC,42,Self-Employed,42322.49,3302.11,706,2260414.84,60,25111.8,2
+APP00100,Stephen Mckee,Anderson-Reyes,29,Self-Employed,77697.69,27653.78,627,3464641.29,36,75823.91,2
+APP00101,Sandra Aguilar,"Torres, Brown and Williams",34,Salaried,71756.34,20671.01,759,4466675.33,48,103768.74,0
+APP00102,Cameron Parker,Bryant-Meyer,51,Salaried,100385.59,10864.32,806,6989118.53,84,260003.62,0
+APP00103,Rebecca Valencia,"Morgan, Barron and Cowan",34,Salaried,69743.39,20881.95,590,2373890.27,48,146785.14,2
+APP00104,Christine Wright,Ferrell-Henry,45,Salaried,108122.16,28444.35,836,1870561.87,36,93344.13,0
+APP00105,Richard Henson,Martin Group,29,Salaried,64278.71,2326.27,659,3662520.42,60,90267.82,0
+APP00106,Marc Moore,Perez Ltd,36,Salaried,95907.48,10931.52,810,1273472.87,48,221636.53,0
+APP00107,Sharon Cherry,Clark Inc,28,Self-Employed,101640.72,13962.96,738,2579417.97,24,172065.05,0
+APP00108,Sierra Johnson,"Wagner, Martinez and Dawson",35,Self-Employed,34448.82,9149.37,665,523451.19,24,27969.06,1
+APP00109,Evelyn Galvan,Brooks Ltd,46,Self-Employed,19390.36,3378.98,654,1277609.37,36,26376.73,3
+APP00110,Sharon Cochran,Wise-Dean,21,Salaried,110156.82,13281.23,700,1356892.4,12,213744.35,2
+APP00111,Richard Rodriguez,"Vang, Stanley and Valdez",42,Salaried,81179.79,9536.97,745,3374199.66,60,224119.26,0
+APP00112,Shannon Walker,Williams Inc,40,Self-Employed,19349.02,4324.06,646,724426.17,24,37029.88,1
+APP00113,Julia Torres,Wallace-Martinez,32,Self-Employed,35341.94,4373.36,702,1808259.2,12,17920.02,1
+APP00114,Crystal Johnson,Wells-Hernandez,24,Salaried,81344.52,28821.0,606,2390279.95,12,151439.61,3
+APP00115,Garrett Lin,"Jennings, Smith and Fisher",39,Self-Employed,52209.59,16337.67,600,3363431.56,60,49641.06,2
+APP00116,Diana May,Bates LLC,33,Salaried,51543.18,11571.27,622,2889549.28,60,121504.48,3
+APP00117,William Herrera,"Obrien, Taylor and Rivas",40,Self-Employed,171297.02,44118.48,612,6498609.17,48,217846.09,2
+APP00118,Ashley Waller,Hunt PLC,38,Salaried,43085.63,9017.8,693,1442574.77,12,38539.6,0
+APP00119,Victor Baker,Campbell Inc,54,Salaried,52805.63,14847.22,734,3218677.43,24,75781.99,0
+APP00120,Jeffrey Chandler,Gonzalez-Gonzalez,36,Salaried,74098.7,10779.08,735,4255015.24,36,78190.67,0
+APP00121,Larry Dixon,Decker-Dudley,28,Salaried,72449.03,31728.61,773,2603818.28,48,61652.1,2
+APP00122,Kenneth Scott,Warner-Phillips,40,Salaried,88362.38,34311.32,529,2870214.25,24,137653.59,2
+APP00123,April Frost,Kelley and Sons,40,Salaried,106500.43,1342.63,746,1526500.42,12,255933.5,2
+APP00124,Michelle Harmon,"Fitzpatrick, Rivera and Smith",52,Salaried,82694.02,7217.25,722,1397730.28,12,204624.43,1
+APP00125,Helen Jones,"Davis, Rodriguez and Andrews",46,Self-Employed,96838.58,20326.42,767,1475346.2,24,129508.15,0
+APP00126,Erin Edwards,Hernandez-Davis,42,Salaried,64362.15,17398.25,737,866631.75,36,37127.76,1
+APP00127,Michelle Evans,"Jones, Cummings and Conway",53,Salaried,77789.09,6818.73,727,1646977.23,36,127184.68,0
+APP00128,Jason Powell,"Hall, Hinton and Phillips",26,Self-Employed,57952.15,16684.14,672,3675818.19,60,78604.87,3
+APP00129,Cameron Fisher,Williams-Li,32,Salaried,70587.17,8334.28,673,4227434.6,120,65918.38,1
+APP00130,Megan Orr,Phelps LLC,29,Salaried,87208.76,17308.94,757,5470991.92,60,215267.21,0
+APP00131,Elizabeth Kelley,"Edwards, Rodgers and Davis",34,Self-Employed,88126.31,17013.0,578,4355909.34,84,233713.67,2
+APP00132,Dustin Jordan,Smith and Sons,24,Self-Employed,53892.53,5324.9,767,2664650.5,48,32242.57,1
+APP00133,Mary Marshall,"Holland, Murphy and Kline",44,Salaried,51399.09,11025.5,716,998987.86,12,114227.9,0
+APP00134,Daniel Kennedy,"Adams, Quinn and Watson",36,Self-Employed,64221.22,7580.86,703,3463959.26,60,127768.31,0
+APP00135,Rebecca Jackson,White-Morales,23,Salaried,55940.24,4270.94,725,1611167.57,24,62068.68,0
+APP00136,Jose Schultz,Nelson-Cruz,28,Salaried,66294.72,1690.62,737,2860961.82,48,136651.19,0
+APP00137,Robert Potter,Marsh-Banks,41,Self-Employed,304586.46,80985.39,728,21102772.15,36,216981.54,4
+APP00138,Courtney Gonzalez,Wilson Ltd,46,Salaried,59745.22,12421.98,898,3837849.05,48,36056.17,1
+APP00139,David Alvarez,"Brown, Dunlap and Moore",58,Self-Employed,92395.57,18320.54,778,2401509.7,60,248351.06,1
+APP00140,Angel Perry,Pruitt-Webb,65,Salaried,122314.41,10277.87,673,6873951.95,36,245005.09,2
+APP00141,Cheyenne Horton,"Gregory, White and James",42,Self-Employed,70418.85,9644.73,767,1284823.29,12,74324.53,0
+APP00142,David Douglas Jr.,Carr-Huffman,28,Salaried,174026.72,37012.74,758,2367555.0,24,252733.76,0
+APP00143,Patricia Rodriguez,"Mcpherson, Anderson and Knapp",21,Salaried,46396.1,5703.18,646,635183.85,24,125200.09,2
+APP00144,Christopher Rubio,Clay Group,41,Salaried,82726.3,28587.39,593,1837747.36,48,109274.05,2
+APP00145,Amber Wright,Brown Ltd,30,Salaried,43575.86,11166.61,693,2339888.6,48,104521.73,1
+APP00146,Joyce Solis,Smith-Oneill,34,Self-Employed,46716.71,8225.08,757,1578947.82,60,113839.32,1
+APP00147,Victoria Larson,"Saunders, Ray and Cunningham",32,Salaried,71670.16,15049.85,592,928597.8,24,87262.59,2
+APP00148,Stephanie Salazar,"Marks, Stone and Watts",37,Salaried,99811.3,29279.81,618,7114684.92,48,190785.84,3
+APP00149,Kathy Rivas,"Davis, Stanley and Wright",49,Salaried,87302.54,32261.53,699,3841547.97,36,153108.03,2
+APP00150,Stephanie Manning,Alvarado-Davidson,40,Salaried,124548.3,43372.39,700,4438006.24,36,249752.24,0
+APP00151,David Wright,Combs PLC,36,Self-Employed,57310.75,4237.23,824,2471869.39,48,78087.09,0
+APP00152,Pamela Boyd,"Brown, Schneider and Moore",28,Salaried,52336.95,5355.67,605,2260865.02,12,31314.6,3
+APP00153,Denise Jones,Christian-Booth,21,Self-Employed,331892.98,23671.69,850,13346809.07,36,296884.39,2
+APP00154,Devon Flores,Walton LLC,33,Salaried,77498.19,19941.56,589,3780124.06,84,137849.39,2
+APP00155,Brenda Hall,Rivera LLC,37,Salaried,49337.18,15655.01,551,3213705.08,48,101190.22,2
+APP00156,Michelle Brown,Hunter PLC,56,Salaried,55332.93,6736.45,728,1665677.34,12,124201.96,0
+APP00157,Joshua Perry,"Gray, Montoya and Miller",39,Salaried,45702.09,6347.01,646,1883754.29,36,83322.18,1
+APP00158,Jason Stein,Solis-West,48,Self-Employed,132432.79,15659.33,685,1618148.58,24,88704.39,3
+APP00159,Melissa Gates,West-Wilson,33,Self-Employed,45717.14,3507.22,719,2907100.84,60,23881.94,1
+APP00160,Jamie Smith,Mcgee-Smith,26,Self-Employed,58762.12,25464.52,673,1783679.05,36,113019.62,0
+APP00161,Paul Castaneda,Gutierrez-Hawkins,28,Salaried,59062.7,9711.15,645,1670164.08,12,101553.86,2
+APP00162,Jennifer Adkins,Petersen PLC,31,Salaried,87905.88,22063.97,708,6316233.61,36,188862.27,2
+APP00163,Lindsey Walker,"Walsh, Wu and Hart",59,Salaried,51663.53,21358.37,669,2431470.38,24,37171.62,0
+APP00164,Jeffrey Johnson,"Powers, Clements and Cox",30,Salaried,38473.06,14723.25,759,745707.77,36,47244.52,0
+APP00165,Michael Powell,Velasquez Group,46,Self-Employed,80437.85,4838.46,730,2246749.7,36,218290.12,0
+APP00166,John Anderson,Castro-Harvey,29,Salaried,80728.65,13041.85,653,2679674.18,48,68938.6,1
+APP00167,Alyssa Long,Moran-Cox,47,Salaried,87832.05,19253.73,616,6250445.06,60,51131.9,0
+APP00168,Alyssa Day,Wilson-Malone,42,Self-Employed,37309.28,13177.11,642,1411682.4,24,65547.84,3
+APP00169,Joel Williams,Smith LLC,36,Self-Employed,98415.98,18816.84,645,2539923.61,24,176799.36,0
+APP00170,Daniel Murphy,"Brandt, Carter and Boyd",38,Salaried,49389.18,3673.28,658,2280982.81,24,136954.93,0
+APP00171,Jamie Walton,"Rodriguez, Prince and Vasquez",31,Salaried,50018.99,7760.57,758,1814968.04,24,127627.54,0
+APP00172,Darlene Miller,"Newton, Ortiz and King",42,Salaried,47294.35,609.6,641,723491.1,24,111533.26,0
+APP00173,Joshua Cooke,Lopez Group,33,Salaried,116555.65,26380.7,801,7419370.79,120,56633.14,0
+APP00174,Matthew Harrington,Bryant and Sons,26,Salaried,78625.3,20406.72,691,1017509.8,12,116383.49,2
+APP00175,Nicole Herring,"Morgan, Sherman and Williams",25,Salaried,76542.73,13179.15,707,5044856.01,60,191689.46,1
+APP00176,Alex Hernandez,"Monroe, Chapman and Barton",40,Self-Employed,153827.17,47683.31,611,9154489.22,36,205913.66,2
+APP00177,Michael Elliott,Ellis-Lawrence,54,Self-Employed,492419.61,41907.88,753,8149245.38,84,1369779.52,2
+APP00178,Michael Wang,"Taylor, Porter and Moreno",40,Salaried,32751.22,7881.69,699,1814963.27,12,61401.24,1
+APP00179,Lawrence Adkins,Tran Group,37,Salaried,48919.45,6144.45,690,2849876.09,48,35469.38,0
+APP00180,Robert Oconnell,"Webb, Romero and Morse",41,Salaried,54185.79,6534.23,744,2608418.46,24,90287.98,0
+APP00181,Alexander Collins,Holt and Sons,51,Salaried,51568.86,5880.11,632,2406216.0,24,108881.99,0
+APP00182,Tina Sanders,"Ochoa, Garcia and Sandoval",40,Salaried,43518.21,10412.6,586,651955.93,24,25416.98,2
+APP00183,Angela Vaughn,"Andrade, Gordon and Cruz",34,Salaried,57433.94,11330.63,653,894234.01,24,70489.4,0
+APP00184,Ashley Barton,"Moon, Farmer and Hill",49,Salaried,43742.28,8054.47,713,2433703.44,36,91054.8,2
+APP00185,Lindsay Martinez,Waller-Chavez,42,Salaried,84094.31,22059.39,680,1541777.59,24,65223.2,2
+APP00186,Dr. Hannah Patterson,Taylor PLC,53,Salaried,77404.98,12077.65,775,2052056.11,84,97832.28,1
+APP00187,Jonathan Peterson,"Tanner, Hunt and Cameron",40,Salaried,87755.52,14022.69,671,3679606.25,48,179637.7,0
+APP00188,Samantha Garcia,"Valencia, Joseph and Walls",26,Self-Employed,76688.64,27470.44,716,1675633.0,24,153534.09,1
+APP00189,Madison Poole,"Robinson, Clark and Klein",24,Salaried,75392.15,6041.34,716,4477567.94,84,129999.4,1
+APP00190,Jessica Gross,"Reed, Chambers and Zavala",55,Salaried,63927.71,6320.75,634,3863962.14,60,175747.87,3
+APP00191,Debra Morton,"Hester, Thompson and Daniels",55,Self-Employed,303468.29,105814.51,706,18975444.99,48,704910.16,1
+APP00192,Karen Graham,"Morris, Wilson and Bell",36,Salaried,74871.1,21255.69,688,1121126.45,24,108159.48,1
+APP00193,Debra Christian,Aguilar-Bender,34,Salaried,28427.62,3888.35,662,1070936.4,12,23853.27,2
+APP00194,Angelica Keith,"Butler, Adkins and Skinner",53,Self-Employed,34083.51,3936.48,735,2140957.79,36,78114.9,0
+APP00195,John Bishop,Rich-Henderson,27,Salaried,27392.92,3300.07,724,925693.38,24,28519.23,0
+APP00196,Allen Rosales,Mills Inc,29,Salaried,62082.39,18417.22,681,3336880.47,60,137844.77,1
+APP00197,Daniel Salinas,Thomas-Santiago,44,Salaried,70029.38,10641.76,702,3316224.01,60,127337.32,0
+APP00198,Spencer Haynes,Adams and Sons,34,Salaried,53233.5,4923.62,643,1747789.64,12,75407.76,1
+APP00199,Adam Vaughan,Vega-Thomas,38,Salaried,170610.9,47754.61,698,4876791.32,24,277467.11,1
+APP00200,Nathan Freeman,Vaughn LLC,36,Salaried,86255.72,6538.9,660,4413237.94,48,152032.66,2
+APP00201,Melissa Brewer,Molina Inc,41,Salaried,99130.95,14404.44,667,1984348.68,36,258488.15,0
+APP00202,Ricky Davis II,Cervantes-Garcia,52,Salaried,49739.72,15754.81,613,3163811.96,36,43365.49,5
+APP00203,Elizabeth Perkins,"Stevenson, Hancock and Newton",39,Salaried,44555.47,9608.27,747,2075688.05,48,112114.5,1
+APP00204,Joseph Coleman,"Price, Dixon and Robles",44,Salaried,75210.41,33234.03,590,1405698.41,24,33887.64,7
+APP00205,Erin Warner,"Roberts, Beck and House",21,Salaried,59453.02,9723.7,694,3223046.76,84,132274.85,0
+APP00206,David Martinez,Butler-French,38,Self-Employed,17111.32,2655.09,677,647950.29,24,44181.48,1
+APP00207,Bryan Herrera,"Edwards, Arnold and Smith",30,Salaried,57559.99,7714.0,738,1395535.29,12,79755.94,2
+APP00208,Cathy Robinson,Harris-Melton,26,Salaried,59500.59,15261.82,553,4145058.71,48,35409.77,1
+APP00209,Dr. William Warren,Greer-Pruitt,29,Salaried,55915.67,10333.99,755,3085363.58,48,127463.88,1
+APP00210,Brian Lee,"Mckinney, Richardson and Chapman",35,Salaried,46151.43,11054.34,557,2195867.19,24,105914.02,3
+APP00211,Christopher Smith,"Morrison, Parsons and Brandt",47,Salaried,59322.94,5430.37,636,3733313.12,48,75890.82,1
+APP00212,Denise Mccann,Cole-Lucero,25,Salaried,53839.93,14529.33,679,2402994.02,36,83671.68,0
+APP00213,Melissa Martinez,Lopez and Sons,38,Salaried,71903.78,16912.92,830,2767449.52,48,160120.26,1
+APP00214,Katherine Salas,"Palmer, Bennett and Patterson",33,Self-Employed,90097.42,17557.88,791,2105289.49,84,79700.85,2
+APP00215,Julie Alexander,"Baker, Martin and Singleton",35,Self-Employed,128926.53,15542.61,744,2733684.08,36,251086.86,2
+APP00216,Anthony Everett,Rivera Ltd,48,Salaried,66243.04,22598.99,690,2511814.22,24,86622.72,2
+APP00217,Rodney Morales,Williams LLC,43,Salaried,59575.35,15783.04,599,2344794.77,36,48378.1,0
+APP00218,Mark Brown,"Williams, Randolph and Gilbert",51,Salaried,92086.83,19319.86,698,5156747.57,48,212546.05,2
+APP00219,Justin Torres,"Turner, Tyler and Pierce",36,Salaried,88690.63,5200.03,708,3416815.43,120,112925.24,0
+APP00220,Bailey Duran DDS,Bowers LLC,31,Salaried,52023.99,10461.19,671,2475798.32,36,132709.12,0
+APP00221,Courtney Mills,"Robinson, White and Jones",36,Self-Employed,106510.04,21817.79,699,6598415.56,60,183777.4,2
+APP00222,Jeremy Dalton,"Moore, Daniels and Powell",40,Self-Employed,127547.83,15070.72,689,9132435.34,120,214375.28,1
+APP00223,Elizabeth Oliver DDS,Walker-Lewis,40,Self-Employed,158691.53,20442.62,783,4975220.48,60,231355.93,0
+APP00224,Theresa Clark,Rivera-Carter,27,Salaried,133453.79,38520.02,576,8823600.1,36,171482.2,1
+APP00225,Matthew Moore,"Moreno, Barajas and Colon",39,Self-Employed,34624.05,5999.44,699,2090013.51,48,80481.26,2
+APP00226,Benjamin Smith,"Smith, Caldwell and Griffin",40,Salaried,71118.4,6237.29,669,1143612.42,24,149174.61,1
+APP00227,Kirk Carter,"Austin, Oliver and Haley",63,Salaried,76009.77,12499.44,701,2436077.84,36,169811.68,0
+APP00228,Michael Warner,"Blackwell, James and Hogan",57,Salaried,72360.01,4798.68,728,1819317.19,84,108628.66,2
+APP00229,Michael Bradshaw,Cruz PLC,29,Self-Employed,35547.42,5396.83,660,1843597.97,12,37894.38,0
+APP00230,Lori Guerrero,"Campbell, Pruitt and Short",35,Salaried,34105.23,16678.82,611,1545578.89,24,18478.29,5
+APP00231,Jessica Stephens,Robertson-Hicks,23,Self-Employed,54951.85,10271.83,679,2291001.22,24,121632.59,2
+APP00232,Susan Serrano,Williams-Villanueva,32,Salaried,45344.74,10524.19,631,2621553.01,24,61654.77,3
+APP00233,Christopher Parker,Flores Inc,41,Self-Employed,69032.87,12612.74,664,2208949.66,48,111217.77,2
+APP00234,Laura Roberts,Jackson PLC,50,Salaried,52903.38,3991.75,729,1849774.14,36,85186.49,0
+APP00235,Michael Lyons,"Smith, Jones and Santiago",31,Salaried,38561.29,6913.98,677,2465533.06,48,55389.13,0
+APP00236,Kathryn Snyder,Hancock Group,31,Self-Employed,67747.92,11145.72,651,4764881.5,48,137391.28,5
+APP00237,Andrew Reynolds,Harris Ltd,21,Salaried,58865.07,19951.55,667,3448400.58,12,98846.1,1
+APP00238,David Davis,"Rowe, Lucas and Case",36,Salaried,87439.83,11204.16,679,2188116.94,36,239795.63,1
+APP00239,Sara Johnston,"Parks, Johnson and Love",27,Salaried,160316.43,48695.53,770,3007391.69,36,115200.78,2
+APP00240,Yvonne Chambers,Miller Inc,33,Salaried,73525.18,7878.83,759,1805212.89,36,134564.83,0
+APP00241,Andrew Avila,Bauer PLC,29,Salaried,76626.94,17247.29,678,2863217.73,48,44752.99,1
+APP00242,Matthew Moon,Andrews and Sons,37,Salaried,41994.64,2942.71,748,1100336.04,48,102110.42,0
+APP00243,Kevin Walters,Russell-Hayes,21,Salaried,30821.88,7372.76,653,2036169.51,60,55377.54,0
+APP00244,Brandon Bailey MD,Hamilton-Smith,23,Self-Employed,155954.21,16753.73,693,8147573.99,48,231836.18,1
+APP00245,Shannon Rivera,"Wilson, Smith and Cortez",59,Salaried,49909.98,2066.88,710,1846856.72,36,122464.53,1
+APP00246,Donna Landry,Avila PLC,25,Salaried,36445.84,3539.41,646,1036107.93,36,56782.4,1
+APP00247,Krista Gibson,Haynes Inc,27,Salaried,58904.43,13131.39,725,2052210.47,84,55974.46,1
+APP00248,Frank Cordova,Reilly-Rodriguez,56,Salaried,72617.09,13433.0,677,2945569.72,36,110795.5,1
+APP00249,Jose Travis,"Turner, Miller and Hubbard",65,Salaried,50383.26,2336.3,722,2762480.98,48,33322.54,0
+APP00250,Kimberly Gutierrez,James-Short,26,Self-Employed,43417.49,9532.96,683,753749.1,24,106083.61,0
+APP00251,Isaiah Avila,Wells PLC,34,Self-Employed,141278.37,24133.98,887,8890644.43,84,300726.04,1
+APP00252,Olivia Harris,Taylor Group,41,Salaried,49749.5,5014.5,680,977756.78,60,113418.68,1
+APP00253,Tanya Kim,"Phillips, Walters and Evans",55,Salaried,40392.1,5097.98,592,1120759.88,60,101655.43,1
+APP00254,Barbara Dudley,"Wong, Bernard and Smith",28,Salaried,92883.47,17809.91,625,6651885.96,36,208176.97,0
+APP00255,Cynthia Moore,"Thomas, Williams and Armstrong",36,Salaried,84083.27,14020.38,771,1968601.12,24,121747.07,0
+APP00256,Kristen Davis,Medina-Arroyo,46,Salaried,57199.98,6629.22,813,1033519.62,36,42924.6,0
+APP00257,Susan Murray MD,Clark-Figueroa,42,Salaried,35488.0,4643.14,659,1785199.79,36,47541.16,2
+APP00258,Kathleen Moran,"Cooper, Gutierrez and Brewer",34,Salaried,47011.81,4040.38,814,1673044.32,60,127560.77,0
+APP00259,Denise Davenport,"Thomas, White and Jensen",37,Salaried,66541.62,7917.45,777,1165152.1,24,179783.51,0
+APP00260,Mrs. Kristen Reyes,Lee-White,24,Salaried,97115.65,5108.91,716,1187194.67,48,228807.56,1
+APP00261,Katie Suarez,"Phelps, York and Randolph",36,Salaried,42258.78,2031.5,727,707821.66,36,41699.86,0
+APP00262,Desiree Tyler,"Murray, Dunn and Roberts",35,Salaried,64066.37,6632.82,730,2778182.76,24,59907.03,1
+APP00263,Timothy Romero,King and Sons,40,Salaried,95765.93,22463.13,767,2475891.86,24,228194.5,0
+APP00264,Diane Evans,"Carpenter, Lynn and Howard",32,Self-Employed,10999.58,1816.06,749,645159.69,36,8626.15,0
+APP00265,Yvonne Burns,"Rios, Garcia and Harvey",43,Salaried,116479.57,27023.59,660,7390689.13,36,201852.23,1
+APP00266,Joshua Reed,Stewart Group,48,Salaried,44419.75,7807.79,698,919043.76,36,58570.9,1
+APP00267,Kimberly Gibson,Jensen-Torres,40,Salaried,82063.22,17505.96,822,2644174.66,48,92006.36,1
+APP00268,Colin Terry,"Hernandez, Knight and Aguirre",42,Self-Employed,78142.8,8077.08,735,1624936.28,24,162544.35,1
+APP00269,Cynthia Rowe,Jackson-Edwards,39,Salaried,113796.75,11391.28,772,3323042.87,24,313376.76,1
+APP00270,Patrick Thornton,Joseph Ltd,38,Self-Employed,92277.99,14649.44,759,2431734.04,120,207632.95,0
+APP00271,Jasmin Alvarado,Hill-Ward,31,Self-Employed,10888.22,2488.38,702,644712.21,36,16543.44,2
+APP00272,Veronica Simpson,"Quinn, Humphrey and Ford",41,Salaried,50226.7,4527.69,698,1643858.7,36,76825.88,3
+APP00273,Jonathan Lawrence,Hampton-Tucker,37,Salaried,72576.19,9250.66,770,3028886.48,60,188166.83,1
+APP00274,Shelly Alexander,Thompson PLC,59,Salaried,69272.36,8014.13,776,3632206.53,60,126958.47,0
+APP00275,Joyce Bowen,Wilkinson and Sons,54,Self-Employed,96043.79,42187.94,625,5890884.26,120,130532.43,5
+APP00276,Matthew Moore,"Gonzalez, Gross and Sims",42,Salaried,103170.69,19738.07,665,3102605.26,48,205925.12,1
+APP00277,Wayne Morgan,"Jones, Smith and Hunter",30,Self-Employed,86883.82,15635.03,746,2133279.39,36,86410.34,0
+APP00278,Marie Christian,Hess PLC,27,Salaried,54439.35,6272.11,729,3849253.83,48,33826.25,0
+APP00279,Shannon James,Hammond-Lewis,50,Salaried,32948.15,217.22,731,1028274.11,12,86623.45,0
+APP00280,Nathan Malone,Arnold PLC,41,Salaried,58249.23,16001.98,840,3044342.81,48,101408.7,2
+APP00281,Amanda Jones,"Kennedy, Rowe and Diaz",43,Salaried,88223.89,5652.84,648,4646793.11,48,77898.95,0
+APP00282,Tammie Bright,Vance PLC,21,Salaried,33670.83,4617.97,772,1442517.9,36,39049.26,1
+APP00283,Jessica Garcia,"Vincent, Anderson and Mason",47,Salaried,100470.14,6210.89,674,2582770.43,84,289643.78,1
+APP00284,Shelia Wallace,Sanders PLC,43,Self-Employed,125596.86,36070.46,685,2573158.8,36,224379.91,2
+APP00285,Stephanie Williams,Bates PLC,27,Self-Employed,59561.39,14728.4,867,2455178.29,12,109106.77,0
+APP00286,Elaine Brooks,"Martin, Palmer and Griffin",33,Salaried,16348.67,761.48,685,697365.24,36,10864.73,0
+APP00287,Joseph Knight,Knight PLC,41,Salaried,40227.78,3501.55,664,2349382.75,12,112448.24,2
+APP00288,Carolyn Miller,"Brennan, Thomas and Dennis",39,Salaried,163225.91,28197.39,723,8910503.64,84,407409.18,0
+APP00289,Lisa Allen,Williams-Juarez,35,Self-Employed,41267.16,604.63,682,2753446.8,36,76581.97,1
+APP00290,Briana Murray,Brown LLC,37,Salaried,27926.61,576.58,785,1961890.21,36,35196.64,1
+APP00291,David Smith,Williams and Sons,35,Self-Employed,143640.91,17158.76,700,7996644.79,60,303231.79,0
+APP00292,Stephanie Byrd,"Velez, Ward and Harrison",40,Salaried,71101.04,19180.18,734,1179614.19,24,158909.59,1
+APP00293,Jeremy Reed,Keith-Williams,53,Salaried,124338.8,13676.74,654,4514381.24,48,289674.24,0
+APP00294,Margaret Coleman,"Nguyen, Padilla and Boyd",21,Salaried,62300.2,17364.55,540,3023312.82,24,157777.09,4
+APP00295,Ryan Gonzalez,Davenport-Baker,36,Salaried,82816.36,15213.93,679,3926464.83,48,157348.47,2
+APP00296,John Young,"Hudson, Bennett and Gray",40,Self-Employed,82838.11,10436.48,622,1895884.89,48,101143.62,1
+APP00297,Laura Haney,"Valdez, Houston and Black",41,Salaried,97862.87,25652.0,787,4597272.99,36,148373.95,1
+APP00298,William Barrett,Kaufman-Walker,34,Salaried,183153.22,15501.92,631,6040545.31,48,445660.82,1
+APP00299,Keith Jennings,Gomez-Parrish,21,Self-Employed,98664.72,23158.03,638,3190383.99,24,101311.72,1
+APP00300,Amber Obrien,Sparks-Eaton,41,Self-Employed,21502.08,6718.19,698,1333998.18,24,19567.58,2
+APP00301,Tanner Mitchell DDS,Shaw and Sons,55,Self-Employed,93985.43,11044.75,697,3507159.42,36,204534.24,0
+APP00302,Heather Fields,Martin-Jones,23,Salaried,94685.26,3446.8,638,4132420.48,84,149767.93,1
+APP00303,Megan Le,"Campbell, Hernandez and Moore",47,Salaried,129930.84,1459.25,871,5947242.52,36,328355.31,0
+APP00304,Sara Fuller,"Love, Wilson and Hall",35,Self-Employed,44881.24,4815.53,659,2054654.47,48,36493.59,1
+APP00305,Maria Parker,Cortez-Olson,37,Salaried,115199.98,14293.15,720,2855495.38,24,144709.57,0
+APP00306,Kevin Oconnor,Mendoza-Garza,27,Salaried,91012.33,14140.19,684,4365606.66,60,98233.38,2
+APP00307,Edward Burgess,"Whitaker, Johnson and Williams",35,Self-Employed,366282.75,67837.76,750,11749404.28,36,746047.33,1
+APP00308,Carlos Ryan,"Vargas, Taylor and Hunt",51,Salaried,53962.33,8084.86,740,2768333.03,48,119724.04,1
+APP00309,Kiara Mcintyre,"Thomas, Jackson and Nielsen",44,Salaried,58873.85,5446.6,672,1221152.82,60,92087.27,1
+APP00310,Dawn Summers,"Mullen, Greene and Elliott",55,Self-Employed,55489.48,3959.98,705,3975651.0,36,90702.51,1
+APP00311,Dr. Paul Morgan,Johns Ltd,50,Salaried,60654.08,3260.32,728,3537503.65,120,48994.56,0
+APP00312,Victor Taylor,"Nicholson, Valentine and Robinson",42,Salaried,48456.21,9505.95,766,1794579.92,24,98532.01,0
+APP00313,Shannon Ramsey,"Haney, Dillon and Jackson",55,Salaried,21814.68,5569.1,627,656209.68,24,56724.88,1
+APP00314,Tracy Ballard,Burke-Norton,42,Salaried,59474.94,4301.23,845,2097569.53,48,140146.78,1
+APP00315,Richard Smith,Hanson PLC,46,Salaried,89299.69,21077.05,654,4935816.92,36,83312.05,1
+APP00316,Jordan Chambers,Jackson-Jennings,35,Self-Employed,42836.39,5248.11,701,2198555.14,36,82749.22,2
+APP00317,Lauren Carson,Carlson-Jones,39,Self-Employed,246116.93,50344.74,620,13321214.19,24,273395.03,2
+APP00318,Ashley Hall,Cruz-Rodriguez,31,Salaried,63631.86,18891.2,613,4157702.47,60,31181.02,1
+APP00319,Stephen Hoffman,Mills PLC,48,Salaried,135199.3,22162.87,658,5323839.34,48,117857.01,1
+APP00320,Connie Brown,"Barnes, Hernandez and Davis",26,Self-Employed,64543.41,4123.91,667,3367311.38,60,47266.21,1
+APP00321,Susan Turner,Valenzuela-Greene,46,Salaried,109691.32,5927.56,717,4222071.12,48,105642.27,0
+APP00322,Charles Shah,"Gordon, Wilson and Olson",36,Salaried,76396.18,12641.23,651,3841649.63,120,174418.86,1
+APP00323,Johnathan Davis,Winters PLC,50,Salaried,140013.66,11556.3,779,5669071.7,36,165388.93,0
+APP00324,Brandy Chavez,Prince Ltd,46,Salaried,77552.85,21804.68,646,4544582.8,60,159468.0,1
+APP00325,Natalie Bautista,"Reynolds, Fisher and Golden",56,Salaried,94541.72,10494.94,680,1164338.73,24,256467.05,0
+APP00326,Patrick Moore,"Moreno, Perez and Lang",45,Salaried,88205.36,15841.46,669,2200076.01,24,155405.58,2
+APP00327,Brett Burns,Bell-Ballard,22,Salaried,49032.99,9551.87,765,1460509.27,12,75835.45,1
+APP00328,Trevor Johnson,"Johnston, Coleman and Scott",37,Salaried,81833.49,30067.95,678,5623897.99,60,158670.1,2
+APP00329,Jeremy Sampson,Kent Inc,26,Salaried,161600.57,16871.42,728,6855544.15,36,113759.42,0
+APP00330,Ariana Jennings,George-Stephens,33,Salaried,57464.59,10143.27,593,1945815.1,48,82284.73,3
+APP00331,Vanessa Howard,Lopez-Fletcher,53,Salaried,91336.1,18316.96,651,3311730.74,120,143569.36,0
+APP00332,Colton Martinez,Lane Inc,44,Salaried,130285.44,17810.06,638,5095377.13,48,312873.57,1
+APP00333,Jordan Bates,"Smith, Pena and Watts",31,Salaried,105658.17,12321.42,811,6769500.51,24,252280.22,0
+APP00334,Linda Smith,Ortiz-Rodriguez,28,Salaried,61096.28,4621.14,770,4260863.54,36,154057.54,0
+APP00335,Dana Martinez,Pearson-King,38,Salaried,23616.46,5562.33,663,1479568.22,12,46768.61,0
+APP00336,Andrea Hubbard,"Henderson, Diaz and Hill",26,Salaried,74602.21,18302.84,649,4662593.72,60,119538.63,2
+APP00337,Daniel Kane,"Sanders, Harris and Arnold",31,Self-Employed,12160.01,2654.05,668,291121.74,36,27837.51,0
+APP00338,Charles Lester,"Olson, Wood and Peters",41,Salaried,138541.4,47856.44,630,3895878.99,48,307530.77,1
+APP00339,Scott Thomas,Hinton-Lane,50,Self-Employed,77409.42,15365.34,733,3697302.2,36,118619.94,1
+APP00340,David Thompson,"Sanders, Taylor and Shields",44,Self-Employed,135393.97,10495.35,661,6954950.65,60,385773.77,4
+APP00341,Allison Smith,Adkins Group,21,Salaried,36648.89,5391.09,853,885522.32,24,91234.19,0
+APP00342,Cynthia Morris,"Avery, Garcia and Romero",41,Salaried,35554.58,2065.19,816,2018679.49,48,61317.07,0
+APP00343,Anthony Harmon,Owen-Mendez,39,Self-Employed,76215.74,8622.67,797,1829011.04,60,48407.41,1
+APP00344,Nichole Alvarez,"Mann, Martin and Oconnell",42,Salaried,71239.56,22042.62,729,1979080.53,24,63905.42,1
+APP00345,Kayla Rodriguez,Brock and Sons,54,Salaried,60618.1,13631.62,691,1843258.99,24,131331.2,0
+APP00346,Theresa Williams,Frost-Graham,21,Salaried,57135.79,4462.63,759,3585812.92,84,42709.4,1
+APP00347,Sharon Boyd,Baker LLC,32,Salaried,222605.34,85927.76,641,12449211.12,60,300809.66,2
+APP00348,Victor Brown,Lynch Ltd,44,Salaried,107690.75,6937.47,838,4721283.76,84,209708.3,0
+APP00349,James Parks,Arias-Morales,22,Self-Employed,105801.07,18499.62,733,6473434.07,84,260289.36,1
+APP00350,Theodore Jones Jr.,"Meyer, Dawson and Harper",53,Self-Employed,124117.98,32589.05,711,7543356.44,60,282258.58,1
+APP00351,Ana Hill,Bowman Group,42,Salaried,140741.91,37878.97,687,4980854.33,60,293628.48,2
+APP00352,Kimberly Nguyen,Harris Ltd,46,Self-Employed,60185.21,4155.02,814,3544080.29,84,88279.28,2
+APP00353,Kerry Chavez DDS,"Mitchell, Johnson and Greene",32,Salaried,25416.83,2116.37,636,619524.29,36,20841.82,1
+APP00354,Michael Farrell,"Hale, Gilbert and Craig",46,Self-Employed,60247.82,6712.16,814,2542080.45,48,123689.67,2
+APP00355,Patricia Le,Allen-Smith,49,Salaried,108969.5,13477.12,720,2080718.45,36,97448.73,0
+APP00356,Jesse Perez,Miller LLC,40,Self-Employed,32587.26,8424.97,612,1225530.93,48,54005.32,1
+APP00357,Jesse Perry,Gomez-Foster,40,Self-Employed,56788.03,5780.31,675,2454489.16,24,159090.11,1
+APP00358,Jeffery Ortega,"Gonzalez, Smith and Padilla",41,Salaried,52373.52,7578.26,584,879618.53,12,91133.35,3
+APP00359,Christian Leblanc,Dunn Ltd,29,Salaried,121094.96,10267.99,762,4814343.97,48,245128.97,1
+APP00360,Ronald Davis,"Herman, Bailey and Richmond",37,Self-Employed,104768.62,20944.11,628,5353700.83,48,206880.88,2
+APP00361,Parker Cain,Perez-Mccarty,36,Salaried,90329.79,12511.4,709,4412185.17,60,216572.4,2
+APP00362,Laurie Hoffman,Spears-Andrews,42,Salaried,95668.63,13722.95,797,1460021.27,12,140977.06,0
+APP00363,Bryan Gomez,Thompson-Hunter,48,Self-Employed,66980.55,22068.95,645,1186920.85,36,97557.35,1
+APP00364,Nicole Parrish,"Jones, Phillips and Arroyo",27,Salaried,65523.65,2098.21,714,2167612.56,36,60601.57,1
+APP00365,Tracy Burke,"Frye, Walter and Li",37,Salaried,40009.28,3054.24,645,2503026.49,24,78376.61,1
+APP00366,Kenneth Lewis,"Wright, Ramos and Bennett",53,Salaried,28272.46,5282.17,699,1814677.82,12,31767.39,0
+APP00367,Courtney Rodriguez,Carrillo-Todd,31,Salaried,67669.23,6800.55,874,2069106.76,36,113695.77,1
+APP00368,Holly Farmer,Maldonado-Mosley,30,Self-Employed,71196.87,9594.1,776,3925334.34,84,160448.06,0
+APP00369,Renee Bruce,Olson LLC,40,Salaried,121785.46,25033.48,703,5680492.18,48,59433.96,0
+APP00370,Sabrina Austin,Reyes and Sons,46,Salaried,153375.33,37882.15,676,10890466.54,36,256741.03,0
+APP00371,Allison Hickman,"Haynes, Mcbride and Gutierrez",38,Salaried,139905.62,18406.67,713,2473340.41,24,122025.29,1
+APP00372,Debra White,Black-Smith,51,Self-Employed,34187.5,7674.84,694,1534090.59,12,36373.31,2
+APP00373,Ellen Morgan,Wright-Davis,47,Salaried,64538.87,6849.01,694,3068968.97,12,35860.88,1
+APP00374,Sergio Knight,"Goodman, Peterson and Spencer",46,Self-Employed,96227.07,14852.99,729,2931087.64,120,82021.27,2
+APP00375,Charles Schultz,Woods LLC,44,Self-Employed,395737.18,67080.55,607,5863714.84,24,1074483.71,4
+APP00376,Paul Lewis,Shannon LLC,61,Self-Employed,193745.64,38023.5,633,2930649.32,24,523556.37,2
+APP00377,Glen Wood,Valentine Ltd,36,Self-Employed,134094.11,20487.0,749,5258779.85,84,284809.32,0
+APP00378,Paula Bradley,Porter and Sons,21,Self-Employed,38113.61,949.37,676,2040923.88,48,76393.54,0
+APP00379,Anthony Moore,Moss LLC,54,Self-Employed,37048.84,8334.5,745,2001028.02,36,80313.86,1
+APP00380,Megan Nelson,Perez and Sons,33,Salaried,92559.92,37672.99,658,2115752.23,48,202104.33,2
+APP00381,Karla Ramos,"Kelly, Maxwell and Wilson",39,Self-Employed,29387.72,7147.3,604,1865483.57,60,46420.49,0
+APP00382,Paul Wilson,Lowe Ltd,51,Salaried,67930.87,4876.25,731,2352428.72,12,38523.49,1
+APP00383,Douglas Gregory,Austin-Duran,22,Salaried,53014.83,15353.21,590,3703726.11,36,103075.98,1
+APP00384,Mr. Andrew Foster,"Rubio, Charles and Watson",25,Self-Employed,161633.33,36758.37,757,3085512.07,60,424248.05,0
+APP00385,Aimee Turner,Vasquez-Galloway,22,Self-Employed,39591.86,10544.65,680,2462110.07,60,39300.41,1
+APP00386,Chad Scott,"Melton, Henry and Joyce",30,Self-Employed,10290.09,1234.58,828,684293.7,120,16043.92,1
+APP00387,Adam Burgess,"Ramirez, Walker and Ray",42,Salaried,90755.58,29144.59,676,5568810.54,48,106899.32,6
+APP00388,James Padilla,Fox Group,43,Salaried,53407.56,10073.24,598,3232784.58,84,71403.67,4
+APP00389,Sandra Drake,Ayers-Johnson,41,Salaried,72884.89,16133.16,536,2454661.28,36,149308.99,4
+APP00390,Scott Williams,Long-Parks,24,Salaried,55275.68,4670.78,677,3029139.46,48,76552.24,1
+APP00391,Thomas Atkins,Bryant Inc,21,Salaried,48626.39,6572.89,641,2273808.6,60,129341.73,1
+APP00392,Laura Mckinney,"Holmes, Stewart and Smith",39,Salaried,99683.82,32287.72,796,3735027.81,36,206690.06,1
+APP00393,Brian Smith,"Clark, Carpenter and Nguyen",33,Salaried,32559.15,10282.07,687,2330802.15,24,15604.13,1
+APP00394,Robert Montgomery,"Hensley, Lopez and Baker",43,Self-Employed,46306.95,9616.98,730,1362687.63,24,105670.52,3
+APP00395,Tamara Davis,Ruiz-Austin,45,Salaried,101761.82,17581.53,707,3743678.95,84,226118.94,0
+APP00396,Dana Chapman,White-Coleman,39,Self-Employed,41313.14,63.5,724,2733759.02,12,73944.64,1
+APP00397,Jennifer Collins,Haynes-Watson,46,Salaried,36665.05,3458.54,719,1075770.69,48,60859.64,1
+APP00398,Gary Jackson,Ramirez-White,40,Salaried,95482.39,13865.48,750,2020490.25,36,229238.86,3
+APP00399,Ashley Hicks,Krause Ltd,43,Salaried,121256.08,13332.72,737,3710434.37,48,178984.94,1
+APP00400,Hannah Luna,Olsen Ltd,31,Salaried,61982.2,8069.4,667,3567615.03,48,52074.86,0
+APP00401,Robin Young,Brock-Peters,36,Self-Employed,15523.76,1851.36,829,987175.33,60,18718.35,0
+APP00402,Craig Morrison,Gonzalez-Marsh,40,Salaried,97103.58,4019.25,711,1832024.12,12,110594.85,1
+APP00403,Mary Thompson,"Hernandez, Shaffer and Thompson",46,Salaried,35831.86,12323.65,641,1766609.5,24,65352.63,2
+APP00404,Kathleen Webster,Taylor-Barry,34,Self-Employed,74167.7,11701.31,557,3414474.09,24,64708.76,0
+APP00405,Joann Glass,"Holmes, Le and Floyd",43,Self-Employed,35729.52,4059.6,741,1862503.73,60,71171.49,2
+APP00406,Madison Weber,King-Garrison,35,Salaried,39489.15,5746.75,719,2063836.37,60,60962.23,1
+APP00407,Lori Hernandez,Ross Ltd,37,Salaried,55901.16,6996.46,707,3888934.31,36,136203.18,2
+APP00408,Jeremy Turner,Brown LLC,46,Salaried,69637.49,4563.25,701,2283535.21,24,115346.7,1
+APP00409,Anthony Romero,Combs-Davis,21,Salaried,41158.87,2483.75,706,1234190.53,24,112745.94,0
+APP00410,Jesse Brown,"Cook, Ward and Castro",25,Salaried,75983.68,4969.95,718,3561622.29,48,202207.64,0
+APP00411,Angela Lin,Cooper-Jenkins,23,Salaried,46347.19,5815.33,759,1750306.79,48,41841.78,0
+APP00412,Lisa Hunter,Dillon-Mccarty,21,Self-Employed,99301.1,16281.35,734,4014272.29,60,201958.25,2
+APP00413,Julian Conner,Ray Ltd,31,Salaried,71781.23,11379.96,712,1159742.06,24,68507.67,0
+APP00414,Joanna Pacheco,"Ryan, Krause and Mitchell",45,Salaried,54648.25,6462.44,774,1141849.48,36,131538.17,1
+APP00415,Erica Alvarez,Nunez-Freeman,35,Salaried,45072.87,4611.76,730,3070476.67,36,89353.42,0
+APP00416,Antonio Garcia,"Griffin, Miller and Austin",40,Self-Employed,20277.95,2330.25,658,326424.11,12,23609.97,3
+APP00417,Gwendolyn Klein,Welch-Thomas,49,Salaried,86195.4,11247.5,712,4086415.07,36,90466.59,2
+APP00418,Carrie Wright,Davidson LLC,51,Self-Employed,53638.41,5637.47,638,3072113.32,36,79987.34,1
+APP00419,Jeffrey Mills,Welch-Duncan,37,Self-Employed,11782.29,1564.91,684,149774.25,36,27519.46,4
+APP00420,Jake Campbell,Miller LLC,52,Salaried,59425.01,14558.38,606,1507308.84,12,129864.17,1
+APP00421,George Harper,Edwards Ltd,39,Salaried,46566.66,8254.15,617,1612338.92,24,24760.97,3
+APP00422,Maria Jones,Page-Jacobs,30,Salaried,126851.96,26291.07,553,5379670.79,48,142783.21,3
+APP00423,Michael Mitchell,Nelson-Wallace,32,Salaried,29779.01,3083.75,724,967690.41,36,43968.82,0
+APP00424,Mary Escobar,Adkins-Meyer,23,Self-Employed,18777.07,3914.15,800,956502.92,12,33033.71,1
+APP00425,Felicia Aguilar,Gutierrez-White,29,Salaried,101509.08,28442.2,671,2596993.07,36,76273.76,2
+APP00426,Gregory Ponce,Martinez and Sons,34,Self-Employed,154455.09,58133.18,717,2089619.29,12,167795.84,1
+APP00427,Jenna Larson,"King, Manning and Brady",46,Salaried,54084.34,10031.7,833,654110.18,24,133171.51,2
+APP00428,Emily Bennett,Jackson Inc,55,Salaried,56903.01,5920.22,759,1862476.63,12,91237.34,0
+APP00429,Robin Santiago,Brown Group,24,Salaried,75842.29,15555.98,643,2555867.44,36,160656.11,2
+APP00430,Nancy Jennings,"Brown, Wise and Warren",42,Salaried,25380.34,4493.3,671,1749117.93,36,39603.64,1
+APP00431,Maria Henderson,Garcia PLC,28,Salaried,26301.9,10695.13,674,386291.94,12,34835.68,1
+APP00432,Jack White,Miller Group,43,Salaried,64468.85,13867.72,650,2823987.11,48,118223.68,2
+APP00433,Travis Tucker,Perez-Rojas,37,Salaried,136988.27,11369.97,704,6393078.13,60,150790.18,0
+APP00434,Chad Jones,Sims-Anderson,21,Self-Employed,36855.76,12032.67,760,1988607.9,36,34679.1,0
+APP00435,Ashley Wise,Johnson Ltd,47,Salaried,79139.21,18787.33,761,3982607.7,60,207380.34,1
+APP00436,Sophia Johnson,Dalton-Nguyen,32,Self-Employed,128817.49,748.44,650,1608720.41,24,343262.07,0
+APP00437,Ralph Anderson,Mcdonald-Pitts,33,Salaried,167493.7,36332.31,653,8359855.3,84,350081.6,1
+APP00438,Christopher Guerra,Dunn-Taylor,27,Salaried,46243.88,9875.0,675,1449434.62,36,34815.55,1
+APP00439,Rhonda Martin,"Ryan, Garza and Bryant",31,Salaried,62772.6,25644.55,680,3664170.59,84,28749.5,3
+APP00440,Jason Rhodes,"Fields, Elliott and Mills",42,Salaried,164201.56,12065.0,808,3826212.15,48,148446.61,0
+APP00441,Jeremy Mitchell,"Ferguson, Stout and Olson",36,Salaried,33963.43,5117.7,860,1867049.19,36,89324.91,2
+APP00442,Joann Ferguson,Ballard Group,41,Salaried,113534.75,13366.54,704,5623344.23,36,271480.16,0
+APP00443,Robert Harrison,Diaz-Green,42,Self-Employed,32234.55,1815.19,717,1648392.69,24,56629.42,0
+APP00444,Holly Valentine,Smith-Mills,51,Salaried,79193.92,10251.73,736,1786366.18,12,216423.25,2
+APP00445,Mrs. Diane Reyes,Cooper Group,35,Salaried,59666.75,15504.54,655,3111647.46,24,44981.58,1
+APP00446,Tracy Montoya,"Smith, Weeks and Arroyo",23,Salaried,36810.63,6293.86,686,2069446.15,48,63889.54,2
+APP00447,Brenda Wright,Evans-Cannon,49,Salaried,48588.7,17990.27,625,2009853.01,60,37932.83,3
+APP00448,Shelly Spencer,Harper-Robles,35,Salaried,75364.78,3424.77,571,2443472.33,12,93249.2,1
+APP00449,Ryan Rosales,"Brooks, Jenkins and Castro",49,Salaried,118365.77,35539.38,682,2603252.92,48,286732.8,2
+APP00450,Phillip Nelson,Wright-Espinoza,42,Salaried,68223.46,23873.88,657,2005608.27,48,150324.22,2
+APP00451,Brittany Kim,"Price, Gray and Baker",37,Salaried,70386.08,8173.2,794,4070405.89,120,50022.76,1
+APP00452,Courtney Hayes,Garrett-Black,41,Self-Employed,96951.33,31946.73,626,3544932.7,60,91007.86,5
+APP00453,Alexander Brown,"Aguirre, Cohen and Mitchell",58,Salaried,48840.43,6921.32,653,2645334.21,24,90136.41,0
+APP00454,Cynthia Vang,"Patel, Adams and Lopez",59,Self-Employed,115383.51,25439.19,686,6508262.49,36,67078.75,1
+APP00455,Alfred Galvan,White LLC,39,Salaried,100993.33,29019.71,551,5297121.74,60,162174.82,2
+APP00456,Marie Moody,Walsh PLC,40,Salaried,228086.23,48472.1,645,11954524.9,36,399796.79,0
+APP00457,Dustin Gallegos,Nelson-Dean,49,Self-Employed,52836.58,3397.02,778,2570420.08,84,62767.79,0
+APP00458,Brenda Thornton,Flores and Sons,30,Salaried,50796.58,5844.46,718,2189602.76,84,59019.85,0
+APP00459,Aaron Miller,Booker Inc,41,Self-Employed,111348.33,17765.07,751,2657773.38,84,109914.87,2
+APP00460,Ruben Dunn,Compton LLC,38,Salaried,99789.77,30819.66,586,6243666.36,48,239570.75,0
+APP00461,Kelsey Rodriguez,Martinez-Gonzales,41,Salaried,56199.52,4233.93,709,3925865.32,84,79619.14,1
+APP00462,Eric Williams,Hall and Sons,30,Self-Employed,42795.88,12000.42,649,1711366.23,36,72236.25,2
+APP00463,Riley Bryant,Snyder LLC,22,Salaried,71216.94,28923.08,686,4842347.61,24,71167.66,4
+APP00464,Taylor Carlson,Collins-Lloyd,21,Salaried,37898.83,5884.29,767,2724155.58,24,78885.36,0
+APP00465,Jose Allen,Ford-Moody,27,Salaried,49837.64,749.76,786,2051903.23,24,37275.29,0
+APP00466,Jeffrey Mendez,Miller-Christensen,33,Salaried,67570.02,21123.64,766,3747522.57,48,38714.49,2
+APP00467,Jason Beck,Brown Group,35,Self-Employed,121486.17,14950.78,709,6150531.48,120,269146.32,0
+APP00468,William Jones,Daniels and Sons,57,Salaried,57611.23,6771.05,812,1511481.87,48,125623.06,0
+APP00469,Katie Mcneil,Huang LLC,49,Salaried,33006.81,12580.08,585,489338.06,12,31058.34,3
+APP00470,Jeanette Harrison,Clayton-Martinez,28,Self-Employed,14443.58,935.68,675,566207.43,24,19392.97,0
+APP00471,Veronica King,"Wright, Wise and Ramos",41,Salaried,40567.27,1353.66,760,2402892.67,24,115409.08,2
+APP00472,Richard Cooper,"Vang, Gonzalez and Moss",34,Self-Employed,23830.15,3201.5,625,750842.42,12,16912.7,1
+APP00473,Lori Ingram,Boyd and Sons,35,Salaried,62077.2,28720.14,655,3666671.71,24,45706.69,4
+APP00474,Evelyn Williams,Price-Ali,40,Salaried,41392.34,3842.37,742,2122934.5,48,62170.86,0
+APP00475,Robin Thompson,Moore-Chandler,44,Self-Employed,41119.75,9394.79,750,2209466.2,48,43897.95,2
+APP00476,Julie Dominguez,"Pineda, Meyer and King",35,Salaried,46974.97,7202.66,723,1369059.81,48,92061.48,0
+APP00477,Robin Brown,"Evans, Ward and Williams",49,Salaried,62026.29,12424.23,693,2493633.33,60,124270.5,2
+APP00478,Judith Carter,"Robinson, Rodriguez and Chen",27,Salaried,108705.0,13819.34,731,2489586.79,24,184857.29,2
+APP00479,Curtis Williams,Smith-Bauer,38,Self-Employed,99735.52,10800.72,679,2672396.49,48,191311.07,1
+APP00480,Kaylee Hays,"Wilson, Mccormick and Smith",64,Self-Employed,69530.63,14726.0,616,1209207.31,12,98445.67,4
+APP00481,Dawn Mullins,Perkins Ltd,40,Salaried,57433.63,5055.05,765,1126067.04,24,131827.82,0
+APP00482,Howard Norman,Barker-Moore,52,Salaried,62229.69,17923.87,705,1532767.6,24,32240.11,0
+APP00483,Evelyn Martinez,Wright Group,39,Self-Employed,79874.96,6989.6,712,3739270.67,24,97936.81,0
+APP00484,Steve Paul,Parks LLC,44,Salaried,96216.73,41916.77,635,3701714.34,36,166401.85,3
+APP00485,Jasmine Beltran,"Brown, Kelly and Moore",37,Salaried,45332.16,10047.44,797,1270042.57,12,53372.92,1
+APP00486,Jonathan Glass MD,"Moody, Martinez and Hall",36,Salaried,68490.18,20604.59,663,4360546.91,36,40518.45,1
+APP00487,Monica Miller,"Kramer, Sherman and Trujillo",30,Salaried,25021.54,4886.17,647,1088658.69,60,30763.9,3
+APP00488,Samantha Gardner,Quinn-Smith,42,Self-Employed,76253.2,11018.29,611,5138441.16,48,161207.08,1
+APP00489,Bobby Guerrero,Howard-Taylor,29,Self-Employed,95474.21,11686.29,729,4783057.22,60,72149.62,0
+APP00490,Lance Simmons,Washington Group,45,Self-Employed,55894.15,12069.29,727,723675.82,120,115254.15,2
+APP00491,Heather Williams,"Phillips, Terry and Lopez",49,Salaried,171267.06,26444.38,762,11442102.16,60,385414.42,1
+APP00492,Heather Bolton,Stephens LLC,42,Salaried,48648.09,15015.35,665,3086614.3,36,85911.55,3
+APP00493,William Gould,"Mcdonald, Dillon and George",35,Salaried,73391.03,21173.56,764,3678084.96,120,69749.47,0
+APP00494,Mark Cox,"Martin, Schmidt and Cole",43,Salaried,71980.19,19881.17,737,3173348.57,24,155920.32,1
+APP00495,Meghan Cisneros,Weaver-Gibson,35,Salaried,63613.11,17924.21,745,2492079.52,24,56624.25,2
+APP00496,Lawrence Harrington,"Hunter, Gross and Andrade",47,Salaried,71832.85,17389.52,773,2940153.94,36,174548.57,0
+APP00497,Austin Osborne,"Vincent, Parsons and Allen",21,Salaried,57715.77,8638.53,777,3356358.94,36,121029.28,3
+APP00498,James Bradley,"Brown, Coffey and Fuentes",35,Salaried,97469.06,10669.46,693,4170554.44,84,58671.12,2
+APP00499,Meghan Rush,Warren Group,21,Self-Employed,131162.68,16005.5,637,2959224.39,12,307680.33,1
+APP00500,Phillip Berry,"Moore, Campbell and Ortiz",23,Salaried,56592.66,13685.6,694,876657.39,36,87862.44,4
+APP00501,Jennifer Banks,Rodriguez-Mills,52,Salaried,109145.2,8263.2,785,2136100.07,48,171342.53,0
+APP00502,Brian Fitzgerald,Williams and Sons,47,Self-Employed,42066.0,10299.53,807,1139419.37,84,57267.35,0
+APP00503,Mr. Justin Green III,Russo and Sons,31,Self-Employed,98293.09,5803.54,818,3348260.58,24,192363.77,0
+APP00504,Zachary Mitchell,Washington Inc,23,Self-Employed,30210.45,7178.1,831,1980142.46,24,61533.92,0
+APP00505,Katherine Martinez,Duncan Group,21,Salaried,89848.97,17249.64,743,2367092.15,84,222549.42,1
+APP00506,Jodi Roach,"Burns, Hanson and Garza",33,Self-Employed,277268.42,27111.42,704,8644096.24,60,311803.89,3
+APP00507,Brandon Fleming,Diaz PLC,62,Salaried,71582.4,4263.54,643,1816823.64,12,144244.83,1
+APP00508,Emma Reed,"Jones, Conrad and Clark",42,Salaried,26964.61,9889.42,683,1206518.26,12,48792.94,2
+APP00509,Joshua Vance,Hebert-Collier,32,Salaried,50069.97,9885.9,687,2454690.44,60,98692.47,0
+APP00510,Michelle Ho,Owen-Brown,43,Salaried,127339.4,11373.51,719,5593720.7,60,210763.4,2
+APP00511,Rebecca Hicks,"Paul, Zamora and Short",22,Salaried,71600.81,26084.56,654,4948431.98,60,86523.53,3
+APP00512,Curtis Taylor,"Brown, Jensen and Rice",35,Salaried,74437.86,22593.01,718,5338882.79,84,151914.75,1
+APP00513,Allison Spencer,"Jones, Torres and Blackburn",39,Self-Employed,128651.57,32986.17,706,8007757.47,36,140200.86,0
+APP00514,Robert Arnold,"Davis, Hardy and Schmidt",37,Salaried,84812.98,6105.78,765,5115729.79,36,83406.16,2
+APP00515,Angelica Parker,Lee Ltd,46,Salaried,130812.27,13698.36,571,4442798.96,60,231138.23,0
+APP00516,Dr. Kelly Hammond DVM,Hudson and Sons,41,Salaried,108141.23,2074.65,759,5059605.08,84,125207.38,0
+APP00517,William Day,"Curry, Perry and Garcia",45,Salaried,148351.3,12179.66,780,4908698.91,48,82950.23,2
+APP00518,Michael Cooper,"Ray, Craig and Park",31,Salaried,74332.88,11272.67,824,4390200.22,60,43205.96,1
+APP00519,Penny Bowman,Andrade-Jackson,47,Salaried,113653.42,21711.02,750,2535592.85,24,230013.03,1
+APP00520,Vincent Reynolds,Pierce PLC,54,Salaried,65863.19,16727.1,813,1646599.73,12,168638.66,0
+APP00521,Amy Martinez,Sandoval-Ferguson,28,Self-Employed,36264.73,3456.66,746,519370.63,60,56526.46,0
+APP00522,Christopher Morris,"Ramos, Gomez and Edwards",29,Self-Employed,184950.65,5306.58,746,8976835.16,36,158170.82,0
+APP00523,Hannah Everett,Kirk-Gutierrez,51,Salaried,83352.53,5398.66,757,4443714.97,12,205279.18,1
+APP00524,Sarah King,"Jordan, Swanson and Franklin",36,Salaried,96782.9,25497.27,710,1180919.46,36,96941.06,0
+APP00525,Krista Martinez,"Gardner, Brooks and Pierce",52,Self-Employed,74970.5,25075.8,608,3197277.99,36,186615.19,3
+APP00526,Joseph Shaw,"King, Nixon and West",34,Self-Employed,39630.87,5668.59,683,1371722.22,24,70213.76,1
+APP00527,Todd Moore,Smith-Johnson,53,Salaried,75999.69,11889.96,645,4525237.71,84,75769.87,1
+APP00528,Michelle Jacobs,Larson-Holmes,39,Self-Employed,173510.08,53365.18,736,2486997.2,24,255481.59,0
+APP00529,Kristy Bryan,Smith-Joyce,41,Self-Employed,95875.96,15334.52,712,1429888.51,36,118063.22,1
+APP00530,Angel May,Foley Inc,54,Self-Employed,20747.91,2595.21,695,1021057.48,24,47627.57,1
+APP00531,Marilyn Wang,"Short, Ellison and Dixon",34,Salaried,59657.47,16204.22,645,2833630.26,24,39416.12,2
+APP00532,Mark Jimenez,"Howe, Moore and Johnson",29,Salaried,137372.21,38300.81,708,8498586.69,60,312401.91,2
+APP00533,Donna Frye,Moore-Baker,34,Salaried,59696.34,9094.27,744,2837726.22,36,133369.66,2
+APP00534,Dr. Michael Evans,"Wright, Scott and Evans",43,Salaried,32534.36,8909.55,641,2243642.56,60,74506.63,0
+APP00535,Anthony Gonzales,"Ross, Hardin and Navarro",22,Salaried,130855.52,12991.15,658,4038604.12,120,340433.41,0
+APP00536,Mr. Lawrence Edwards,"Nguyen, Olson and Freeman",44,Salaried,100564.95,16956.98,782,3607796.33,84,98941.8,0
+APP00537,Morgan Valencia,"Warner, Weiss and Davis",33,Salaried,62887.15,12683.73,592,4443636.15,48,101923.69,3
+APP00538,Bianca Wood,"Evans, Cross and Johnston",49,Salaried,63985.02,5572.38,770,1180616.62,12,160635.02,0
+APP00539,Emma Owens,Deleon LLC,21,Self-Employed,106662.47,11027.98,832,6373540.25,84,146004.79,0
+APP00540,David Davis,Hobbs-Hamilton,30,Salaried,48914.47,6129.45,813,620926.32,24,29849.05,1
+APP00541,James Gilbert,Kane and Sons,21,Salaried,92208.16,22215.37,728,3798127.21,84,99679.44,2
+APP00542,Sean Moore,"Delgado, Guzman and Smith",30,Self-Employed,82946.21,26939.89,684,1758803.12,48,76757.43,4
+APP00543,Kenneth Edwards,"Reyes, Torres and Williams",40,Self-Employed,76253.18,24796.65,821,3654944.54,48,170821.72,1
+APP00544,Kathleen Robertson,"Cunningham, Murphy and Wolfe",36,Self-Employed,67817.77,19398.69,552,4061619.52,36,96454.26,1
+APP00545,Mr. Alexander Landry MD,Williams Ltd,35,Self-Employed,53525.9,6182.39,675,748428.01,36,111403.25,2
+APP00546,Cindy Gomez,Maddox-Mullins,36,Self-Employed,127346.53,50899.57,711,2779511.61,48,296040.38,2
+APP00547,Johnny Khan,"Wagner, Walker and Roberts",40,Salaried,47879.51,935.55,727,1558795.12,12,59168.41,0
+APP00548,Julie Herrera,Hernandez-Rogers,28,Salaried,29291.93,8069.96,768,801074.01,24,60692.43,1
+APP00549,Jessica Khan,Duncan-Williams,45,Salaried,98624.13,22748.49,683,3451173.19,60,48590.36,2
+APP00550,Pamela Diaz,Baker-Ross,45,Salaried,99372.47,4929.98,750,6867840.02,48,73677.83,0
+APP00551,Kelly Lee,Ayala-Anderson,42,Self-Employed,92022.07,13321.01,712,1663056.74,12,77223.43,0
+APP00552,Angel Gordon,Castillo and Sons,44,Salaried,88872.7,17217.82,690,3323565.68,48,102821.59,0
+APP00553,Diana Hays,Foster-Duncan,41,Salaried,61895.92,4010.83,662,2440276.53,60,90283.03,3
+APP00554,Barbara Hester,"Gilbert, Fitzgerald and Sanchez",58,Salaried,107786.68,18531.54,710,3106468.64,84,166750.56,2
+APP00555,Robert Morgan,Adams Group,37,Salaried,66816.06,5144.54,692,1918315.25,12,71524.43,0
+APP00556,Nicole Gonzalez,Cohen-Johnston,35,Salaried,53450.31,10641.62,762,2933627.21,60,32032.03,1
+APP00557,Kathryn Williams,Powers Group,30,Salaried,54250.64,11589.18,757,2662113.0,60,106303.25,0
+APP00558,Gary Wells,Bailey-Flores,28,Self-Employed,227310.32,9997.55,794,13813630.19,84,124306.25,1
+APP00559,Larry Robertson,"Rios, Carrillo and Jackson",26,Salaried,27083.23,4601.97,657,983240.13,24,62542.36,0
+APP00560,Louis Martin,Jensen-Branch,29,Self-Employed,79456.0,19641.23,581,3845881.71,12,196572.82,2
+APP00561,Nancy Evans MD,Hanson-Alexander,37,Salaried,32035.51,706.39,731,2102019.01,36,72106.48,1
+APP00562,Kim Erickson,Gonzalez LLC,41,Salaried,68101.04,15548.25,890,4295793.58,48,120044.6,0
+APP00563,Robert Richardson,Todd Inc,39,Salaried,57467.39,14641.28,773,3861889.5,48,107441.74,1
+APP00564,Veronica Silva,Singh and Sons,30,Self-Employed,13185.74,5037.67,644,371026.93,60,22726.43,1
+APP00565,Molly Watts,"Mcintosh, Melton and Wilkins",47,Salaried,90094.02,19522.73,713,6407961.85,36,227282.2,2
+APP00566,John Coffey,Cooper Inc,45,Self-Employed,52116.47,4092.29,767,3178239.4,84,145742.94,1
+APP00567,Paula Lane,Cole-Johnson,36,Salaried,26196.64,5228.12,623,1563637.34,24,36948.7,1
+APP00568,Lauren Jackson,Singh and Sons,31,Salaried,92286.77,19340.46,786,4803961.48,84,168760.63,1
+APP00569,Lisa Randall,Payne LLC,43,Self-Employed,181581.81,50925.48,683,12891596.11,48,391393.25,1
+APP00570,Michael Johnson,"Webb, Blair and Thomas",40,Salaried,138192.53,47336.68,648,5319554.74,60,57559.33,3
+APP00571,Ashley Smith,"Barnett, Bennett and Escobar",24,Salaried,67550.84,12952.95,693,3816106.14,60,111005.09,2
+APP00572,Christian Vaughn,"Williams, Jackson and Campbell",37,Self-Employed,64031.5,10273.11,765,3453133.87,84,125575.25,2
+APP00573,Reginald Knapp,"Williamson, Brown and Pena",41,Salaried,129978.35,24706.93,661,7269082.91,36,269715.47,1
+APP00574,Nancy Brown,Jones Ltd,29,Salaried,131332.79,19315.3,581,7497511.72,36,173018.82,3
+APP00575,Daniel Nguyen,Alvarado-Durham,40,Salaried,117706.92,24970.82,738,2759680.38,84,130381.14,0
+APP00576,Kelly Edwards,Lin-Smith,23,Salaried,37084.54,2792.94,601,1221679.14,12,34094.82,1
+APP00577,Thomas Peterson,"Hughes, Whitney and Romero",51,Self-Employed,79155.81,21466.94,661,2812820.53,48,129628.77,2
+APP00578,Raymond Le,"Garcia, Stewart and Delacruz",50,Self-Employed,93516.51,21536.44,727,5319218.25,24,231551.12,4
+APP00579,Melissa Bishop,"Miller, Gonzalez and Rasmussen",35,Salaried,29477.46,5838.31,740,1620519.79,12,72768.31,1
+APP00580,David Grant,"House, Smith and Wright",42,Self-Employed,91323.86,7458.77,800,5662259.68,60,122624.81,0
+APP00581,William Evans,"Torres, Burns and Garner",21,Salaried,152960.47,10684.62,732,9072261.16,60,168969.33,3
+APP00582,Daniel Bush,Reed LLC,26,Salaried,78856.14,24316.58,848,3766329.32,60,164876.04,0
+APP00583,Gregory Peck,Garrett-Young,35,Salaried,129151.93,49475.14,627,2634300.1,36,241452.98,2
+APP00584,Denise Martinez,"Hill, Brown and Scott",27,Self-Employed,61944.64,13731.85,711,3105118.3,48,97123.02,2
+APP00585,Jamie Baird,Zamora-Briggs,45,Salaried,72375.63,30038.48,616,4720596.02,120,84461.62,3
+APP00586,Tina Ballard,Raymond LLC,58,Salaried,89779.71,26052.43,764,4541997.17,48,62131.55,0
+APP00587,Dwayne Klein,Hernandez Group,26,Salaried,40957.37,3687.43,733,2692438.85,36,96330.93,0
+APP00588,Jeremy Scott,"Taylor, Blair and Meyer",30,Self-Employed,28904.95,5738.9,763,2079514.39,36,53207.75,4
+APP00589,Dale Ryan,"Salazar, Garrett and Perez",40,Salaried,124951.91,17746.48,667,4192403.27,84,167409.15,2
+APP00590,Melissa Taylor,Berry Group,54,Salaried,140238.0,32062.35,785,7768817.94,48,347402.76,1
+APP00591,Laurie Sanchez,Browning-Murphy,26,Self-Employed,26858.15,4893.44,743,1192435.12,36,52464.6,1
+APP00592,Kiara Little,"Anderson, Delgado and Carpenter",40,Salaried,109255.74,27046.65,696,4293565.7,48,270261.91,1
+APP00593,Jason Love,"Mcbride, Huffman and Parker",56,Salaried,72722.8,19095.95,713,1919301.89,36,106514.72,2
+APP00594,Randy Smith,"Roach, Browning and Jordan",21,Salaried,64087.35,7201.24,719,1714649.17,48,98989.24,2
+APP00595,Tanya Russell,Douglas PLC,25,Salaried,71715.04,12427.45,745,1656498.16,24,186226.68,0
+APP00596,Sherry Woods,Stewart PLC,34,Salaried,102815.6,21135.28,692,5129368.48,60,267470.98,1
+APP00597,Victor Morris,"Fry, Wilson and Stewart",33,Self-Employed,62517.1,15114.26,672,1283050.14,12,159489.35,0
+APP00598,Susan Davis,Acosta LLC,46,Salaried,142645.11,45593.96,607,5403851.64,60,305282.38,5
+APP00599,Kimberly Sharp,Ali-Turner,40,Salaried,81233.5,6601.14,607,3525533.29,48,129058.13,2
+APP00600,Susan Thompson,"Peck, Shannon and Mahoney",21,Self-Employed,77397.31,7686.14,771,2963857.81,60,75448.13,1
+APP00601,Casey Gillespie,Hernandez-Lopez,43,Salaried,50276.81,4766.72,662,3182309.52,36,69857.49,0
+APP00602,Jennifer Simpson DVM,Lopez PLC,32,Salaried,169262.51,51515.97,676,6531867.64,36,408377.1,1
+APP00603,Tammy Mcdowell,"Adams, Bradley and Hall",51,Self-Employed,95521.77,23429.07,722,1620997.33,12,118074.82,2
+APP00604,Keith Rodriguez,Hall Inc,32,Salaried,88314.39,8860.87,785,6317302.84,60,200633.11,0
+APP00605,Mrs. Virginia Daniels,Miller-Chan,32,Self-Employed,18897.2,3381.76,602,1184836.15,60,48306.94,1
+APP00606,Todd Rosales MD,Shaw PLC,43,Self-Employed,37386.53,1525.02,723,1929242.6,24,107161.17,1
+APP00607,Brian Martin,Joseph-Brooks,46,Salaried,132004.31,7193.18,769,7574330.4,48,368425.55,0
+APP00608,David Lopez,Henry-Taylor,42,Salaried,82291.75,6051.02,727,1620443.21,24,149626.45,1
+APP00609,Rachel Bradley,Perez Group,21,Salaried,23245.98,6718.02,787,1347218.28,84,34398.5,0
+APP00610,Casey Chase,Schaefer Group,43,Salaried,116715.88,30498.74,586,2855446.56,60,301264.34,5
+APP00611,Samantha Robertson,Newton and Sons,28,Salaried,47583.03,5005.7,581,1967014.45,24,47128.99,2
+APP00612,Michael Lopez,Jones Group,40,Salaried,133377.65,16007.22,766,3024867.28,48,121465.58,1
+APP00613,Franklin Wright,"Burns, Nguyen and Ellis",24,Self-Employed,49134.18,3654.83,677,2811806.51,60,137565.98,2
+APP00614,David Molina,Patterson Inc,42,Self-Employed,75880.09,6099.29,632,2030250.22,60,161901.14,0
+APP00615,Elizabeth Sharp,"Moss, James and Edwards",30,Self-Employed,129531.47,14426.07,694,3522285.15,60,225158.88,2
+APP00616,Matthew Schwartz,"Crosby, Armstrong and Herrera",25,Salaried,38928.64,7918.03,793,722256.35,36,29029.14,0
+APP00617,Bryan Parker,"Liu, Buchanan and Meyer",45,Salaried,47848.36,8317.56,633,2642970.49,48,77902.92,1
+APP00618,Jonathan Jacobson,Bryant-Rich,40,Salaried,64693.95,1681.63,886,1924688.72,12,182655.25,0
+APP00619,Emily Wilson,Stone Group,32,Salaried,92970.48,7805.52,672,4006730.29,24,178779.25,1
+APP00620,Elizabeth Mendez,"Williams, Hughes and Hubbard",53,Self-Employed,27081.82,6079.32,707,864847.46,24,36341.45,1
+APP00621,Casey Hernandez,Lee Group,34,Salaried,31027.19,6127.32,617,1814534.26,12,52508.72,2
+APP00622,Lisa Perry,Wilkerson-Ayala,38,Salaried,99997.3,11827.72,720,2558832.82,36,255470.67,1
+APP00623,Kaitlin Medina,Murray-Henderson,41,Self-Employed,42619.1,9631.33,678,2917280.21,60,105173.75,2
+APP00624,Colleen Wright,"Ellison, Vaughn and Mckee",32,Salaried,53707.5,6469.45,628,1679991.85,48,75720.28,1
+APP00625,Shelley Miller,Gallegos-Hayes,43,Salaried,31720.0,8327.04,865,578290.43,12,55668.3,1
+APP00626,Michael Miller,"Mason, White and Richards",33,Salaried,47813.45,10267.16,673,1263150.67,12,51130.76,1
+APP00627,Amy Kelley,"Payne, Long and Morris",34,Salaried,65501.57,8632.67,686,1076613.63,36,99592.01,1
+APP00628,Laura Hernandez,White PLC,52,Self-Employed,131860.06,56648.78,714,5290795.9,60,108682.08,2
+APP00629,Joseph Wilson,"Huang, Khan and Davis",28,Salaried,42953.79,6786.41,805,1160399.85,12,72343.68,2
+APP00630,Kevin Davis,Holt-Meadows,21,Self-Employed,159522.71,47064.55,758,10394940.44,84,264583.03,1
+APP00631,Rhonda Chavez,Higgins Inc,54,Self-Employed,42575.86,11922.01,606,1831942.24,12,49232.04,2
+APP00632,Joyce Brown,Wilson Group,63,Self-Employed,42619.52,3142.88,752,1108197.44,12,48448.88,0
+APP00633,Robert Cummings,"Cox, Mills and Cruz",34,Salaried,131274.46,15132.15,620,5129709.77,84,108562.03,0
+APP00634,Robert Reese,"Salazar, Moore and Pierce",21,Salaried,60490.74,20460.29,738,1437239.13,36,42664.16,1
+APP00635,Amber Cooper,Tate LLC,35,Self-Employed,41108.96,5296.5,633,934150.2,24,87638.6,0
+APP00636,Zachary Michael,"Savage, Huffman and Martin",35,Salaried,62062.61,12878.84,671,1864322.69,36,58632.12,0
+APP00637,Timothy Johnson,White Ltd,36,Salaried,123860.65,12921.86,734,2291185.18,84,93326.03,0
+APP00638,Randy Cannon,Barnes LLC,27,Self-Employed,152100.68,35282.48,712,3546813.3,24,402999.04,2
+APP00639,Maria Fisher,"Mack, Griffin and Sims",44,Salaried,51222.06,5474.74,703,3497586.2,60,55747.27,1
+APP00640,Janet Kane DVM,Roach and Sons,43,Self-Employed,64553.75,17656.32,755,3357321.87,24,152694.86,3
+APP00641,Michael Stanley,Dean LLC,23,Self-Employed,54854.9,11973.58,701,3689878.73,60,98858.48,4
+APP00642,Martha Bailey,Ellis Group,45,Self-Employed,34094.62,8027.89,723,934561.4,24,68814.82,2
+APP00643,Joshua Rice,"Aguirre, Franklin and Snyder",59,Salaried,73753.51,22981.64,599,4677506.88,48,118442.15,2
+APP00644,Courtney Smith,Chapman Group,40,Self-Employed,64489.84,13285.65,806,2175653.08,24,55071.98,1
+APP00645,Edwin Nunez,Ortiz-Miller,35,Salaried,111168.58,15737.96,681,2295820.09,60,270400.02,0
+APP00646,Kim Morrow,"Smith, Khan and Ramirez",37,Self-Employed,144363.14,9472.75,844,8702560.08,48,358831.27,0
+APP00647,Gregory Hill,"Grant, Bryan and Williams",44,Self-Employed,53408.53,14599.67,770,832051.89,48,63363.2,4
+APP00648,Molly Rodriguez,Brown LLC,21,Self-Employed,43045.42,13434.09,674,1562168.62,24,87537.82,4
+APP00649,Jennifer Miranda,Thomas Inc,40,Salaried,95299.39,37134.97,753,5828404.14,84,142537.24,0
+APP00650,Alexis Harris,"Lane, Morrison and Rivera",34,Salaried,50508.65,12808.94,527,2476494.34,36,122284.25,0
+APP00651,Andrew Harper,Williams Group,56,Salaried,98560.93,8028.58,711,4246393.57,48,237034.2,1
+APP00652,Amber Yang,Martin LLC,36,Salaried,64761.81,23361.0,732,2151260.16,48,31980.93,2
+APP00653,David Robinson,"Guerrero, Graves and Armstrong",55,Salaried,48889.25,6215.76,786,806836.41,36,123526.83,0
+APP00654,Amy Gordon,"Thompson, Gibson and Riley",27,Salaried,38975.54,5079.04,642,2785126.83,36,106444.78,1
+APP00655,Robert Dennis,Davis LLC,44,Salaried,141868.93,32597.47,698,3190124.88,36,295766.85,0
+APP00656,Kyle Chambers,Richardson-Gray,41,Self-Employed,58258.63,6857.73,565,1591538.88,24,43851.96,1
+APP00657,Eric Thomas,Chang PLC,29,Self-Employed,176549.19,42396.69,709,4617634.59,60,391241.75,2
+APP00658,Connie Turner,Carter and Sons,40,Salaried,56089.89,7769.53,601,3728658.71,48,110608.18,1
+APP00659,Travis Hobbs,Neal LLC,50,Self-Employed,84294.82,26639.0,770,4874036.19,84,95608.42,0
+APP00660,Lori Simmons,Rose-Warren,35,Salaried,195323.68,49888.6,738,7703524.45,48,461741.13,3
+APP00661,William David DDS,"Clark, Brown and Duncan",21,Salaried,34175.5,2658.1,710,2369229.92,36,62865.38,0
+APP00662,Emma Butler,"Rice, Miller and Ramsey",38,Salaried,29384.06,8022.99,725,445668.07,36,66788.7,1
+APP00663,James Webster,"Peck, Andersen and Mitchell",29,Self-Employed,137822.25,21484.64,684,9043926.5,120,276434.98,2
+APP00664,Samuel Turner,"Abbott, Green and Andrews",35,Self-Employed,33915.66,14010.88,688,529953.97,12,32865.2,1
+APP00665,Renee Melendez,"Gomez, Anderson and Hart",37,Self-Employed,61107.83,8941.96,644,2167362.67,24,166373.38,1
+APP00666,Tracy Grant,"Daniel, Jimenez and Morton",21,Self-Employed,33177.78,7823.5,752,505639.02,12,56410.67,0
+APP00667,David Harris,"Hall, Roberts and Lee",22,Self-Employed,61229.28,10559.07,626,4404720.74,60,100255.69,0
+APP00668,Tammy Boone,Johnson Ltd,43,Salaried,47692.34,4903.55,610,3188870.7,36,68257.8,1
+APP00669,Nathaniel Lee,Mclaughlin and Sons,33,Salaried,59851.98,9868.69,718,2818306.48,36,46178.07,0
+APP00670,Michael Morrison,"Duarte, Gutierrez and Cook",21,Salaried,67339.71,17421.6,699,1688251.9,12,129894.24,0
+APP00671,Chelsea Gill,"Shaffer, Lewis and Davidson",46,Self-Employed,33942.25,5129.1,714,970974.49,48,49482.57,2
+APP00672,Kristin Mendoza,"Campbell, Tyler and Parker",41,Salaried,52177.93,5359.47,696,2033509.75,36,140403.18,0
+APP00673,Felicia Krueger,"Pierce, Wang and Wilson",31,Salaried,54096.68,13459.56,781,1696840.4,36,137967.6,3
+APP00674,Timothy Hayden,Peterson-Ramsey,25,Self-Employed,19494.28,2298.59,727,258861.32,12,44378.39,1
+APP00675,Zachary Mendoza,"Choi, Collier and Lee",46,Salaried,62529.25,16151.87,725,3212462.85,24,60238.27,0
+APP00676,Larry Harris,Nielsen-Mendoza,41,Self-Employed,70636.35,16282.56,697,3447454.56,12,143110.53,2
+APP00677,Kristen Rowe,Robles-Brewer,62,Salaried,63180.13,12384.28,751,4186229.79,48,31403.48,2
+APP00678,Joseph Howard,Moore-Murray,42,Self-Employed,54374.55,15081.04,743,2208217.84,36,120176.16,0
+APP00679,Jose Crawford,"Huang, Ford and Olsen",42,Self-Employed,64840.38,23679.07,707,2119148.05,24,91905.92,1
+APP00680,William Harrison,"Brown, Meyer and Cunningham",36,Salaried,50158.57,11026.87,746,2141321.25,36,126874.76,1
+APP00681,Suzanne Wood,"Stewart, Herrera and Clark",46,Self-Employed,111521.85,14183.62,606,2641026.93,12,150838.76,1
+APP00682,Justin Walker,"Rivera, Hendricks and Flynn",44,Salaried,141163.3,43625.03,596,6992159.87,48,138200.33,0
+APP00683,Dean Donovan,Montes LLC,51,Salaried,61363.53,15921.6,677,3571478.71,36,159548.18,2
+APP00684,Jennifer Hernandez,Morgan Group,33,Salaried,80736.18,18647.52,688,1712228.96,12,130448.7,1
+APP00685,James Whitaker,"Ferguson, Martin and Obrien",34,Self-Employed,50523.43,2476.98,777,1571429.88,12,130997.21,0
+APP00686,Mr. Michael Scott PhD,Larson LLC,33,Salaried,76502.0,20099.9,697,4901334.85,60,184580.08,1
+APP00687,Maria Henry,"Hodge, Mckinney and Nelson",46,Salaried,152992.32,25098.53,745,6476456.22,120,252259.84,1
+APP00688,Robert Jackson,Crawford and Sons,53,Self-Employed,98154.07,2343.02,672,4309964.85,60,158982.04,0
+APP00689,Katherine Stark,Hayes-Sampson,33,Salaried,29218.76,325.76,718,1617097.61,12,54689.41,2
+APP00690,Maria Brown,Warren and Sons,34,Salaried,80622.47,9525.99,652,3762938.45,120,198702.42,0
+APP00691,Ryan Landry,Brooks Inc,41,Salaried,124522.46,3129.4,769,2014124.22,120,358010.05,0
+APP00692,Pamela Gutierrez,Gentry Group,36,Salaried,60980.6,11948.29,608,3673331.15,60,72652.81,0
+APP00693,Crystal Mann,"Johnson, Webb and Porter",48,Self-Employed,138023.11,6376.19,749,9298639.0,36,316400.59,1
+APP00694,Jonathan Brooks,Peterson Group,21,Salaried,40317.32,5972.49,625,612687.58,36,45298.88,1
+APP00695,Mary Jensen,"Russo, Collins and Murphy",30,Salaried,31991.6,4197.84,707,616637.53,84,60603.89,0
+APP00696,Mr. Aaron Arnold,Short PLC,30,Self-Employed,62644.38,6084.39,759,3390220.63,60,149719.13,2
+APP00697,Joseph Hill,"Haney, Harris and Johnson",21,Salaried,24951.12,3298.33,729,1204351.48,36,63293.14,1
+APP00698,Alicia Li,Reeves-Boyd,28,Self-Employed,46713.29,6084.52,587,1632677.01,36,70825.25,3
+APP00699,Renee Browning,Collins Inc,29,Salaried,109918.69,32297.4,636,4875434.48,120,133564.96,2
+APP00700,Brent Hernandez,"Charles, Wiggins and Cook",36,Self-Employed,16088.9,6333.6,586,872023.63,12,14648.87,1
+APP00701,Joseph Ochoa,Garcia Ltd,49,Self-Employed,28073.58,9016.17,540,1186630.65,12,19642.85,4
+APP00702,James Watson,"Edwards, Lane and Collins",36,Self-Employed,29741.44,2112.72,716,607061.39,48,40511.76,2
+APP00703,Karl Branch,Flores and Sons,28,Salaried,59067.72,16495.77,727,1025779.58,12,136194.33,1
+APP00704,Michael Abbott,Hill-Flores,37,Salaried,57851.07,18318.08,714,2217519.82,36,75327.74,1
+APP00705,Shannon Malone,Lambert-Nelson,48,Self-Employed,183070.66,6690.69,781,12334035.29,48,232426.7,0
+APP00706,James Tran,Hill Inc,28,Salaried,93376.09,11308.0,716,4245507.18,36,205956.6,1
+APP00707,Adam Jackson,"Castro, Garcia and Daniels",29,Salaried,76979.16,20284.6,679,2578278.62,12,69440.9,1
+APP00708,Mr. Richard Knight PhD,"Flores, Thomas and Bush",44,Salaried,78985.23,8528.13,669,5254284.53,60,85235.7,0
+APP00709,Joseph Williams,Andrews-Jackson,36,Self-Employed,80658.54,25033.72,647,2848692.63,36,193506.81,2
+APP00710,Sean Clay,Austin-Morgan,44,Self-Employed,36782.76,8425.27,621,1565062.07,24,22928.53,1
+APP00711,Anthony Jones,Williams-Johnson,38,Salaried,101515.69,24521.14,663,1927778.97,24,137147.46,0
+APP00712,Stephanie Elliott,"Williams, Reyes and Miller",45,Self-Employed,31220.56,10735.5,674,1755970.73,60,50202.99,2
+APP00713,Timothy Edwards,White-Carlson,28,Salaried,88508.46,26251.79,683,4781065.82,60,81085.39,1
+APP00714,Laurie Goodwin,"Soto, Vaughn and Griffin",38,Salaried,117711.05,8095.15,900,7022010.2,120,136683.87,0
+APP00715,Jennifer Jones,Edwards-Roth,36,Salaried,74081.3,8298.93,652,2334411.22,36,73751.05,0
+APP00716,David Davenport,"Chang, Lamb and Miller",26,Salaried,54617.7,11203.89,712,2084385.76,12,66806.7,0
+APP00717,Steven Rivera,Bradley-Davis,22,Salaried,66843.98,7059.01,649,1477285.57,36,173878.29,0
+APP00718,Brenda Hinton,"Mcdonald, Bryant and Cohen",45,Self-Employed,9174.66,2090.37,663,641035.86,48,12836.18,2
+APP00719,Kathryn Mccann,"Miranda, Ruiz and Meza",34,Self-Employed,73828.88,16773.48,665,1267246.16,12,101080.13,2
+APP00720,Jeffrey Roberson,Callahan PLC,28,Salaried,57752.65,4076.17,790,2941966.05,48,81702.74,0
+APP00721,Randy Friedman,Durham-Myers,37,Salaried,66663.79,13743.56,692,3620873.28,60,174012.04,0
+APP00722,Raymond Johnson,"Stark, Rivera and Valencia",49,Salaried,103930.93,10086.8,724,2230793.07,24,78442.4,0
+APP00723,Willie Henry,Chavez-Johnson,21,Self-Employed,47450.39,6074.89,690,1609488.42,24,119012.86,1
+APP00724,Todd Reynolds,Rodriguez-Mendoza,23,Self-Employed,23183.41,4758.17,590,338190.2,12,27418.08,3
+APP00725,Mary Miller,Campbell LLC,29,Self-Employed,50722.51,14553.29,623,2302624.25,12,125614.11,3
+APP00726,Rebecca Marquez,"Andrews, Romero and Sullivan",53,Salaried,77959.3,6107.81,715,5589392.41,84,96483.25,0
+APP00727,Christian Dawson,"Robles, Nguyen and Banks",41,Salaried,75295.3,21588.63,696,2845642.59,36,45614.19,1
+APP00728,Nancy Stewart,Patel-Morales,46,Salaried,81341.04,18214.34,735,5807790.06,84,130028.52,1
+APP00729,Aaron Parker,Allen-Sanchez,27,Salaried,95700.83,19746.76,675,1873202.59,36,91806.53,2
+APP00730,Derrick Anderson,Dickson Group,27,Salaried,36774.16,5260.32,698,1307220.53,120,81347.2,1
+APP00731,Jerry Peters,Peterson Ltd,42,Salaried,78275.53,16491.61,585,5175413.62,48,150092.2,2
+APP00732,Alexander Gomez,"Reynolds, Baird and Bradley",39,Self-Employed,156646.35,13675.34,754,10119624.81,48,332001.93,1
+APP00733,Kyle Nguyen,Stephens-Young,43,Salaried,33513.12,4651.41,672,1052831.19,12,30679.8,1
+APP00734,Edgar Hughes,"Caldwell, Stevenson and Joseph",36,Salaried,73047.87,20980.55,707,3850838.12,60,142104.32,3
+APP00735,Steven Stein,Wilson-Carlson,41,Self-Employed,43147.41,9474.28,766,2811899.69,36,49100.9,2
+APP00736,Laura Jackson,Peters-Short,40,Salaried,59815.94,13918.63,674,3470081.24,48,158394.66,2
+APP00737,Charles Turner,Parker Group,46,Self-Employed,36492.67,18272.94,598,1813998.63,24,63724.06,1
+APP00738,Arthur Hamilton MD,George Ltd,46,Salaried,70069.6,9208.99,729,1482290.03,12,129360.94,0
+APP00739,Mr. David Wright,"Wise, Gray and Snyder",22,Self-Employed,184157.35,44341.03,720,3016527.12,60,432147.58,1
+APP00740,Linda Gonzalez,"Brown, Robinson and Taylor",21,Salaried,31135.22,2333.7,705,1521806.25,48,59135.96,1
+APP00741,Eric Rush,"Berger, Fields and Smith",48,Salaried,44677.16,15652.62,649,1877179.69,24,69348.68,1
+APP00742,Manuel Brock,Guerrero Group,50,Self-Employed,27636.09,4571.97,744,726337.24,36,27714.99,1
+APP00743,George Ochoa,"Carter, Gilbert and West",28,Salaried,132226.55,25044.18,706,3909435.03,60,262784.8,3
+APP00744,Valerie Taylor,Maldonado LLC,21,Salaried,44669.03,1634.4,724,1586877.43,36,62998.02,0
+APP00745,Travis Harris,Hudson-Gentry,39,Salaried,69048.73,11411.88,581,2881489.95,36,38493.83,3
+APP00746,Vincent Novak,Sellers-Zuniga,47,Salaried,63088.25,4782.76,766,2234304.44,36,154179.43,0
+APP00747,Michael Henry,"Haas, Cooper and Davis",56,Self-Employed,35494.61,14716.54,597,1250741.17,12,17716.97,3
+APP00748,Dana Bennett,Carr PLC,43,Salaried,65804.9,10417.63,724,1246606.01,12,132144.94,1
+APP00749,Jenna Wilson,Abbott-Phelps,34,Salaried,198678.71,19302.07,729,12702607.73,84,168575.3,1
+APP00750,Leslie Gardner,Wood PLC,29,Salaried,115248.86,18928.67,597,5595245.1,48,167290.17,1
+APP00751,Krista Benton,Smith PLC,38,Self-Employed,34539.45,3839.26,708,717250.71,12,86368.45,2
+APP00752,Michael Gonzales,Rodriguez-Campbell,35,Salaried,89064.59,1021.97,749,3333907.26,24,65179.79,2
+APP00753,Michael Fuentes,Young Ltd,28,Salaried,41804.05,7291.5,762,1546873.44,24,82722.49,0
+APP00754,Jennifer Porter,"Long, Flores and Reyes",58,Self-Employed,19826.5,1546.47,715,952410.56,36,38707.6,2
+APP00755,Dana Hopkins,Graham-Clark,56,Salaried,119649.52,21243.83,590,5806851.85,48,290975.53,1
+APP00756,Rachel Jones,Wells and Sons,49,Self-Employed,154863.14,52323.15,776,7853625.01,84,119928.9,0
+APP00757,Karen Morales DDS,"Cruz, Middleton and Larsen",29,Salaried,98630.98,27227.31,718,5313663.36,84,212498.14,1
+APP00758,Melissa Stephens,Roberts Ltd,47,Salaried,61212.26,19309.82,615,1114139.27,24,83796.32,1
+APP00759,Heather Woodard,Taylor Inc,44,Salaried,68626.46,14012.39,672,2079061.27,60,96843.0,0
+APP00760,Margaret Miller,"Smith, Griffith and Tucker",42,Self-Employed,111129.43,18918.5,708,1449224.36,12,142791.79,2
+APP00761,Mary Kelly,Proctor-Taylor,50,Salaried,90193.75,5150.27,737,3542674.37,48,128267.99,3
+APP00762,Amanda Terrell,May Group,44,Salaried,61966.28,14385.44,626,2340206.36,12,98586.88,4
+APP00763,Jennifer Goodwin,English-Dominguez,45,Salaried,36097.93,12093.87,689,2023636.17,12,23049.1,4
+APP00764,Jessica Smith,Hanson-Gibson,44,Salaried,77864.57,14892.25,599,1715124.19,12,110040.42,1
+APP00765,Jorge Stone,Arnold-Cole,41,Salaried,116192.91,54977.01,541,5796825.41,36,188936.21,5
+APP00766,Laura Griffin,Perez-Coleman,21,Salaried,32085.96,6192.26,582,975466.09,48,50601.19,1
+APP00767,Raymond Chapman,Lane Ltd,39,Salaried,93110.95,28947.33,635,3250967.79,36,71919.59,1
+APP00768,Haley Johnson,Joseph LLC,32,Salaried,74384.53,9720.31,806,4102843.46,120,97864.55,1
+APP00769,Jason Nixon,House-Johnston,25,Salaried,81709.38,10787.07,854,1331281.37,24,122670.41,0
+APP00770,Todd Thomas,Good PLC,55,Salaried,111963.83,12912.13,717,3646323.13,60,229182.61,2
+APP00771,Jesse Clark,Bush-Wilson,55,Salaried,55327.91,5850.22,681,1963000.85,24,144208.11,1
+APP00772,Mr. Jeffrey Horton,Nixon-Miller,52,Salaried,36530.78,11988.64,687,2007182.19,36,57284.53,0
+APP00773,Eric Patrick,"Simon, Terrell and Terrell",41,Salaried,56239.18,3148.4,770,1347123.22,24,119766.62,0
+APP00774,Samuel Wong,Marshall-Miller,52,Salaried,112831.35,10447.1,627,7767849.3,120,74569.41,1
+APP00775,Carly Riggs,"Davis, Kennedy and Harmon",38,Salaried,54085.55,23078.26,577,3886896.64,120,122796.09,5
+APP00776,Christopher Moore,"Miller, Schultz and Yates",40,Salaried,51716.27,14979.16,793,3161653.84,24,56964.94,0
+APP00777,Tina Hall,Austin-Berger,27,Salaried,26414.24,3911.92,665,791971.53,36,33892.56,0
+APP00778,Cody Davidson,"Osborne, Harrison and Hunt",42,Self-Employed,224239.11,48186.11,643,11622761.63,60,211575.79,2
+APP00779,Allen Mendez,Berry-Rivera,39,Salaried,101283.27,16235.62,697,1720689.48,24,66303.54,2
+APP00780,Kevin Price,Yu-Yates,25,Self-Employed,90850.85,26768.45,708,5839597.89,36,191738.95,1
+APP00781,Christine Goodwin,Jackson-Neal,37,Salaried,105416.69,11159.11,697,4528655.99,60,109943.17,0
+APP00782,Amy Garcia,"Curry, Acosta and Elliott",37,Self-Employed,92835.6,8630.94,711,2096817.46,60,106818.96,2
+APP00783,Chelsea Nguyen,Soto PLC,56,Salaried,67750.98,9311.94,751,2143979.34,36,60223.6,1
+APP00784,Dennis Huffman,Berry Ltd,47,Salaried,70252.3,22511.62,805,4218268.86,60,173285.28,1
+APP00785,Margaret Harper,Lamb-Weber,38,Salaried,56943.8,3575.11,718,3656566.66,36,135275.48,1
+APP00786,Laurie Bailey,Washington-Martinez,40,Self-Employed,406303.43,116311.2,690,17545321.18,120,983430.28,1
+APP00787,Lisa Cervantes,York LLC,38,Salaried,88644.07,15258.25,801,3618334.94,36,215038.66,1
+APP00788,Elizabeth Mendez,Anderson-Campbell,36,Salaried,54683.6,6335.39,700,3119375.86,24,142479.7,0
+APP00789,Cesar Wilson,Smith-Rodriguez,27,Salaried,73920.07,24353.33,591,4551360.78,48,104814.69,2
+APP00790,Clayton Steele,Kent Ltd,36,Self-Employed,30185.32,2719.82,736,1747452.4,48,26702.52,1
+APP00791,Jennifer Taylor,Hopkins LLC,31,Salaried,124477.27,36187.2,741,4364880.59,84,140128.66,2
+APP00792,Cody Reid,Green Ltd,25,Salaried,43298.63,11912.5,715,2187253.93,12,45973.28,1
+APP00793,Maria Cooke,Washington PLC,43,Salaried,91652.16,16375.17,717,5814559.35,36,191370.47,0
+APP00794,Katherine Taylor,Cooper Inc,42,Self-Employed,138662.65,65612.39,562,2926563.72,60,59722.28,2
+APP00795,Jerry Brown,Larson and Sons,21,Salaried,65397.17,4672.52,721,2307748.59,36,53923.73,1
+APP00796,Adam Taylor,Mullins-Gutierrez,37,Salaried,71161.79,7507.58,793,1095687.6,12,148783.81,1
+APP00797,Tracey Wagner,Young-Alexander,48,Self-Employed,69271.82,16788.49,625,2530682.29,84,49225.97,1
+APP00798,Michael Perry PhD,"Jackson, Lane and Wilkinson",49,Salaried,73728.43,23991.48,672,4301089.66,36,38319.31,1
+APP00799,Bradley Johnson DDS,May Inc,48,Salaried,58339.1,23122.93,652,1389737.01,24,36160.89,1
+APP00800,Donald Medina,Jackson Group,38,Salaried,56384.89,18934.91,658,2509873.52,24,104470.37,0
+APP00801,Jim Newton,Turner-Reese,30,Salaried,121483.87,30954.77,697,1724481.04,36,89926.7,2
+APP00802,Krista Wilson,"Hall, Vega and Price",27,Salaried,57092.31,19947.1,694,3760042.28,84,40793.58,2
+APP00803,Reginald Morrow,Thomas-Berg,41,Salaried,50203.72,2420.63,754,3072481.81,36,52704.68,1
+APP00804,Rodney Williams,Roberts Group,42,Self-Employed,45807.66,4317.8,677,1991009.45,48,103765.19,0
+APP00805,Kimberly Fritz,Gregory-Nixon,51,Self-Employed,148522.46,8836.58,642,8071782.94,120,144231.32,0
+APP00806,Ronald Potter,"Blanchard, Davis and Schmidt",49,Salaried,102494.58,19395.25,722,1868985.55,48,54605.3,1
+APP00807,Zachary Cole,Blanchard-Reynolds,37,Salaried,87758.85,21019.64,669,5503582.91,48,213567.17,1
+APP00808,Robert Gonzales,"Garrison, Rogers and Adams",26,Salaried,52655.43,4130.07,849,2891609.2,36,136128.42,0
+APP00809,Patricia Young PhD,Scott PLC,35,Self-Employed,90377.66,22352.04,811,1735074.24,48,76195.74,1
+APP00810,Heather Page,Murray-Leonard,40,Salaried,52904.55,9118.91,814,3747830.31,24,56242.58,2
+APP00811,Carol Taylor,Navarro PLC,36,Salaried,59946.21,10290.4,653,800391.45,12,53233.37,1
+APP00812,Daniel Brown,Meyer Ltd,32,Salaried,99133.39,20964.75,737,4927985.3,36,203794.18,1
+APP00813,Douglas Ryan,"Kaiser, Edwards and Smith",41,Salaried,105966.44,18863.57,761,2363613.13,60,108603.63,1
+APP00814,Michael Roberts,Decker Inc,33,Salaried,41720.32,6909.81,756,2301103.15,24,108238.48,1
+APP00815,Scott Duke,Davis-Garcia,32,Self-Employed,32004.47,1654.51,721,519252.53,12,80097.46,0
+APP00816,Anna Estes,Bell-Hardy,41,Salaried,75084.45,5446.92,801,1266378.23,36,142623.71,1
+APP00817,Tamara Riddle,Lee-Johnson,34,Self-Employed,200028.9,9715.48,743,7996656.21,36,101946.79,0
+APP00818,Beth Cline,Brown PLC,40,Salaried,29847.1,3053.28,697,2138262.97,36,76725.04,3
+APP00819,Michael Poole,"Shannon, Robinson and Greene",41,Self-Employed,78982.03,22193.8,616,2258173.13,36,157453.05,0
+APP00820,Megan Burns,Erickson Inc,27,Self-Employed,20800.36,1959.64,745,1014052.77,12,48952.15,2
+APP00821,Debra Perry,Gates and Sons,33,Self-Employed,37845.26,5211.38,714,1631734.14,120,23947.51,0
+APP00822,Mark Beard,Douglas-Yoder,52,Salaried,64186.58,14050.55,745,4013405.52,36,129836.21,0
+APP00823,Jose Ramirez,"Pratt, Lopez and Rodriguez",26,Salaried,48931.68,8602.68,693,1434450.7,48,112087.94,3
+APP00824,Jackie Clements,King Group,21,Salaried,43255.53,5333.25,727,1959331.01,36,117366.4,1
+APP00825,Aaron Schroeder,"Mayer, Fowler and Livingston",21,Salaried,55178.66,12658.85,713,3809392.12,36,95313.47,0
+APP00826,Monica Ellis,Hammond-Schwartz,38,Salaried,54250.04,11620.78,765,1733568.12,12,85743.25,0
+APP00827,Heather Brown,"Carrillo, Morris and Martin",38,Self-Employed,22543.31,6470.57,680,864859.15,24,30187.94,1
+APP00828,Claudia Jordan,Ramirez Inc,37,Self-Employed,107022.93,12347.4,615,6991679.49,48,227235.42,2
+APP00829,Derrick Clayton,Price-Ferrell,50,Salaried,106120.94,13237.36,750,3390556.77,24,278810.63,1
+APP00830,Kenneth Knight,Sosa-Baker,21,Salaried,80379.7,14012.74,675,2800462.89,84,146701.72,0
+APP00831,Mr. Michael Williams,Jones-Krause,42,Self-Employed,22361.61,2348.27,640,676374.41,24,22632.65,1
+APP00832,Richard Stevens,Bishop and Sons,54,Self-Employed,84751.16,1805.43,685,5133537.36,120,45608.09,0
+APP00833,Scott Alexander,"Vasquez, Thomas and Mack",27,Salaried,81263.86,18046.44,704,5511576.37,36,147933.14,2
+APP00834,Tyler Harris,Mendez Inc,34,Salaried,41323.79,14258.68,692,2060649.49,24,91008.36,0
+APP00835,Bonnie Santos,Baldwin-Garcia,30,Self-Employed,57115.58,9066.48,583,2822526.75,48,34964.01,1
+APP00836,Timothy Hill,Jones Ltd,29,Salaried,58459.95,9647.89,657,2069494.88,24,80128.33,3
+APP00837,Danielle Watson,Waters-Smith,35,Salaried,152462.91,17180.79,788,1943753.42,12,410053.55,1
+APP00838,Carol Sanders,Hernandez-Bowman,52,Self-Employed,264442.53,87475.63,658,5933100.36,24,387158.56,1
+APP00839,Michael Young,Ortega LLC,56,Self-Employed,21443.62,780.21,735,447020.21,12,22140.84,0
+APP00840,Michele Smith,Graves Group,35,Self-Employed,346676.57,108615.61,706,6570533.35,84,404679.6,4
+APP00841,Casey Perez,"Smith, Zimmerman and Wise",57,Self-Employed,36227.51,11257.13,691,1856400.38,12,46521.07,4
+APP00842,Alexandra Dominguez,Graham-Anthony,38,Salaried,107315.35,18083.28,771,2165724.43,120,77953.05,1
+APP00843,Virginia Henderson,Fernandez Inc,56,Salaried,117039.44,13010.65,567,2005826.34,24,237867.28,0
+APP00844,Benjamin Reyes,Finley-Meyers,37,Salaried,43570.66,11580.21,799,1523007.61,24,74821.02,1
+APP00845,Ashley Edwards,Martinez-Nichols,39,Salaried,87210.14,22637.09,749,2349559.72,36,160837.6,0
+APP00846,Breanna Ayala,Cook-Turner,42,Salaried,68908.51,13524.38,853,1429964.07,24,125969.27,1
+APP00847,Brandi Haney,Chen Ltd,65,Salaried,97050.88,4377.5,666,2015520.98,60,51384.94,2
+APP00848,Joseph Smith,Diaz LLC,47,Salaried,83896.97,30285.63,545,2296456.48,60,64364.69,3
+APP00849,Jessica Bowen,Randall LLC,31,Self-Employed,132850.25,19652.03,713,5873440.71,12,112435.54,1
+APP00850,Brittany Jenkins,"Harris, Spencer and Ponce",48,Salaried,78234.97,17685.53,700,4497394.73,48,51688.77,0
+APP00851,Shannon Miller,"Lee, Dominguez and Mosley",34,Salaried,60942.82,1983.45,769,3849550.62,84,140206.99,1
+APP00852,Paul Lawrence,"Barker, Tucker and Mcclure",33,Salaried,106279.94,4371.76,808,6066997.75,12,83310.95,0
+APP00853,Victor Edwards,Moss-Taylor,47,Salaried,98195.96,5456.26,721,4879631.9,60,207211.52,1
+APP00854,Donald Miller,Johnson PLC,38,Self-Employed,104734.43,24438.11,656,6960386.05,48,87517.31,3
+APP00855,Lindsay Lawson,Burns Inc,41,Salaried,53018.1,16908.12,674,2289544.86,36,35462.97,4
+APP00856,Melissa Abbott,"Schneider, Porter and Hanna",38,Salaried,43124.9,1736.45,714,2156305.72,36,38298.28,1
+APP00857,Elizabeth Holmes,Levy-Smith,41,Self-Employed,43683.99,8133.13,642,1603081.71,24,70162.81,4
+APP00858,Nicole Phillips,Brown-French,42,Salaried,54696.53,18690.86,731,1730765.07,48,95858.9,2
+APP00859,Steven Blevins,Sullivan and Sons,21,Salaried,78345.06,2000.92,822,2499419.33,36,195667.3,0
+APP00860,Brian Porter MD,"Contreras, Ellis and Gregory",45,Salaried,116048.79,41096.52,732,2425307.95,84,78444.66,2
+APP00861,Vanessa Hatfield,"Hernandez, Riley and Buckley",28,Salaried,56677.08,6808.39,707,3389054.67,48,108701.56,1
+APP00862,Bonnie Valencia,Moss Group,24,Salaried,109427.65,40088.75,537,1676659.81,24,217612.45,2
+APP00863,Holly Vega,"Smith, Meadows and Montgomery",37,Salaried,126248.96,16966.41,721,6625685.89,60,150859.45,0
+APP00864,Tiffany Townsend,Haynes and Sons,39,Salaried,77935.35,16309.57,673,4977544.47,48,48796.78,0
+APP00865,Austin Baker,Jackson Inc,31,Salaried,43695.44,7005.07,718,1828466.46,48,35766.26,0
+APP00866,Antonio Mccormick,Hoover-Davis,46,Salaried,153654.47,15768.81,694,2491053.55,24,106251.31,0
+APP00867,Lori Mason,"Jackson, Garza and Meyers",25,Salaried,56720.99,5446.05,734,2138667.52,84,146768.08,0
+APP00868,Michael Miller,Wilson PLC,34,Self-Employed,65266.89,9230.34,651,2127282.58,48,87444.87,1
+APP00869,Lisa Ramirez,"Walker, Brock and Simmons",32,Salaried,54994.44,11450.43,642,3911883.95,60,89097.06,0
+APP00870,Jorge Harris,"Gregory, Nguyen and Daugherty",38,Salaried,46250.08,14752.13,761,2473265.01,36,94141.98,1
+APP00871,Kimberly Myers,"Gardner, Morris and Oconnell",41,Salaried,36922.08,5277.99,655,2041111.14,48,48981.82,1
+APP00872,Sandra Becker,Duran PLC,28,Salaried,80799.38,28823.32,697,3470302.18,48,140924.97,0
+APP00873,Michael Blair,Rogers Inc,45,Salaried,52577.45,17359.99,653,2868881.21,48,30363.86,7
+APP00874,Amy Miller,Thomas-Perry,39,Self-Employed,540617.37,108671.13,700,29925473.76,36,827780.07,5
+APP00875,Jesse Lynch,"Wood, Martin and Sanchez",21,Self-Employed,23377.44,3971.49,757,373607.34,24,15857.61,1
+APP00876,Patrick Yang,"Williams, Garcia and Boone",21,Salaried,31234.12,7549.18,702,791984.56,24,30774.18,2
+APP00877,Michael Miles,"Bennett, Moore and Hobbs",38,Salaried,86836.86,6009.49,783,1109606.02,36,103394.51,0
+APP00878,Troy Mills,Smith and Sons,36,Self-Employed,178659.77,12893.05,822,7608841.78,60,395050.22,0
+APP00879,Michelle Jackson,Mann PLC,37,Salaried,70211.35,10058.95,724,4532001.3,36,142439.36,2
+APP00880,Richard Adams,Butler-Aguirre,38,Salaried,89297.89,12754.51,618,4337490.65,84,196331.2,0
+APP00881,Patricia Johnson,Schwartz-Harris,40,Salaried,30830.23,6940.56,655,1295253.37,24,17904.01,2
+APP00882,Denise Brown,"Nelson, Cole and Allen",47,Salaried,55751.63,8004.01,770,3766466.16,60,154461.54,0
+APP00883,Laura Jones,Bishop Inc,27,Self-Employed,25704.59,9735.01,626,574063.52,36,13253.43,2
+APP00884,Ian Porter,"White, Porter and Clements",26,Salaried,25200.99,1534.61,838,415218.0,36,62656.99,0
+APP00885,Holly Scott,"Serrano, Turner and Barnes",27,Self-Employed,59150.61,12252.59,715,3965358.8,84,124642.78,0
+APP00886,Kenneth Sharp,"Young, Wilson and Moreno",41,Salaried,26060.61,3715.7,734,1724349.98,12,47907.06,0
+APP00887,Jordan Williams,Montgomery PLC,50,Salaried,41712.41,13281.34,740,2209854.72,24,56014.58,2
+APP00888,Dana Ruiz,"Robinson, Townsend and Hopkins",34,Salaried,51611.38,20975.48,633,1381055.96,36,98401.91,3
+APP00889,Chris Velazquez,Brown-Rodriguez,21,Salaried,37835.76,2932.18,749,2655534.31,24,85455.78,0
+APP00890,Kristen Sloan,Jennings Group,21,Salaried,65740.62,2286.08,799,3807748.11,36,54452.26,0
+APP00891,Jennifer Morris,Thompson-Santiago,30,Salaried,71627.35,9421.7,627,3755684.96,36,166058.72,1
+APP00892,Nathan Nelson,Brown LLC,32,Salaried,95800.1,17956.96,690,2430896.78,36,60461.92,1
+APP00893,Jake Shaw,Clark-King,34,Self-Employed,101173.59,8816.62,772,4328747.7,120,169471.37,1
+APP00894,Cassie Brock,"Trujillo, Chang and Williams",38,Salaried,115334.26,14835.51,720,7076284.39,36,227995.69,1
+APP00895,Dr. Andrea Marshall,"Williams, Medina and Moore",35,Salaried,66492.57,9810.19,786,4229965.86,48,157308.1,2
+APP00896,Ryan Murphy,Washington Inc,48,Salaried,86690.74,27320.78,608,3960536.21,120,121067.92,0
+APP00897,Aimee Gonzalez,Jacobson Ltd,31,Salaried,79620.87,4923.64,639,3452968.65,84,84268.89,0
+APP00898,Elizabeth Dean,Watkins-Nguyen,29,Self-Employed,61837.59,6384.15,766,3330636.09,24,101260.22,1
+APP00899,Kevin Snyder,Burgess LLC,43,Self-Employed,50358.42,5687.89,755,2200407.88,60,53478.51,2
+APP00900,Christie Mccullough,Maxwell LLC,23,Self-Employed,40807.75,7996.61,694,1512370.43,12,67059.95,1
+APP00901,Danielle Smith,Garcia Ltd,42,Salaried,50062.32,15276.68,713,857324.22,36,70265.58,1
+APP00902,David Reed,Kane-Bennett,39,Salaried,84443.08,13809.26,755,1651958.27,12,190066.98,1
+APP00903,Sherry Tapia,Jones PLC,37,Salaried,65374.86,8183.38,637,3766672.29,48,67425.29,3
+APP00904,Matthew Sweeney,Brown-Graham,54,Salaried,56112.51,3271.42,699,756387.83,12,54474.78,0
+APP00905,Ashley Moreno,Reilly Group,32,Salaried,47562.47,9027.56,703,720015.08,36,72556.99,2
+APP00906,Johnathan Brown,Hughes and Sons,59,Salaried,43864.59,5549.05,770,2907284.55,12,25733.11,1
+APP00907,Michelle Davis DVM,Cortez-Chen,36,Salaried,104663.73,9900.09,651,5676942.55,60,107027.84,1
+APP00908,Kelly Haynes,Harris-Martinez,25,Salaried,60399.45,7525.44,704,740060.2,36,78400.09,1
+APP00909,William Miller,"Carroll, Ramirez and Rodriguez",39,Salaried,47374.78,4620.42,706,1455476.62,12,77469.35,1
+APP00910,Casey Wilkins,Ellis-Jackson,27,Self-Employed,95984.25,8390.25,747,5547804.06,84,107722.96,1
+APP00911,Keith Graham,Robinson-Phillips,30,Self-Employed,38334.16,4088.82,718,1420512.59,24,69008.28,1
+APP00912,Cynthia Green,Clarke Ltd,42,Salaried,38407.19,4785.04,699,1541198.53,12,97096.86,0
+APP00913,Robert Haynes,"Whitehead, Lane and Tran",44,Self-Employed,137451.71,14791.88,779,5433183.26,36,241815.11,2
+APP00914,Emily Nelson,Miller PLC,32,Salaried,50317.89,13482.82,662,1214073.22,24,53036.88,1
+APP00915,Dale Chan,Atkins-Robinson,48,Self-Employed,51637.46,8131.5,694,2854698.8,24,31157.21,1
+APP00916,Brittney Martin,Hood-Ramirez,50,Self-Employed,70760.63,4397.6,630,1286455.1,24,57706.14,1
+APP00917,Jason Herrera,"Patterson, Salas and Wright",52,Salaried,126463.29,10240.01,695,5366478.09,60,230921.54,0
+APP00918,Christine Parker,Riley-Snow,43,Self-Employed,67439.31,6120.63,767,1496973.9,24,142230.71,0
+APP00919,Bryan Moore,"Shah, Mcintyre and Villanueva",52,Self-Employed,29698.45,16622.07,610,439298.49,24,13349.38,5
+APP00920,Samantha Terry,Baird-Williams,21,Self-Employed,73166.44,9069.58,767,1506836.08,36,66152.31,0
+APP00921,Russell Murphy,Quinn-Gordon,35,Self-Employed,43083.95,7327.86,758,2764270.43,36,51155.48,0
+APP00922,David Kelly,Schmidt-Mendoza,29,Salaried,144059.68,4754.63,870,3251262.73,48,184106.71,0
+APP00923,Megan Green,"Nicholson, Chavez and Allen",39,Salaried,69814.81,9110.78,686,2003835.42,60,188992.43,0
+APP00924,Amanda Sullivan MD,"Mullins, Steele and Russell",32,Self-Employed,12185.17,4177.29,541,247184.45,12,10191.7,4
+APP00925,Danielle Murray,Anderson LLC,36,Salaried,79129.7,8625.01,656,4441764.14,60,49102.59,1
+APP00926,Brenda Smith,Holland Inc,57,Salaried,181427.46,60905.81,657,7026132.31,120,208727.92,0
+APP00927,Vickie Anderson,Castillo LLC,36,Salaried,136925.66,11200.32,679,9395579.03,60,109801.9,0
+APP00928,Jacqueline Mccoy,Warner PLC,42,Salaried,164860.44,26599.17,731,8549575.71,120,123742.6,0
+APP00929,Lauren Green,"Silva, Bray and Ford",36,Salaried,42579.88,7317.73,784,1868548.11,24,59106.5,1
+APP00930,Alison Brown,Sawyer Group,39,Self-Employed,120246.83,12002.05,827,6180429.46,60,144632.67,0
+APP00931,Jill Anderson,Clarke LLC,38,Salaried,49877.56,8902.88,708,719509.9,24,33130.04,3
+APP00932,Sandra Rivera,"Marshall, Schultz and Dalton",42,Self-Employed,76927.41,20162.63,824,5311038.82,12,134411.36,1
+APP00933,Joel Jackson,Cruz Ltd,50,Self-Employed,28202.48,7619.72,673,1956851.21,120,42790.75,1
+APP00934,Samantha Foster,Schmidt-Phillips,54,Salaried,56587.14,20635.19,522,1616603.72,12,32053.19,5
+APP00935,Michael Thompson,Wolfe-Salazar,41,Salaried,52740.65,8135.93,760,2621090.35,120,129316.56,2
+APP00936,Cody Ramirez,"Norton, French and Miller",44,Salaried,110838.82,31268.03,582,2672868.69,48,115367.53,1
+APP00937,Amanda Harvey,Fitzgerald-Brown,26,Self-Employed,94146.03,10613.07,688,4222289.97,120,257941.19,0
+APP00938,Edward Jenkins,"Cox, Williams and Reyes",37,Self-Employed,75256.95,29238.03,708,4383517.96,120,171535.4,1
+APP00939,Amy Ramirez,Harvey-Diaz,47,Salaried,41185.95,3323.67,717,2816678.71,48,62655.28,1
+APP00940,Curtis Wilkerson,Wong Ltd,47,Salaried,65729.59,16103.22,687,2126550.37,120,61797.19,1
+APP00941,Lydia Pham,Castro and Sons,40,Salaried,50518.49,6772.74,659,2708312.41,60,121937.02,0
+APP00942,Virginia Casey,Zavala and Sons,47,Salaried,111848.02,11302.58,719,6150033.62,60,149016.8,1
+APP00943,Joshua Washington,"Wilson, Mendoza and Crosby",43,Self-Employed,151704.01,10612.77,800,3833397.81,60,133057.4,0
+APP00944,Kathryn Price,"Pitts, Warner and Mullins",50,Self-Employed,144019.2,40510.69,709,7163792.82,36,232554.68,0
+APP00945,Francis Robinson,Flores LLC,41,Salaried,50899.28,3679.52,674,2612419.49,12,84554.38,1
+APP00946,Paula Brown,"Frazier, Ramirez and Brown",34,Self-Employed,8780.17,2665.41,615,507885.25,12,19549.93,1
+APP00947,Kendra Wang DVM,Chavez-Mason,41,Salaried,32283.77,8367.82,618,2324329.2,36,65281.69,3
+APP00948,Ariel Sandoval,Harrison PLC,21,Self-Employed,135255.0,22608.85,748,1949557.76,24,333470.27,0
+APP00949,Robert Stark,"Bryan, Lam and Hayes",42,Salaried,60376.81,22942.37,714,1457393.77,24,114280.58,0
+APP00950,Zachary Robinson,Marsh-Dougherty,21,Salaried,39232.56,10384.93,602,812298.69,36,71669.3,4
+APP00951,Rebecca Kelly,Lopez Group,21,Self-Employed,157887.89,6059.34,597,3357650.64,48,271070.46,1
+APP00952,Sarah Thompson,Miller and Sons,43,Salaried,129261.06,26119.4,730,5074132.64,84,344988.28,1
+APP00953,Renee Wolfe,Mullen-Jones,43,Salaried,73959.23,18342.35,659,4786064.27,120,187750.09,0
+APP00954,Alyssa Haynes,Hill Ltd,26,Self-Employed,43770.56,5780.69,712,1703698.95,48,107193.34,4
+APP00955,Kristy Hart,Crawford and Sons,31,Salaried,59599.64,10286.75,679,3105667.29,48,132780.62,0
+APP00956,William Keith,"Crane, Johnson and Butler",52,Salaried,83764.57,18821.0,612,2897412.31,24,144536.8,3
+APP00957,Eric Henry Jr.,"Weaver, Anderson and Reed",33,Salaried,133335.55,21585.79,735,4157375.71,120,140848.5,0
+APP00958,Daniel Fox,Rojas-Smith,60,Salaried,91459.59,10480.73,874,5675443.68,36,231808.81,0
+APP00959,Thomas Harris,Brown and Sons,38,Salaried,95696.51,7045.41,769,4912374.62,36,48579.31,1
+APP00960,Mitchell Sellers,"Newman, Jenkins and Cooper",42,Salaried,122405.76,45082.4,673,4045965.27,48,106715.26,2
+APP00961,Erica Johnson,"Buchanan, Tucker and Wade",54,Self-Employed,30316.85,4407.43,750,2026669.51,48,42432.02,0
+APP00962,Sylvia Schroeder,"Wilkinson, Wallace and Torres",39,Salaried,98104.96,23042.94,610,4111647.0,60,170170.58,0
+APP00963,Shannon Yu,Villanueva LLC,28,Salaried,53230.02,7110.73,663,1240072.43,12,94491.05,0
+APP00964,Tom Foster,Mccormick and Sons,37,Self-Employed,10653.28,3076.53,526,436713.19,36,8563.92,2
+APP00965,Eric Taylor,Watson-Roberts,38,Salaried,26490.67,4131.26,800,1390282.27,12,18611.77,2
+APP00966,Travis Conner,Hernandez LLC,24,Self-Employed,25619.6,8081.36,749,871751.76,12,22783.5,3
+APP00967,Marie Thompson,Huber-Montgomery,35,Salaried,84521.34,16537.93,744,5293324.81,48,104600.86,0
+APP00968,Melissa Mcfarland,Joseph LLC,31,Self-Employed,62267.81,2269.41,723,2739076.33,36,32714.42,2
+APP00969,Courtney Chapman,Mcpherson Ltd,47,Salaried,82166.85,8389.95,642,3292087.71,60,173966.14,0
+APP00970,Eric Barker,"Conway, Bauer and Martin",38,Salaried,166067.33,29494.85,695,10549042.93,24,169375.18,1
+APP00971,Nicholas Rush,Williams LLC,35,Self-Employed,24885.38,4259.74,802,989817.84,12,31368.73,2
+APP00972,Jenna Gamble,"Martinez, Green and Lopez",37,Salaried,67363.25,19920.92,654,2483319.69,12,76762.12,4
+APP00973,Amanda Guzman,"Mann, Wade and Spence",40,Salaried,81051.75,22960.11,674,1477004.79,36,123808.02,0
+APP00974,Tracy Walker,Watson PLC,44,Salaried,53112.07,10494.61,570,1792506.64,120,126817.67,3
+APP00975,Taylor Taylor,Ferguson Inc,28,Salaried,61554.66,7837.23,814,2205066.3,48,50343.64,0
+APP00976,Cynthia Haas,Sullivan Group,28,Salaried,29583.04,1620.29,723,675597.98,24,38895.72,1
+APP00977,Stephen Davis,Gould LLC,49,Salaried,142628.69,13823.99,630,6741971.7,120,302658.02,0
+APP00978,Margaret Tanner,Smith Ltd,34,Salaried,48363.86,5311.69,633,997771.77,12,27908.33,3
+APP00979,Derek Wright,"Cantrell, Rivera and Thornton",24,Salaried,143377.38,18123.11,654,3644851.8,24,345856.07,0
+APP00980,David Rodriguez,Kemp-Montes,42,Salaried,71275.77,10360.39,705,3254844.93,36,191978.74,1
+APP00981,James Oconnor,"Estrada, Marsh and Chandler",43,Salaried,116179.48,9182.81,736,3269175.98,24,225306.7,1
+APP00982,Stacey Snyder,Morgan-Rodriguez,23,Salaried,55307.34,10549.8,676,2786389.43,36,144657.35,1
+APP00983,Joshua Garcia,Mccullough-Taylor,40,Salaried,69703.96,3263.04,790,3724337.69,60,104331.54,0
+APP00984,Sean Curtis,"Wilson, Johnson and Williamson",45,Salaried,57512.64,4917.48,712,1729831.98,24,84649.73,2
+APP00985,Carla Jones,Griffin Inc,42,Salaried,76307.83,11704.6,791,1315795.91,24,53942.33,0
+APP00986,Elizabeth Flores,Brown-Davidson,44,Salaried,85355.65,6964.13,716,3530916.44,48,48192.21,0
+APP00987,Angela Jackson,"Fox, Harrington and Wang",24,Salaried,40384.0,2123.56,900,709704.64,12,43697.24,0
+APP00988,Nicholas Payne,Johnson PLC,41,Salaried,67587.8,24975.13,631,2900472.28,60,93412.62,2
+APP00989,Anna Wheeler,Rhodes-Rosario,35,Salaried,50572.56,10395.75,650,2810472.21,48,80277.16,1
+APP00990,Karen Johnson,"Foster, Henry and Morrison",33,Salaried,182672.78,20594.32,672,8991115.32,24,179949.54,0
+APP00991,Carmen Preston,"Harding, Kerr and Ward",47,Salaried,72632.18,19133.43,683,2825105.51,24,128149.92,1
+APP00992,Brian Harris,Baldwin Group,53,Self-Employed,202783.57,54698.04,561,13941677.09,24,167191.7,3
+APP00993,Michael Bowen,Hughes-Smith,56,Salaried,69252.34,11822.01,727,1253802.03,12,83327.29,1
+APP00994,Deborah Campbell,Bell-Madden,51,Salaried,84984.28,23614.62,579,5506989.34,24,72392.06,1
+APP00995,Anthony Armstrong,"Miller, Luna and Wallace",37,Salaried,37631.1,3427.84,731,2258156.74,24,80514.06,1
+APP00996,Brittany Ward,Lara-Roberts,42,Salaried,59144.71,10165.93,613,2199255.59,60,96847.9,2
+APP00997,Edward Stanley,"Waller, Coleman and Mosley",46,Salaried,83140.13,23325.04,670,1760245.39,48,167275.67,1
+APP00998,Christina Johnson,Houston PLC,39,Salaried,142601.18,18041.16,752,3044821.5,60,85908.41,1
+APP00999,Edgar Miller,Thomas LLC,39,Salaried,77187.87,27926.85,834,5195387.91,60,98845.43,0
+APP01000,Elizabeth Sanders,Mcneil-Fox,46,Salaried,140957.87,17353.52,652,3668045.24,84,385916.46,1
