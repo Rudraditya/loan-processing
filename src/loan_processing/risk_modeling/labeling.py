@@ -50,8 +50,15 @@ def add_default_label(
     cibil_risk = 900 - df["CIBIL_Score"]
     log_income = np.log(df["Monthly_Net_Income"])
 
+    # New-to-credit (NTC) applicants have no CIBIL_Score (NaN), so they get
+    # zero contribution from the credit-history term instead of propagating
+    # NaN through the rest of the logit — their synthetic risk is driven by
+    # the other (alternative-data) factors below, same as a real NTC
+    # underwriting decision would be.
+    cibil_zscore = _zscore(cibil_risk).fillna(0.0)
+
     raw_logit = (
-        1.4 * _zscore(cibil_risk)
+        1.4 * cibil_zscore
         + 1.2 * _zscore(emi_to_income)
         + 0.8 * _zscore(df["Number_of_Bounced_Transactions_Last_6M"])
         + 0.6 * _zscore(loan_to_annual_income)

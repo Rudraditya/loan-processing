@@ -16,19 +16,30 @@ from loan_processing.extraction.bank_statement_parser import parse_bank_statemen
 from loan_processing.extraction.salary_slip_parser import parse_salary_slip
 from loan_processing.risk_modeling.train import FEATURE_COLUMNS, build_features
 
-# The salary slip and bank statement can't supply these: CIBIL_Score needs a
-# credit-bureau pull, Requested_Loan_Amount / Requested_Tenure_Months come
-# from the loan application form (no extractor for that yet), and the mock
-# bank statement doesn't simulate bounced-transaction line items.
+# The salary slip and bank statement can't supply these: Requested_Loan_Amount
+# / Requested_Tenure_Months / and Is_First_Loan come from the loan
+# application form (no extractor for that yet), and the mock bank statement
+# doesn't simulate bounced-transaction line items. CIBIL_Score is not on this
+# list because it isn't a model input at all (see risk_modeling.train) - a
+# credit-bureau pull was deliberately excluded from the feature set.
 FIELDS_NOT_AVAILABLE_FROM_THESE_DOCUMENTS = [
-    "CIBIL_Score",
+    "Is_First_Loan",
     "Requested_Loan_Amount",
     "Requested_Tenure_Months",
     "Number_of_Bounced_Transactions_Last_6M",
 ]
 
 
-def build_applicant_record(salary_slip_path: str | Path, bank_statement_path: str | Path) -> dict:
+def build_applicant_record(
+    salary_slip_path: str | Path,
+    bank_statement_path: str | Path,
+    is_first_loan: bool | None = None,
+) -> dict:
+    """`is_first_loan` stands in for the loan-application-form input the real
+    frontend collects (there's no form extractor yet). Leave it None to get
+    the honest "unknown from these documents" behavior; pass True/False to
+    simulate that form field being supplied, e.g. for the CLI demo.
+    """
     salary_fields = parse_salary_slip(salary_slip_path)
     bank_fields = parse_bank_statement(bank_statement_path)
 
@@ -49,6 +60,9 @@ def build_applicant_record(salary_slip_path: str | Path, bank_statement_path: st
     }
     for field in FIELDS_NOT_AVAILABLE_FROM_THESE_DOCUMENTS:
         record[field] = math.nan
+
+    if is_first_loan is not None:
+        record["Is_First_Loan"] = 1 if is_first_loan else 0
 
     return record
 

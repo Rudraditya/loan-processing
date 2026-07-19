@@ -25,6 +25,7 @@ _OUTPUT_COLUMNS = [
     "Employment_Type",
     "Monthly_Net_Income",
     "Total_Existing_EMIs",
+    "Is_First_Loan",
     "CIBIL_Score",
     "Requested_Loan_Amount",
     "Requested_Tenure_Months",
@@ -91,6 +92,14 @@ def generate_applicants(n: int = 1000, seed: int = DEFAULT_SEED) -> pd.DataFrame
         ]
     )
 
+    # New-to-credit (NTC) applicants: ~15% are taking their first loan ever,
+    # so they have no CIBIL_Score to report. Drawn last (after every other
+    # column) so inserting this doesn't shift the RNG stream and change any
+    # previously-generated column's values for a given seed.
+    is_first_loan = (rng.random(n) < 0.15).astype(int)
+    cibil_score_with_ntc = cibil_score.astype(float)
+    cibil_score_with_ntc[is_first_loan == 1] = np.nan
+
     df = pd.DataFrame(
         {
             "Applicant_ID": [f"APP{i + 1:05d}" for i in range(n)],
@@ -100,7 +109,8 @@ def generate_applicants(n: int = 1000, seed: int = DEFAULT_SEED) -> pd.DataFrame
             "Employment_Type": employment_type,
             "Monthly_Net_Income": monthly_net_income.round(2),
             "Total_Existing_EMIs": total_existing_emis.round(2),
-            "CIBIL_Score": cibil_score,
+            "Is_First_Loan": is_first_loan,
+            "CIBIL_Score": cibil_score_with_ntc,
             "Requested_Loan_Amount": requested_loan_amount.round(2),
             "Requested_Tenure_Months": requested_tenure_months,
             "Average_Monthly_Bank_Balance": average_monthly_bank_balance.round(2),
@@ -113,6 +123,7 @@ def generate_applicants(n: int = 1000, seed: int = DEFAULT_SEED) -> pd.DataFrame
 def validate_applicants(df: pd.DataFrame) -> None:
     """Raises if any row fails the ApplicantRecord schema."""
     for row in df.itertuples(index=False):
+        cibil_score = None if pd.isna(row.CIBIL_Score) else int(row.CIBIL_Score)
         ApplicantRecord(
             applicant_id=row.Applicant_ID,
             full_name=row.Full_Name,
@@ -121,7 +132,8 @@ def validate_applicants(df: pd.DataFrame) -> None:
             employment_type=row.Employment_Type,
             monthly_net_income=row.Monthly_Net_Income,
             total_existing_emis=row.Total_Existing_EMIs,
-            cibil_score=row.CIBIL_Score,
+            is_first_loan=row.Is_First_Loan,
+            cibil_score=cibil_score,
             requested_loan_amount=row.Requested_Loan_Amount,
             requested_tenure_months=row.Requested_Tenure_Months,
             average_monthly_bank_balance=row.Average_Monthly_Bank_Balance,

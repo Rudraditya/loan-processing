@@ -6,8 +6,8 @@ Usage:
 
 Locates the applicant's mock salary-slip PDF and bank-statement XLSX under
 data/mock_documents/, extracts structured financial fields, scores them with
-the saved XGBoost credit-risk model, and prints a Customer Risk Analysis
-Report with a final processing recommendation.
+the saved Logistic Regression credit-risk model, and prints a Customer Risk
+Analysis Report with a final processing recommendation.
 """
 from __future__ import annotations
 
@@ -36,11 +36,17 @@ HIGH_EMI_TO_INCOME_RATIO = 0.50
 LOW_BALANCE_TO_INCOME_RATIO = 0.25  # balance under a quarter month's income looks thin
 
 _MISSING_FIELD_REASONS = {
-    "CIBIL_Score": "requires a credit bureau pull",
+    "Is_First_Loan": "requires the loan application form",
     "Requested_Loan_Amount": "requires the loan application form",
     "Requested_Tenure_Months": "requires the loan application form",
     "Number_of_Bounced_Transactions_Last_6M": "bank statement did not include bounced-transaction line items",
 }
+
+# The model doesn't use a credit-bureau score (CIBIL_Score) as an input for
+# any applicant - these are the alternative-data factors it relies on
+# instead, called out explicitly in the NTC section since a first-time
+# borrower also has no repayment history behind them.
+NTC_ALTERNATIVE_DATA_FACTORS = ["Monthly_Net_Income", "Average_Monthly_Bank_Balance"]
 
 
 def locate_documents(applicant_id: str) -> tuple[Path, Path]:
@@ -56,20 +62,25 @@ def locate_documents(applicant_id: str) -> tuple[Path, Path]:
 
 
 def load_model_artifacts() -> tuple:
-    model = joblib.load(MODELS_DIR / "xgboost_model.pkl")
-    scaler = joblib.load(MODELS_DIR / "scaler.pkl")
+    model = joblib.load(MODELS_DIR / "logistic_regression_model.pkl")
+    scaler = joblib.load(MODELS_DIR / "logistic_regression_scaler.pkl")
+    medians = joblib.load(MODELS_DIR / "logistic_regression_medians.pkl")
     feature_columns = joblib.load(MODELS_DIR / "feature_columns.pkl")
-    return model, scaler, feature_columns
+    return model, scaler, medians, feature_columns
 
 
 def score_applicant(
-    model_input: pd.DataFrame, model, scaler, feature_columns: list[str]
+    model_input: pd.DataFrame, model, scaler, medians: pd.Series, feature_columns: list[str]
 ) -> tuple[str, float]:
     assert list(model_input.columns) == feature_columns, (
         "Feature order from the extraction layer doesn't match the saved model's "
         "feature_columns.pkl — the two have drifted out of sync."
     )
-    scaled = scaler.transform(model_input)
+    # Unlike XGBoost, Logistic Regression can't accept NaN at all - impute with the
+    # same per-feature training medians train.py used for its own held-out evaluation,
+    # then scale with that same run's fitted scaler, before predicting.
+    imputed = model_input.fillna(medians)
+    scaled = scaler.transform(imputed)
     probability_of_default = float(model.predict_proba(scaled)[0, 1])
     predicted_class = "Default" if probability_of_default >= 0.5 else "No Default"
     return predicted_class, probability_of_default
@@ -161,7 +172,7 @@ def build_report(
 
     lines.append("")
     lines.append("-" * 70)
-    lines.append("3. AI RISK PROFILE PREDICTION (XGBoost)")
+    lines.append("3. AI RISK PROFILE PREDICTION (Logistic Regression)")
     lines.append("-" * 70)
     lines.append(f"Predicted Class         : {predicted_class}")
     lines.append(f"Default Probability     : {probability_of_default:.2%}")
@@ -169,21 +180,38 @@ def build_report(
         lines.append(
             f"Confidence Note         : computed with {len(missing_required_fields)} of "
             f"{total_features} model features missing ({', '.join(missing_required_fields)}). "
-            "XGBoost natively handles missing values via learned default split directions, but "
-            "this prediction should be treated as a preliminary signal only, not a final assessment."
+            "Logistic Regression can't accept missing values directly, so each was substituted "
+            "with its training-set median before scoring - this prediction should be treated as "
+            "a preliminary signal only, not a final assessment."
+        )
+
+    is_ntc = record.get("Is_First_Loan") == 1
+    if is_ntc:
+        lines.append("")
+        lines.append("-" * 70)
+        lines.append("4. NEW-TO-CREDIT (NTC) APPLICANT NOTE")
+        lines.append("-" * 70)
+        lines.append(
+            "This applicant is taking out their first loan. This model does not use a credit "
+            "bureau score (CIBIL_Score) as an input for any applicant, so this assessment isn't "
+            "weighted any differently on that front than a returning borrower's - it rests "
+            f"entirely on alternative data: {', '.join(NTC_ALTERNATIVE_DATA_FACTORS)}. A "
+            "first-time borrower does, however, have no repayment track record behind those "
+            "numbers yet, so treat this prediction as directional; an underwriter should "
+            "corroborate with other NTC-appropriate signals (e.g. utility/rent payment history) "
+            "before final decisioning."
         )
 
     lines.append("")
     lines.append("-" * 70)
-    lines.append("4. PROCESSING RECOMMENDATION")
+    lines.append(f"{5 if is_ntc else 4}. PROCESSING RECOMMENDATION")
     lines.append("-" * 70)
     if missing_required_fields:
         lines.append(">>> FLAG FOR MANUAL REVIEW <<<")
         lines.append(
             "Reason: required underwriting inputs are missing "
             f"({', '.join(missing_required_fields)}). Route to an underwriter to supplement "
-            "with a credit bureau pull and the applicant's loan application form before final "
-            "decisioning."
+            "with the applicant's loan application form before final decisioning."
         )
     elif has_data_flags:
         lines.append(">>> FLAG FOR MANUAL REVIEW <<<")
@@ -202,16 +230,27 @@ def build_report(
 def main() -> None:
     parser = argparse.ArgumentParser(description="AI-powered Loan Assessment Agent")
     parser.add_argument("applicant_id", help="Applicant_ID to process, e.g. APP00522")
+    parser.add_argument(
+        "--first-loan",
+        choices=["yes", "no"],
+        default=None,
+        help=(
+            "Stands in for the loan-application-form field (there's no form extractor yet). "
+            "Omit to leave Is_First_Loan as unknown/NaN, same as the other application-form-only "
+            "fields."
+        ),
+    )
     args = parser.parse_args()
 
     salary_path, bank_path = locate_documents(args.applicant_id)
     print(f"Located documents: {salary_path.name}, {bank_path.name}\n")
 
-    record = build_applicant_record(salary_path, bank_path)
+    is_first_loan = None if args.first_loan is None else args.first_loan == "yes"
+    record = build_applicant_record(salary_path, bank_path, is_first_loan=is_first_loan)
     model_input = build_model_input(record)
 
-    model, scaler, feature_columns = load_model_artifacts()
-    predicted_class, probability_of_default = score_applicant(model_input, model, scaler, feature_columns)
+    model, scaler, medians, feature_columns = load_model_artifacts()
+    predicted_class, probability_of_default = score_applicant(model_input, model, scaler, medians, feature_columns)
 
     checks = run_consistency_checks(record)
     report = build_report(

@@ -8,7 +8,7 @@ from __future__ import annotations
 
 from enum import Enum
 
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, model_validator
 
 
 class EmploymentType(str, Enum):
@@ -24,8 +24,21 @@ class ApplicantRecord(BaseModel):
     employment_type: EmploymentType
     monthly_net_income: float = Field(gt=0)
     total_existing_emis: float = Field(ge=0)
-    cibil_score: int = Field(ge=300, le=900)
+    is_first_loan: int = Field(ge=0, le=1)
+    cibil_score: int | None = Field(default=None, ge=300, le=900)
     requested_loan_amount: float = Field(gt=0)
     requested_tenure_months: int = Field(gt=0)
     average_monthly_bank_balance: float = Field(ge=0)
     number_of_bounced_transactions_last_6m: int = Field(ge=0)
+
+    @model_validator(mode="after")
+    def _cibil_score_matches_first_loan_status(self) -> "ApplicantRecord":
+        # New-to-credit (NTC) applicants have no credit history to score,
+        # so CIBIL_Score must be genuinely absent for them rather than
+        # defaulted to a fabricated value; conversely, returning borrowers
+        # must have a real score.
+        if self.is_first_loan == 1 and self.cibil_score is not None:
+            raise ValueError("cibil_score must be null for first-time (NTC) applicants")
+        if self.is_first_loan == 0 and self.cibil_score is None:
+            raise ValueError("cibil_score is required for applicants with prior credit history")
+        return self
