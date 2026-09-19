@@ -20,14 +20,14 @@ data_generation -> document_simulation -> risk_modeling (label + train) -> extra
                                               agentic_api (FastAPI)  <-->  frontend (React + Vite)
 ```
 
-The repo contains four subsystems:
+The repo contains four subsystems. Paths are relative to `src/loan_processing/` unless marked as repo root.
 
 | Subsystem | Location | What it is |
 |---|---|---|
-| ML pipeline (active) | `src/loan_processing/{data_generation,document_simulation,risk_modeling,extraction}`, `app.py` | Synthetic data → model training → document extraction → CLI risk report |
-| `agentic_api` | `src/loan_processing/agentic_api/` | FastAPI service exposing extraction and scoring over HTTP |
-| `frontend` | `frontend/` | React + Vite + Zustand dashboard (Upload, Ledger, Insights, Pending Reviews, Decision History) |
-| Original rules-based API | `src/loan_processing/{api,ingestion,validation,scoring,decisioning,output}` | Earlier self-contained prototype: regex extraction + DTI-based scoring → Excel report. Not connected to the ML model |
+| ML pipeline (active) | `data_generation/`<br>`document_simulation/`<br>`risk_modeling/`<br>`extraction/`<br>`app.py` (repo root) | Synthetic data → model training → document extraction → CLI risk report |
+| `agentic_api` | `agentic_api/` | FastAPI service exposing extraction and scoring over HTTP |
+| `frontend` | `frontend/` (repo root) | React + Vite + Zustand dashboard (Upload, Ledger, Insights, Pending Reviews, Decision History) |
+| Original rules-based API | `api/`<br>`ingestion/`<br>`validation/`<br>`scoring/`<br>`decisioning/`<br>`output/` | Earlier self-contained prototype: regex extraction + DTI-based scoring → Excel report. Not connected to the ML model |
 
 ### API endpoints (`agentic_api`)
 
