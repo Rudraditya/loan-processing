@@ -6,3 +6,8 @@ __pycache__/
 .env
 node_modules/
 frontend/dist/
+
+# Local run artifacts / real-world test documents (may contain personal data)
+*.log
+midnight-portal.zip
+Testing/

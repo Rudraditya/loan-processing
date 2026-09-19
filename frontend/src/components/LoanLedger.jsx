@@ -1,8 +1,12 @@
-import { useRef, useState } from "react";
-import { ChevronRight } from "lucide-react";
+import { useMemo, useRef, useState } from "react";
+import { ArrowUpRight, Search } from "lucide-react";
 import { motion, useReducedMotion } from "motion/react";
 import { useLoanStore } from "../store/useLoanStore";
 import StatusPill from "./StatusPill";
+import PageHeader from "./PageHeader";
+
+const STATUS_OPTIONS = ["All Statuses", "Proceed", "Flagged"];
+const EMPLOYMENT_OPTIONS = ["All Employment", "Salaried", "Self-Employed", "Business Owner"];
 
 const inr = new Intl.NumberFormat("en-IN", {
   style: "currency",
@@ -64,8 +68,17 @@ function LedgerRow({ applicant, onSelect, reduce }) {
       <td className="px-4 py-3.5">
         <StatusPill verdict={applicant.Classification_Verdict} />
       </td>
-      <td className="rounded-r-lg px-3 py-3.5 text-zinc-600 transition-colors group-hover:text-accent">
-        <ChevronRight size={14} strokeWidth={2} />
+      <td className="rounded-r-lg px-3 py-3.5">
+        <button
+          onClick={(e) => {
+            e.stopPropagation();
+            onSelect(applicant.Applicant_ID);
+          }}
+          className="flex items-center gap-1 whitespace-nowrap rounded-md px-2 py-1 text-xs font-medium text-zinc-500 opacity-0 transition-all group-hover:opacity-100 hover:bg-accent/10 hover:text-accent"
+        >
+          Review Insights
+          <ArrowUpRight size={12} strokeWidth={2} />
+        </button>
       </td>
     </motion.tr>
   );
@@ -76,11 +89,68 @@ export default function LoanLedger() {
   const selectApplicant = useLoanStore((state) => state.selectApplicant);
   const reduce = useReducedMotion();
 
+  const [query, setQuery] = useState("");
+  const [statusFilter, setStatusFilter] = useState(STATUS_OPTIONS[0]);
+  const [employmentFilter, setEmploymentFilter] = useState(EMPLOYMENT_OPTIONS[0]);
+
+  const filtered = useMemo(() => {
+    return applicants.filter((a) => {
+      // No Name field exists on real applicant records (only Applicant_ID),
+      // so search is scoped to ID rather than fabricating a name to match against.
+      if (query.trim() && !a.Applicant_ID.toLowerCase().includes(query.trim().toLowerCase())) return false;
+      if (statusFilter === "Proceed" && a.Classification_Verdict !== 0) return false;
+      if (statusFilter === "Flagged" && a.Classification_Verdict !== 1) return false;
+      if (employmentFilter !== "All Employment" && a.Employment_Type !== employmentFilter) return false;
+      return true;
+    });
+  }, [applicants, query, statusFilter, employmentFilter]);
+
   return (
     <div className="w-full">
-      <div className="mb-6 flex items-baseline justify-between px-1">
-        <h1 className="text-base font-semibold text-zinc-100">Loan Application Ledger</h1>
-        <span className="text-xs tabular-nums text-zinc-500">{applicants.length} records</span>
+      <PageHeader
+        eyebrow="Applicant Records"
+        title="Loan Ledger"
+        description="Every scored applicant this session, searchable and filterable by status or employment type."
+        right={
+          <span className="rounded-full border border-zinc-800 bg-zinc-900/60 px-3 py-1.5 font-mono text-xs tabular-nums text-zinc-300">
+            {filtered.length} of {applicants.length} records
+          </span>
+        }
+      />
+
+      <div className="mb-4 flex flex-col gap-3 sm:flex-row sm:items-center">
+        <div className="relative flex-1">
+          <Search size={14} strokeWidth={2} className="absolute left-3 top-1/2 -translate-y-1/2 text-zinc-500" />
+          <input
+            type="text"
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+            placeholder="Search by Applicant ID..."
+            className="w-full rounded-lg border border-zinc-800 bg-zinc-950/60 py-2 pl-9 pr-3 text-sm text-zinc-100 outline-none transition-colors placeholder:text-zinc-600 focus:border-accent"
+          />
+        </div>
+        <select
+          value={statusFilter}
+          onChange={(e) => setStatusFilter(e.target.value)}
+          className="rounded-lg border border-zinc-800 bg-zinc-950/60 px-3 py-2 text-sm text-zinc-300 outline-none transition-colors focus:border-accent"
+        >
+          {STATUS_OPTIONS.map((opt) => (
+            <option key={opt} value={opt} className="bg-zinc-900">
+              {opt}
+            </option>
+          ))}
+        </select>
+        <select
+          value={employmentFilter}
+          onChange={(e) => setEmploymentFilter(e.target.value)}
+          className="rounded-lg border border-zinc-800 bg-zinc-950/60 px-3 py-2 text-sm text-zinc-300 outline-none transition-colors focus:border-accent"
+        >
+          {EMPLOYMENT_OPTIONS.map((opt) => (
+            <option key={opt} value={opt} className="bg-zinc-900">
+              {opt}
+            </option>
+          ))}
+        </select>
       </div>
 
       <div className="overflow-x-auto rounded-xl border border-zinc-800/80 p-1">
@@ -96,12 +166,13 @@ export default function LoanLedger() {
             </tr>
           </thead>
           <motion.tbody
+            key={`${query}-${statusFilter}-${employmentFilter}`}
             variants={reduce ? undefined : listVariants}
             initial={reduce ? undefined : "hidden"}
             animate={reduce ? undefined : "show"}
             className="divide-y divide-zinc-800/50"
           >
-            {applicants.map((applicant) => (
+            {filtered.map((applicant) => (
               <LedgerRow
                 key={applicant.Applicant_ID}
                 applicant={applicant}
@@ -111,6 +182,9 @@ export default function LoanLedger() {
             ))}
           </motion.tbody>
         </table>
+        {filtered.length === 0 && (
+          <p className="px-4 py-8 text-center text-sm text-zinc-500">No applicants match the current filters.</p>
+        )}
       </div>
     </div>
   );

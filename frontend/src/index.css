@@ -2,9 +2,15 @@
 
 @theme {
   --color-accent: #3b82f6;
+  --color-midnight: #070912;
+  --color-midnight-card: #0c101d;
+  --font-sans: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
 }
 
 body {
+  font-family: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
   font-feature-settings: "tnum" 1;
 }
 

@@ -14,6 +14,7 @@ from pydantic import BaseModel, Field, model_validator
 class EmploymentType(str, Enum):
     SALARIED = "Salaried"
     SELF_EMPLOYED = "Self-Employed"
+    BUSINESS_OWNER = "Business Owner"
 
 
 class ApplicantRecord(BaseModel):
@@ -23,6 +24,8 @@ class ApplicantRecord(BaseModel):
     age: int = Field(ge=21, le=65)
     employment_type: EmploymentType
     monthly_net_income: float = Field(gt=0)
+    gross_income: float = Field(gt=0)
+    total_deductions: float = Field(ge=0)
     total_existing_emis: float = Field(ge=0)
     is_first_loan: int = Field(ge=0, le=1)
     cibil_score: int | None = Field(default=None, ge=300, le=900)
@@ -41,4 +44,10 @@ class ApplicantRecord(BaseModel):
             raise ValueError("cibil_score must be null for first-time (NTC) applicants")
         if self.is_first_loan == 0 and self.cibil_score is None:
             raise ValueError("cibil_score is required for applicants with prior credit history")
+        return self
+
+    @model_validator(mode="after")
+    def _net_income_reconciles_with_gross_and_deductions(self) -> "ApplicantRecord":
+        if abs((self.gross_income - self.total_deductions) - self.monthly_net_income) > 0.02:
+            raise ValueError("monthly_net_income must equal gross_income - total_deductions")
         return self

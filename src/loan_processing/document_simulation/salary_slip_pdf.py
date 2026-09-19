@@ -14,14 +14,12 @@ from reportlab.lib.pagesizes import A4
 from reportlab.lib.units import mm
 from reportlab.pdfgen import canvas
 
-TAX_DEDUCTION_RATE = 0.22
-
 
 def render_salary_slip(applicant: pd.Series, statement_month: date | None = None) -> bytes:
     statement_month = statement_month or date.today().replace(day=1)
     net_pay = float(applicant["Monthly_Net_Income"])
-    gross_pay = net_pay / (1 - TAX_DEDUCTION_RATE)
-    tax_deduction = gross_pay - net_pay
+    gross_pay = float(applicant["Gross_Income"])
+    tax_deduction = float(applicant["Total_Deductions"])
 
     buffer = io.BytesIO()
     c = canvas.Canvas(buffer, pagesize=A4)

@@ -28,7 +28,6 @@ def incomplete_record(complete_record) -> dict:
         "Is_First_Loan",
         "Requested_Loan_Amount",
         "Requested_Tenure_Months",
-        "Number_of_Bounced_Transactions_Last_6M",
     ]:
         record[field] = math.nan
     return record
@@ -45,7 +44,7 @@ def test_consistency_checks_flag_missing_fields(incomplete_record):
     checks = run_consistency_checks(incomplete_record)
 
     missing_lines = [c for c in checks if c.startswith("[MISSING]")]
-    assert len(missing_lines) == 4
+    assert len(missing_lines) == 3
 
 
 def test_report_includes_ntc_note_for_first_time_borrowers(ntc_record):

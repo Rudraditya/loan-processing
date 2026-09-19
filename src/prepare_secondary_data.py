@@ -97,6 +97,8 @@ FINAL_COLUMNS = [
     "Age",
     "Employment_Type",
     "Monthly_Net_Income",
+    "Gross_Income",
+    "Total_Deductions",
     "Total_Existing_EMIs",
     "CIBIL_Score",
     "Is_First_Loan",
@@ -104,6 +106,12 @@ FINAL_COLUMNS = [
     "Requested_Tenure_Months",
     "Average_Monthly_Bank_Balance",
     "Number_of_Bounced_Transactions_Last_6M",
+    "Cash_Flow_Month_1",
+    "Cash_Flow_Month_2",
+    "Cash_Flow_Month_3",
+    "Cash_Flow_Month_4",
+    "Cash_Flow_Month_5",
+    "Cash_Flow_Month_6",
     "Default",
 ]
 
@@ -146,9 +154,15 @@ def load_and_map(path: Path = RAW_KAGGLE_PATH) -> pd.DataFrame:
     # No numeric bureau score exists in this dataset for anyone, NTC or not.
     mapped["CIBIL_Score"] = np.nan
 
+    # No gross-pay/deductions breakdown exists in this dataset either.
+    mapped["Gross_Income"] = np.nan
+    mapped["Total_Deductions"] = np.nan
+
     # Not present in a loan-application-level dataset (no bank-transaction data).
     mapped["Average_Monthly_Bank_Balance"] = np.nan
     mapped["Number_of_Bounced_Transactions_Last_6M"] = np.nan
+    for i in range(1, 7):
+        mapped[f"Cash_Flow_Month_{i}"] = np.nan
 
     # loan_amnt is a real, direct source for the requested amount; this
     # dataset has no loan-term/duration field, so tenure is NaN.

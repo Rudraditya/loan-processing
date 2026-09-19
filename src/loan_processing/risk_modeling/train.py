@@ -1,7 +1,7 @@
 """Trains and evaluates baseline (Logistic Regression) and XGBoost credit-risk
 classifiers on the synthetic applicant dataset, balances the training set with
-SMOTE, and serializes the XGBoost model + preprocessing artifacts for the
-document-extraction integration phase.
+SMOTE, and serializes each model as one bundled sklearn Pipeline (preprocessing
++ classifier) for the document-extraction integration phase.
 
 CIBIL_Score (a credit-bureau score) is deliberately excluded from
 FEATURE_COLUMNS - the model relies entirely on income/EMI/balance/repayment
@@ -15,6 +15,18 @@ incomplete rows are kept in the training set as-is, unresampled. Logistic
 Regression, unlike XGBoost, cannot accept NaN at all (neither to fit nor to
 predict), so - for that baseline comparison model only - missing values are
 median-imputed; the production model (XGBoost) never sees an imputed value.
+
+Employment_Type is the one raw-categorical feature (`Salaried`/`Self-Employed`/
+`Business Owner`) - `_build_preprocessor()` one-hot encodes it via
+`OneHotEncoder(handle_unknown="ignore")` inside a `ColumnTransformer`, so an
+unseen category at scoring time degrades gracefully (zero-filled dummies)
+rather than raising. Each model's preprocessor and classifier are fit
+separately (SMOTE needs to run on the already-encoded/scaled array, between
+the two - imblearn's own auto-SMOTE Pipeline step doesn't have a clean hook
+for `_smote_resample_allow_nan`'s "skip incomplete rows" logic), then
+assembled into a `sklearn.pipeline.Pipeline` from the already-fitted pieces
+purely for serialization/scoring convenience - `pipeline.predict_proba(raw_df)`
+runs the whole preprocess-then-predict sequence in one call.
 """
 from __future__ import annotations
 
@@ -25,10 +37,13 @@ import joblib
 import numpy as np
 import pandas as pd
 from imblearn.over_sampling import SMOTE
+from sklearn.compose import ColumnTransformer
+from sklearn.impute import SimpleImputer
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import classification_report
 from sklearn.model_selection import train_test_split
-from sklearn.preprocessing import StandardScaler
+from sklearn.pipeline import Pipeline
+from sklearn.preprocessing import OneHotEncoder, StandardScaler
 from xgboost import XGBClassifier
 
 from loan_processing.risk_modeling.evaluation import (
@@ -37,6 +52,7 @@ from loan_processing.risk_modeling.evaluation import (
     plot_feature_importance,
     plot_roc_curves,
 )
+from loan_processing.risk_modeling.emi import estimated_monthly_installment
 from loan_processing.risk_modeling.labeling import add_default_label
 
 REPO_ROOT = Path(__file__).resolve().parents[3]
@@ -47,7 +63,7 @@ FIGURES_DIR = REPO_ROOT / "reports" / "figures"
 
 FEATURE_COLUMNS = [
     "Age",
-    "Is_Self_Employed",
+    "Employment_Type",
     "Monthly_Net_Income",
     "Total_Existing_EMIs",
     "Is_First_Loan",
@@ -57,13 +73,40 @@ FEATURE_COLUMNS = [
     "Number_of_Bounced_Transactions_Last_6M",
     "EMI_to_Income_Ratio",
     "Loan_to_Annual_Income_Ratio",
+    "Deductions_to_Gross_Ratio",
+    "Cash_Flow_Trend_Slope",
+    "Requested_EMI_to_Income_Ratio",
 ]
+
+# Employment_Type is the only raw-categorical feature - build_features()
+# passes it through as a string; the ColumnTransformer preprocessor built by
+# _build_preprocessor() below one-hot encodes it. Every other FEATURE_COLUMNS
+# entry is numeric and gets scaled (optionally median-imputed first).
+CATEGORICAL_FEATURES = ["Employment_Type"]
+
+_CASH_FLOW_MONTH_COLUMNS = [f"Cash_Flow_Month_{i}" for i in range(1, 7)]
+
+
+def _cash_flow_trend_slope(df: pd.DataFrame) -> pd.Series:
+    """Centered OLS slope of the 6 monthly cash-flow figures (x = 1..6).
+    Explicitly NaN if any of the 6 months is missing for a row, rather than
+    silently averaging over fewer points - same "explicit NaN over a
+    fabricated partial value" convention as FIELDS_NOT_AVAILABLE_FROM_THESE_DOCUMENTS.
+    """
+    x = np.arange(1, 7)
+    x_centered = x - x.mean()
+    denom = (x_centered**2).sum()
+    y = df[_CASH_FLOW_MONTH_COLUMNS].to_numpy(dtype=float)
+    any_missing = np.isnan(y).any(axis=1)
+    y_mean = np.where(any_missing, np.nan, np.nanmean(y, axis=1))[:, None]
+    slope = ((y - y_mean) * x_centered).sum(axis=1) / denom
+    return pd.Series(np.where(any_missing, np.nan, slope), index=df.index)
 
 
 def build_features(df: pd.DataFrame) -> pd.DataFrame:
     features = pd.DataFrame(index=df.index)
     features["Age"] = df["Age"]
-    features["Is_Self_Employed"] = (df["Employment_Type"] == "Self-Employed").astype(int)
+    features["Employment_Type"] = df["Employment_Type"]
     features["Monthly_Net_Income"] = df["Monthly_Net_Income"]
     features["Total_Existing_EMIs"] = df["Total_Existing_EMIs"]
     features["Is_First_Loan"] = df["Is_First_Loan"]
@@ -73,7 +116,47 @@ def build_features(df: pd.DataFrame) -> pd.DataFrame:
     features["Number_of_Bounced_Transactions_Last_6M"] = df["Number_of_Bounced_Transactions_Last_6M"]
     features["EMI_to_Income_Ratio"] = df["Total_Existing_EMIs"] / df["Monthly_Net_Income"]
     features["Loan_to_Annual_Income_Ratio"] = df["Requested_Loan_Amount"] / (df["Monthly_Net_Income"] * 12)
+    features["Deductions_to_Gross_Ratio"] = df["Total_Deductions"] / df["Gross_Income"]
+    features["Cash_Flow_Trend_Slope"] = _cash_flow_trend_slope(df)
+    # The *requested* loan's own estimated installment (at emi.py's assumed
+    # rate) against income - unlike Loan_to_Annual_Income_Ratio, this is
+    # tenure-sensitive: the same loan amount compressed into a short tenure
+    # produces a much higher ratio here than spread over a long one, which a
+    # coarse loan/annual-income ratio can't distinguish. NaN wherever
+    # Requested_Tenure_Months is itself NaN (see emi.py).
+    installment = estimated_monthly_installment(df["Requested_Loan_Amount"], df["Requested_Tenure_Months"])
+    features["Requested_EMI_to_Income_Ratio"] = installment / df["Monthly_Net_Income"]
     return features[FEATURE_COLUMNS]
+
+
+def _build_preprocessor(feature_columns: list[str], impute_numeric: bool) -> ColumnTransformer:
+    """Builds the ColumnTransformer that turns build_features()'s raw output
+    (Employment_Type as a string, everything else numeric) into a fully
+    numeric array: one-hot encodes the categorical column(s) - gracefully
+    zero-filling any category never seen at fit time, via handle_unknown -
+    and scales the numeric columns (optionally median-imputing them first,
+    for the Logistic Regression path only - XGBoost keeps true NaN via its
+    own missing=np.nan handling, so its preprocessor must not impute).
+
+    Computed from `feature_columns` (this run's actual post-exclusion column
+    list, e.g. after --exclude-features), not the module-level FEATURE_COLUMNS
+    constant directly - so excluding Employment_Type (or, in principle, every
+    numeric column) from a given run doesn't leave a stale, mismatched
+    transformer.
+    """
+    categorical = [c for c in feature_columns if c in CATEGORICAL_FEATURES]
+    numeric = [c for c in feature_columns if c not in CATEGORICAL_FEATURES]
+
+    numeric_steps: list[tuple] = [("scale", StandardScaler())]
+    if impute_numeric:
+        numeric_steps.insert(0, ("impute", SimpleImputer(strategy="median")))
+
+    transformers = []
+    if categorical:
+        transformers.append(("cat", OneHotEncoder(handle_unknown="ignore", sparse_output=False), categorical))
+    if numeric:
+        transformers.append(("num", Pipeline(numeric_steps), numeric))
+    return ColumnTransformer(transformers)
 
 
 def _smote_resample_allow_nan(
@@ -176,27 +259,31 @@ def main(
     )
 
     # --- XGBoost path: true NaN preserved throughout, no imputation ---
-    scaler = StandardScaler()
-    X_train_scaled = pd.DataFrame(scaler.fit_transform(X_train), columns=feature_columns, index=X_train.index)
-    X_test_scaled = pd.DataFrame(scaler.transform(X_test), columns=feature_columns, index=X_test.index)
+    # The preprocessor one-hot encodes Employment_Type and scales the numeric
+    # columns; StandardScaler passes NaN straight through untouched, same as
+    # before - XGBoost's own missing=np.nan handles it downstream.
+    xgb_preprocessor = _build_preprocessor(feature_columns, impute_numeric=False)
+    xgb_feature_names = list(xgb_preprocessor.fit(X_train).get_feature_names_out())
+    X_train_scaled = pd.DataFrame(xgb_preprocessor.transform(X_train), columns=xgb_feature_names, index=X_train.index)
+    X_test_scaled = pd.DataFrame(xgb_preprocessor.transform(X_test), columns=xgb_feature_names, index=X_test.index)
 
     print(f"\nTraining class balance before SMOTE: {y_train.value_counts().to_dict()}")
     X_train_res, y_train_res = _smote_resample_allow_nan(X_train_scaled, y_train, seed=42)
     print(f"Training class balance after SMOTE:  {y_train_res.value_counts().to_dict()}")
 
     # --- Logistic Regression path: median-imputed for this baseline only ---
-    # Impute every column with any missingness, not just CIBIL_Score - the
-    # original synthetic dataset only ever left that one column NaN, but a
-    # secondary dataset can leave several columns entirely missing (their
-    # median is itself NaN, so those fall back to 0). LogisticRegression,
-    # unlike XGBoost, can't accept NaN under any circumstance.
-    train_medians = X_train.median().fillna(0.0)
-    X_train_lr = X_train.fillna(train_medians)
-    X_test_lr = X_test.fillna(train_medians)
-
-    lr_scaler = StandardScaler()
-    X_train_lr_scaled = lr_scaler.fit_transform(X_train_lr)
-    X_test_lr_scaled = lr_scaler.transform(X_test_lr)
+    # Impute every numeric column with any missingness, not just CIBIL_Score -
+    # the original synthetic dataset only ever left that one column NaN, but a
+    # secondary dataset can leave several columns entirely missing. Logistic
+    # Regression, unlike XGBoost, can't accept NaN under any circumstance.
+    # SimpleImputer(strategy="median") is the sklearn-native equivalent of the
+    # old manual `X_train.median().fillna(0.0)` step, now inside the pipeline.
+    lr_preprocessor = _build_preprocessor(feature_columns, impute_numeric=True)
+    lr_feature_names = list(lr_preprocessor.fit(X_train).get_feature_names_out())
+    X_train_lr_scaled = pd.DataFrame(
+        lr_preprocessor.transform(X_train), columns=lr_feature_names, index=X_train.index
+    )
+    X_test_lr_scaled = pd.DataFrame(lr_preprocessor.transform(X_test), columns=lr_feature_names, index=X_test.index)
 
     smote_lr = SMOTE(random_state=42)
     X_train_lr_res, y_train_lr_res = smote_lr.fit_resample(X_train_lr_scaled, y_train)
@@ -204,6 +291,7 @@ def main(
     model_runs = {
         "Logistic Regression": {
             "model": LogisticRegression(max_iter=1000, random_state=42),
+            "preprocessor": lr_preprocessor,
             "X_train": X_train_lr_res,
             "y_train": y_train_lr_res,
             "X_test": X_test_lr_scaled,
@@ -219,6 +307,7 @@ def main(
                 missing=np.nan,
                 random_state=42,
             ),
+            "preprocessor": xgb_preprocessor,
             "X_train": X_train_res,
             "y_train": y_train_res,
             "X_test": X_test_scaled,
@@ -245,23 +334,30 @@ def main(
         plot_confusion_matrix(y_test, y_pred, name, figures_dir / f"confusion_matrix_{slug}.png")
 
     plot_roc_curves(roc_inputs, figures_dir / "roc_curve_comparison.png")
+    # Expanded (post-one-hot) names - XGBoost's feature_importances_ array
+    # length matches the encoded column count, not the raw 13-feature list.
     plot_feature_importance(
-        model_runs["XGBoost"]["model"], feature_columns, figures_dir / "xgboost_feature_importance.png"
+        model_runs["XGBoost"]["model"], xgb_feature_names, figures_dir / "xgboost_feature_importance.png"
     )
 
     print("\n===== Model Comparison =====")
     comparison_df = pd.DataFrame(all_metrics).T
     print(comparison_df.round(4).to_string())
 
-    joblib.dump(model_runs["XGBoost"]["model"], models_dir / "xgboost_model.pkl")
-    joblib.dump(model_runs["Logistic Regression"]["model"], models_dir / "logistic_regression_model.pkl")
-    joblib.dump(scaler, models_dir / "scaler.pkl")
-    # lr_scaler/train_medians are distinct from `scaler` above - lr_scaler is fit on
-    # median-imputed data, `scaler` on the raw NaN-preserving data XGBoost trains on.
-    # Persisted separately so a caller scoring with the Logistic Regression model
-    # (which can't accept NaN at all) can reproduce this exact impute-then-scale step.
-    joblib.dump(lr_scaler, models_dir / "logistic_regression_scaler.pkl")
-    joblib.dump(train_medians, models_dir / "logistic_regression_medians.pkl")
+    # Each pipeline bundles its already-fitted preprocessor (one-hot +
+    # scale/impute) with its already-fitted classifier into one object -
+    # scoring becomes a single pipeline.predict_proba(raw_df) call, no
+    # separate impute/scale steps for a caller to reproduce by hand.
+    xgb_pipeline = Pipeline([("preprocess", xgb_preprocessor), ("classifier", model_runs["XGBoost"]["model"])])
+    lr_pipeline = Pipeline(
+        [("preprocess", lr_preprocessor), ("classifier", model_runs["Logistic Regression"]["model"])]
+    )
+    joblib.dump(xgb_pipeline, models_dir / "xgboost_pipeline.pkl")
+    joblib.dump(lr_pipeline, models_dir / "logistic_regression_pipeline.pkl")
+    # feature_columns.pkl keeps validating the raw, pre-transform input
+    # contract (now including Employment_Type as a string instead of
+    # Is_Self_Employed as an int) - agentic_api/main.py and app.py assert
+    # extraction output matches this list before scoring.
     joblib.dump(feature_columns, models_dir / "feature_columns.pkl")
 
     print(f"\nSaved model artifacts to {models_dir}")

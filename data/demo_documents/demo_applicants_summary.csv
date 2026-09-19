@@ -1,0 +1,5 @@
+Applicant_ID,Full_Name,Employment_Type,Age,Is_First_Loan,Monthly_Net_Income,Requested_Loan_Amount,Requested_Tenure_Months,Cash_Flow_Shape,Bounces
+APPDEMO01,Ananya Rao,Salaried,29,False,52157.39,410142.33,48,rising,0
+APPDEMO02,Vikram Nair,Salaried,41,False,76620.73,455776.44,36,falling,1
+APPDEMO03,Priyanka Deshmukh,Self-Employed,35,False,83678.49,874689.36,60,volatile,0
+APPDEMO04,Rohan Mehta,Business Owner,27,True,62236.48,273443.43,24,flat,0

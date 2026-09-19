@@ -2,12 +2,14 @@
 """AI-powered Loan Assessment Agent — end-to-end CLI.
 
 Usage:
-    python app.py <Applicant_ID>
+    python app.py <Applicant_ID> <Date_Of_Birth YYYY-MM-DD>
 
 Locates the applicant's mock salary-slip PDF and bank-statement XLSX under
 data/mock_documents/, extracts structured financial fields, scores them with
 the saved Logistic Regression credit-risk model, and prints a Customer Risk
-Analysis Report with a final processing recommendation.
+Analysis Report with a final processing recommendation. Age is calculated
+from the supplied date of birth as of today, not extracted from the
+documents.
 """
 from __future__ import annotations
 
@@ -23,6 +25,7 @@ from loan_processing.extraction.record_builder import (
     FIELDS_NOT_AVAILABLE_FROM_THESE_DOCUMENTS,
     build_applicant_record,
     build_model_input,
+    calculate_age,
 )
 
 REPO_ROOT = Path(__file__).resolve().parent
@@ -39,7 +42,6 @@ _MISSING_FIELD_REASONS = {
     "Is_First_Loan": "requires the loan application form",
     "Requested_Loan_Amount": "requires the loan application form",
     "Requested_Tenure_Months": "requires the loan application form",
-    "Number_of_Bounced_Transactions_Last_6M": "bank statement did not include bounced-transaction line items",
 }
 
 # The model doesn't use a credit-bureau score (CIBIL_Score) as an input for
@@ -62,26 +64,20 @@ def locate_documents(applicant_id: str) -> tuple[Path, Path]:
 
 
 def load_model_artifacts() -> tuple:
-    model = joblib.load(MODELS_DIR / "logistic_regression_model.pkl")
-    scaler = joblib.load(MODELS_DIR / "logistic_regression_scaler.pkl")
-    medians = joblib.load(MODELS_DIR / "logistic_regression_medians.pkl")
+    # The pipeline bundles preprocessing (one-hot encoding Employment_Type,
+    # median-imputing + scaling the numeric features) and the classifier
+    # into one fitted sklearn Pipeline - see risk_modeling/train.py.
+    pipeline = joblib.load(MODELS_DIR / "logistic_regression_pipeline.pkl")
     feature_columns = joblib.load(MODELS_DIR / "feature_columns.pkl")
-    return model, scaler, medians, feature_columns
+    return pipeline, feature_columns
 
 
-def score_applicant(
-    model_input: pd.DataFrame, model, scaler, medians: pd.Series, feature_columns: list[str]
-) -> tuple[str, float]:
+def score_applicant(model_input: pd.DataFrame, pipeline, feature_columns: list[str]) -> tuple[str, float]:
     assert list(model_input.columns) == feature_columns, (
         "Feature order from the extraction layer doesn't match the saved model's "
         "feature_columns.pkl — the two have drifted out of sync."
     )
-    # Unlike XGBoost, Logistic Regression can't accept NaN at all - impute with the
-    # same per-feature training medians train.py used for its own held-out evaluation,
-    # then scale with that same run's fitted scaler, before predicting.
-    imputed = model_input.fillna(medians)
-    scaled = scaler.transform(imputed)
-    probability_of_default = float(model.predict_proba(scaled)[0, 1])
+    probability_of_default = float(pipeline.predict_proba(model_input)[0, 1])
     predicted_class = "Default" if probability_of_default >= 0.5 else "No Default"
     return predicted_class, probability_of_default
 
@@ -229,7 +225,26 @@ def build_report(
 
 def main() -> None:
     parser = argparse.ArgumentParser(description="AI-powered Loan Assessment Agent")
-    parser.add_argument("applicant_id", help="Applicant_ID to process, e.g. APP00522")
+    parser.add_argument("applicant_id", help="Applicant_ID to process, e.g. APP01732")
+    parser.add_argument(
+        "date_of_birth",
+        help=(
+            "Applicant's date of birth, YYYY-MM-DD. Age is calculated from this as of "
+            "today rather than extracted from the documents (a printed age goes stale "
+            "the moment it ages past the document's issue date)."
+        ),
+    )
+    parser.add_argument(
+        "employment_status",
+        choices=["Salaried", "Self-Employed", "Business Owner"],
+        help=(
+            "Stands in for the loan-application-form field - no longer extracted from "
+            "the salary slip (a self-reported document label isn't a reliable substitute "
+            "for what the applicant actually selects on the form, and a document can't "
+            "offer a category like 'Business Owner' beyond whatever two values happen to "
+            "be printed on it)."
+        ),
+    )
     parser.add_argument(
         "--first-loan",
         choices=["yes", "no"],
@@ -242,15 +257,23 @@ def main() -> None:
     )
     args = parser.parse_args()
 
+    try:
+        date_of_birth = datetime.strptime(args.date_of_birth, "%Y-%m-%d").date()
+    except ValueError as exc:
+        parser.error(f"date_of_birth must be in YYYY-MM-DD format: {exc}")
+
     salary_path, bank_path = locate_documents(args.applicant_id)
     print(f"Located documents: {salary_path.name}, {bank_path.name}\n")
 
+    age = calculate_age(date_of_birth)
     is_first_loan = None if args.first_loan is None else args.first_loan == "yes"
-    record = build_applicant_record(salary_path, bank_path, is_first_loan=is_first_loan)
+    record = build_applicant_record(
+        salary_path, bank_path, args.applicant_id, age, args.employment_status, is_first_loan=is_first_loan
+    )
     model_input = build_model_input(record)
 
-    model, scaler, medians, feature_columns = load_model_artifacts()
-    predicted_class, probability_of_default = score_applicant(model_input, model, scaler, medians, feature_columns)
+    pipeline, feature_columns = load_model_artifacts()
+    predicted_class, probability_of_default = score_applicant(model_input, pipeline, feature_columns)
 
     checks = run_consistency_checks(record)
     report = build_report(

@@ -1,4 +1,4 @@
-import { useMemo } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import ReactFlow, { Background, Controls, Handle, Position } from "reactflow";
 import "reactflow/dist/style.css";
 import {
@@ -7,25 +7,17 @@ import {
   FileText,
   FileUp,
   Gauge,
-  MousePointerClick,
+  Loader2,
+  Play,
   ScanText,
   SlidersHorizontal,
   Users,
   Wand2,
   Zap,
 } from "lucide-react";
-import { useLoanStore } from "../store/useLoanStore";
-import StatusPill from "./StatusPill";
+import PageHeader from "./PageHeader";
 
 const EDGE_COLOR = "#22d3ee"; // bright cyan, high-contrast against zinc-950
-
-function segmentFor(applicant) {
-  const highIncome = applicant.Monthly_Net_Income > 150000;
-  if (applicant.Employment_Type === "Self-Employed") {
-    return highIncome ? "High-Income Self-Employed" : "Emerging Self-Employed";
-  }
-  return highIncome ? "Premium Salaried" : "Mass-Market Salaried";
-}
 
 function PipelineNode({ data }) {
   const Icon = data.icon;
@@ -38,29 +30,24 @@ function PipelineNode({ data }) {
         <span className="text-xl font-bold leading-tight">{data.title}</span>
       </div>
       {data.subtitle && <div className="mt-2 text-base leading-snug text-gray-300">{data.subtitle}</div>}
-      {data.body}
     </div>
   );
 }
 
 const nodeTypes = { pipeline: PipelineNode };
 
-function buildGraph(applicant) {
+// Static illustration of app.py's own extraction -> scoring pipeline (not a
+// per-applicant trace, and not the separate agentic_api extraction/scoring
+// path - see CLAUDE.md's "four co-existing subsystems" for that distinction).
+function buildGraph() {
   const col = (i) => i * 400;
-
-  const stat = (label, value) => (
-    <div className="mt-3 flex items-baseline justify-between">
-      <span className="text-xs font-medium uppercase tracking-wide text-gray-400">{label}</span>
-      <span className="font-mono text-xl font-bold tabular-nums text-white">{value}</span>
-    </div>
-  );
 
   const nodes = [
     {
       id: "upload",
       type: "pipeline",
       position: { x: col(0), y: 300 },
-      data: { icon: FileUp, title: "Document Upload", subtitle: "Salary slip + bank statement" },
+      data: { icon: FileUp, title: "Document Upload", subtitle: "Salary slip (PDF/JPG) + bank statement (XLSX/PDF)" },
     },
     {
       id: "parsePdf",
@@ -81,12 +68,7 @@ function buildGraph(applicant) {
       data: {
         icon: ScanText,
         title: "Extraction Layer",
-        body: (
-          <>
-            {stat("Confidence", `${applicant.Extraction_Confidence}%`)}
-            {stat("Latency", `${applicant.Processing_Latency}s`)}
-          </>
-        ),
+        subtitle: "Combines both documents into one record; cross-checks the computed balance against the statement's own header",
       },
     },
     {
@@ -99,119 +81,133 @@ function buildGraph(applicant) {
       id: "feature",
       type: "pipeline",
       position: { x: col(4), y: 20 },
-      data: { icon: SlidersHorizontal, title: "Feature Engineering", subtitle: "2 engineered ratios + one-hot" },
+      data: { icon: SlidersHorizontal, title: "Feature Engineering", subtitle: "2 engineered ratios + one-hot encoding" },
     },
     {
       id: "imputation",
       type: "pipeline",
       position: { x: col(4), y: 300 },
-      data: { icon: Wand2, title: "Data Imputation", subtitle: "NaN-tolerant (native to XGBoost)" },
+      data: { icon: Wand2, title: "Data Imputation", subtitle: "Fields unavailable from documents filled with training-set medians" },
     },
     {
-      id: "xgboost",
+      id: "model",
       type: "pipeline",
       position: { x: col(4), y: 580 },
-      data: { icon: Zap, title: "XGBoost Inference", subtitle: "predict_proba()" },
+      data: { icon: Zap, title: "Logistic Regression Inference", subtitle: "predict_proba() on scaled, imputed features" },
     },
     {
       id: "riskOutput",
       type: "pipeline",
       position: { x: col(5), y: 140 },
-      data: {
-        icon: Gauge,
-        title: "Risk Meter Output",
-        body: (
-          <div className="mt-3 flex items-center gap-3">
-            <span className="font-mono text-2xl font-bold tabular-nums text-white">
-              {(applicant.Default_Probability * 100).toFixed(1)}%
-            </span>
-            <StatusPill verdict={applicant.Classification_Verdict} />
-          </div>
-        ),
-      },
+      data: { icon: Gauge, title: "Risk Meter Output", subtitle: "Default probability + Approve / Decline verdict" },
     },
     {
       id: "clustering",
       type: "pipeline",
       position: { x: col(5), y: 460 },
-      data: {
-        icon: Users,
-        title: "Customer Clustering",
-        body: <div className="mt-3 text-base font-medium text-gray-200">{segmentFor(applicant)}</div>,
-      },
+      data: { icon: Users, title: "Customer Segmentation", subtitle: "Employment type x income tier" },
     },
   ];
 
+  // The wave number is this edge's topological depth in the pipeline - used
+  // only to sequence the "Simulate Flow" animation, not real timing data.
   const edgeIds = [
-    ["upload", "parsePdf"],
-    ["upload", "parseExcel"],
-    ["parsePdf", "extraction"],
-    ["parseExcel", "extraction"],
-    ["extraction", "mlLayer"],
-    ["mlLayer", "feature"],
-    ["mlLayer", "imputation"],
-    ["mlLayer", "xgboost"],
-    ["feature", "riskOutput"],
-    ["feature", "clustering"],
-    ["imputation", "riskOutput"],
-    ["imputation", "clustering"],
-    ["xgboost", "riskOutput"],
-    ["xgboost", "clustering"],
+    ["upload", "parsePdf", 0],
+    ["upload", "parseExcel", 0],
+    ["parsePdf", "extraction", 1],
+    ["parseExcel", "extraction", 1],
+    ["extraction", "mlLayer", 2],
+    ["mlLayer", "feature", 3],
+    ["mlLayer", "imputation", 3],
+    ["mlLayer", "model", 3],
+    ["feature", "riskOutput", 4],
+    ["feature", "clustering", 4],
+    ["imputation", "riskOutput", 4],
+    ["imputation", "clustering", 4],
+    ["model", "riskOutput", 4],
+    ["model", "clustering", 4],
   ];
 
-  const edges = edgeIds.map(([source, target]) => ({
+  const edges = edgeIds.map(([source, target, wave]) => ({
     id: `${source}-${target}`,
     source,
     target,
     type: "smoothstep",
     animated: true,
     style: { stroke: EDGE_COLOR, strokeWidth: 2.5 },
+    data: { wave },
   }));
 
   return { nodes, edges };
 }
 
+const { nodes: PIPELINE_NODES, edges: PIPELINE_EDGES } = buildGraph();
+const MAX_WAVE = Math.max(...PIPELINE_EDGES.map((e) => e.data.wave));
+const WAVE_STEP_MS = 450;
+
 export default function ArchitecturePipeline() {
-  const activeApplicantId = useLoanStore((state) => state.activeApplicantId);
-  const applicants = useLoanStore((state) => state.applicants);
-  const setCurrentTab = useLoanStore((state) => state.setCurrentTab);
+  const [activeWave, setActiveWave] = useState(-1);
+  const [simulating, setSimulating] = useState(false);
+  const timeoutsRef = useRef([]);
 
-  const applicant = applicants.find((a) => a.Applicant_ID === activeApplicantId) ?? null;
+  useEffect(() => () => timeoutsRef.current.forEach(clearTimeout), []);
 
-  const { nodes, edges } = useMemo(() => (applicant ? buildGraph(applicant) : { nodes: [], edges: [] }), [
-    applicant,
-  ]);
-
-  if (!applicant) {
-    return (
-      <div className="flex flex-col items-center justify-center gap-3 rounded-xl border border-dashed border-zinc-800 py-32 text-center">
-        <MousePointerClick size={22} strokeWidth={1.5} className="text-zinc-600" />
-        <p className="text-sm text-zinc-500">Select an applicant from the Ledger to trace their pipeline run.</p>
-        <button
-          onClick={() => setCurrentTab("ledger")}
-          className="mt-1 rounded-md border border-zinc-800 px-3.5 py-1.5 text-[13px] text-zinc-300 transition-colors hover:border-accent hover:text-accent"
-        >
-          Go to Ledger
-        </button>
-      </div>
+  function runSimulation() {
+    timeoutsRef.current.forEach(clearTimeout);
+    timeoutsRef.current = [];
+    setSimulating(true);
+    for (let wave = 0; wave <= MAX_WAVE; wave++) {
+      timeoutsRef.current.push(setTimeout(() => setActiveWave(wave), wave * WAVE_STEP_MS));
+    }
+    timeoutsRef.current.push(
+      setTimeout(() => {
+        setActiveWave(-1);
+        setSimulating(false);
+      }, (MAX_WAVE + 1) * WAVE_STEP_MS + 400)
     );
   }
 
+  const displayEdges = useMemo(
+    () =>
+      PIPELINE_EDGES.map((edge) => {
+        const isLit = edge.data.wave === activeWave;
+        return {
+          ...edge,
+          style: {
+            stroke: isLit ? "#67e8f9" : EDGE_COLOR,
+            strokeWidth: isLit ? 4.5 : 2.5,
+          },
+        };
+      }),
+    [activeWave]
+  );
+
   return (
     <div>
-      <div className="mb-4 flex items-baseline justify-between px-1">
-        <h1 className="text-base font-semibold text-zinc-100">Data Flow Pipeline</h1>
-        <span className="font-mono text-xs tabular-nums text-zinc-500">{applicant.Applicant_ID}</span>
-      </div>
-
-      <p className="mb-3 px-1 text-xs text-zinc-500">
-        Drag to pan, scroll to zoom, or use the controls to fit the full diagram.
-      </p>
+      <PageHeader
+        eyebrow="Architecture Overview"
+        title="Data Flow Pipeline"
+        description="How a submitted application moves through extraction and scoring. Drag to pan, scroll to zoom, or use the controls to fit the full diagram."
+        right={
+          <button
+            onClick={runSimulation}
+            disabled={simulating}
+            className="flex items-center gap-1.5 rounded-lg border border-zinc-800 bg-zinc-900/60 px-3 py-1.5 text-xs font-medium text-zinc-300 transition-colors hover:border-accent hover:text-accent disabled:cursor-not-allowed disabled:opacity-60"
+          >
+            {simulating ? (
+              <Loader2 size={12} strokeWidth={2} className="animate-spin" />
+            ) : (
+              <Play size={12} strokeWidth={2} className="fill-current" />
+            )}
+            {simulating ? "Simulating..." : "Simulate Flow"}
+          </button>
+        }
+      />
 
       <div className="h-[640px] w-full overflow-hidden rounded-xl border border-zinc-800/80 bg-zinc-950/60">
         <ReactFlow
-          nodes={nodes}
-          edges={edges}
+          nodes={PIPELINE_NODES}
+          edges={displayEdges}
           nodeTypes={nodeTypes}
           fitView
           fitViewOptions={{ padding: 0.12 }}
